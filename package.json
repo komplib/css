@@ -5,12 +5,14 @@
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
     "husky": "^8.0.1",
-    "pinst": "^3.0.0"
+    "pinst": "^3.0.0",
+    "prettier": "2.6.2"
   },
   "scripts": {
     "postinstall": "husky install",
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
+    "format": "prettier --write \"**/*.{js,json,md,yml,yaml,css,scss,less,vue}\"",
     "test": "echo \"Error: no test specified\""
   }
 }
