@@ -4,6 +4,11 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
+    "eslint": "^7.32.0 || ^8.2.0",
+    "eslint-config-airbnb-base": "latest",
+    "eslint-plugin-import": "^2.25.2",
     "husky": ">=6",
     "lint-staged": ">=10",
     "pinst": ">=2",
@@ -14,11 +19,16 @@
     "prepack": "pinst --disable",
     "postpack": "pinst --enable",
     "format": "prettier --write \"**/*.{js,json,md,yml,yaml,css,scss,less,vue}\"",
+    "lint": "yarn eslint --ext **/*.{js,ts} src",
     "test": "echo \"Error: no test specified\"",
     "prepublishOnly": "pinst --disable",
     "postpublish": "pinst --enable"
   },
   "lint-staged": {
     "*.{js,json,md,yml,yaml,css,scss,less,vue}": "yarn format"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0"
   }
 }
