@@ -971,8 +971,8 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-import: ^2.25.2
     eslint-plugin-prettier: ^4.0.0
-    husky: ">=6"
-    lint-staged: ">=10"
+    husky: ^8.0.1
+    lint-staged: ^13.0.0
     pinst: ">=2"
     prettier: 2.6.2
   languageName: unknown
@@ -1830,7 +1830,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:>=6":
+"husky@npm:^8.0.1":
   version: 8.0.1
   resolution: "husky@npm:8.0.1"
   bin:
@@ -2200,7 +2200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:>=10":
+"lint-staged@npm:^13.0.0":
   version: 13.0.0
   resolution: "lint-staged@npm:13.0.0"
   dependencies:
