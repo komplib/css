@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@commitlint/cli", "npm:17.0.2"],\
             ["@commitlint/config-conventional", "npm:17.0.2"],\
+            ["@semantic-release/git", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:10.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
             ["@typescript-eslint/parser", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
             ["eslint", "npm:8.17.0"],\
@@ -869,6 +870,36 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@semantic-release-error-npm-3.0.0-238eebf38b-29c4391ecb.zip/node_modules/@semantic-release/error/",\
           "packageDependencies": [\
             ["@semantic-release/error", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@semantic-release/git", [\
+        ["npm:10.0.1", {\
+          "packageLocation": "./.yarn/cache/@semantic-release-git-npm-10.0.1-2fa2e024e6-b0a346acaf.zip/node_modules/@semantic-release/git/",\
+          "packageDependencies": [\
+            ["@semantic-release/git", "npm:10.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:10.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@semantic-release-git-virtual-1252c5cb1b/0/cache/@semantic-release-git-npm-10.0.1-2fa2e024e6-b0a346acaf.zip/node_modules/@semantic-release/git/",\
+          "packageDependencies": [\
+            ["@semantic-release/git", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:10.0.1"],\
+            ["@semantic-release/error", "npm:3.0.0"],\
+            ["@types/semantic-release", null],\
+            ["aggregate-error", "npm:3.1.0"],\
+            ["debug", "virtual:1f3c51be25fef20e854261431be23d317093b3b463e81e911f4f45a636ff582620db066c9d2a5922a428e07e10fe4788eee8196c796ce2c9bd49d22743fec207#npm:4.3.4"],\
+            ["dir-glob", "npm:3.0.1"],\
+            ["execa", "npm:5.1.1"],\
+            ["lodash", "npm:4.17.21"],\
+            ["micromatch", "npm:4.0.5"],\
+            ["p-reduce", "npm:2.1.0"],\
+            ["semantic-release", "npm:19.0.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/semantic-release",\
+            "semantic-release"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2189,6 +2220,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css", "workspace:."],\
             ["@commitlint/cli", "npm:17.0.2"],\
             ["@commitlint/config-conventional", "npm:17.0.2"],\
+            ["@semantic-release/git", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:10.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
             ["@typescript-eslint/parser", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
             ["eslint", "npm:8.17.0"],\
