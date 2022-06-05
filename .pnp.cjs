@@ -44,7 +44,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.0.0"],\
             ["husky", "npm:8.0.1"],\
             ["lint-staged", "npm:13.0.0"],\
-            ["pinst", "npm:3.0.0"],\
+            ["pinst", "npm:2.1.6"],\
             ["prettier", "npm:2.6.2"],\
             ["semantic-release", "npm:19.0.2"]\
           ],\
@@ -2198,7 +2198,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["eslint-plugin-prettier", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.0.0"],\
             ["husky", "npm:8.0.1"],\
             ["lint-staged", "npm:13.0.0"],\
-            ["pinst", "npm:3.0.0"],\
+            ["pinst", "npm:2.1.6"],\
             ["prettier", "npm:2.6.2"],\
             ["semantic-release", "npm:19.0.2"]\
           ],\
@@ -5792,10 +5792,11 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["pinst", [\
-        ["npm:3.0.0", {\
-          "packageLocation": "./.yarn/cache/pinst-npm-3.0.0-5d2b6c1dda-4ae48a6a60.zip/node_modules/pinst/",\
+        ["npm:2.1.6", {\
+          "packageLocation": "./.yarn/cache/pinst-npm-2.1.6-750cbdedeb-3644c352a7.zip/node_modules/pinst/",\
           "packageDependencies": [\
-            ["pinst", "npm:3.0.0"]\
+            ["pinst", "npm:2.1.6"],\
+            ["fromentries", "npm:1.3.2"]\
           ],\
           "linkType": "HARD"\
         }]\
