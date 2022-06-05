@@ -7,6 +7,7 @@
   },
   "scripts": {
     "format": "prettier --write \"**/*.{js,json,md,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
+    "install:ci": "yarn install --immutable --immutable-cache --check-cache",
     "lint": "yarn eslint --ext **/*.{js,ts} src",
     "postinstall": "husky install",
     "postpack": "pinst --enable",
