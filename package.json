@@ -6,15 +6,15 @@
     "url": "https://github.com/komplib/css.git"
   },
   "scripts": {
-    "postinstall": "husky install",
-    "prepack": "pinst --disable",
-    "postpack": "pinst --enable",
     "format": "prettier --write \"**/*.{js,json,md,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
     "lint": "yarn eslint --ext **/*.{js,ts} src",
-    "test": "echo \"Error: no test specified\"",
-    "prepublishOnly": "pinst --disable",
+    "postinstall": "husky install",
+    "postpack": "pinst --enable",
     "postpublish": "pinst --enable",
-    "semantic-release": "semantic-release"
+    "prepack": "pinst --disable",
+    "prepublishOnly": "pinst --disable",
+    "semantic-release": "semantic-release",
+    "test": "echo \"Error: no test specified\""
   },
   "packageManager": "yarn@3.2.1",
   "devDependencies": {
