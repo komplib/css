@@ -35,6 +35,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["@commitlint/cli", "npm:17.0.2"],\
             ["@commitlint/config-conventional", "npm:17.0.2"],\
+            ["@semantic-release/changelog", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:6.0.1"],\
             ["@semantic-release/git", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:10.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
             ["@typescript-eslint/parser", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
@@ -829,6 +830,32 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@semantic-release/changelog", [\
+        ["npm:6.0.1", {\
+          "packageLocation": "./.yarn/cache/@semantic-release-changelog-npm-6.0.1-8829cd6462-a7c999f202.zip/node_modules/@semantic-release/changelog/",\
+          "packageDependencies": [\
+            ["@semantic-release/changelog", "npm:6.0.1"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:6.0.1", {\
+          "packageLocation": "./.yarn/__virtual__/@semantic-release-changelog-virtual-c1f36e23d8/0/cache/@semantic-release-changelog-npm-6.0.1-8829cd6462-a7c999f202.zip/node_modules/@semantic-release/changelog/",\
+          "packageDependencies": [\
+            ["@semantic-release/changelog", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:6.0.1"],\
+            ["@semantic-release/error", "npm:3.0.0"],\
+            ["@types/semantic-release", null],\
+            ["aggregate-error", "npm:3.1.0"],\
+            ["fs-extra", "npm:9.1.0"],\
+            ["lodash", "npm:4.17.21"],\
+            ["semantic-release", "npm:19.0.2"]\
+          ],\
+          "packagePeers": [\
+            "@types/semantic-release",\
+            "semantic-release"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@semantic-release/commit-analyzer", [\
         ["npm:9.0.2", {\
           "packageLocation": "./.yarn/cache/@semantic-release-commit-analyzer-npm-9.0.2-6c1ff15dac-f7f759e608.zip/node_modules/@semantic-release/commit-analyzer/",\
@@ -1612,6 +1639,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["at-least-node", [\
+        ["npm:1.0.0", {\
+          "packageLocation": "./.yarn/cache/at-least-node-npm-1.0.0-2b36e661fa-463e2f8e43.zip/node_modules/at-least-node/",\
+          "packageDependencies": [\
+            ["at-least-node", "npm:1.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["balanced-match", [\
         ["npm:1.0.2", {\
           "packageLocation": "./.yarn/cache/balanced-match-npm-1.0.2-a53c126459-9706c088a2.zip/node_modules/balanced-match/",\
@@ -2220,6 +2256,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["css", "workspace:."],\
             ["@commitlint/cli", "npm:17.0.2"],\
             ["@commitlint/config-conventional", "npm:17.0.2"],\
+            ["@semantic-release/changelog", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:6.0.1"],\
             ["@semantic-release/git", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:10.0.1"],\
             ["@typescript-eslint/eslint-plugin", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
             ["@typescript-eslint/parser", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:5.27.0"],\
@@ -3223,6 +3260,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/fs-extra-npm-10.1.0-86573680ed-dc94ab3709.zip/node_modules/fs-extra/",\
           "packageDependencies": [\
             ["fs-extra", "npm:10.1.0"],\
+            ["graceful-fs", "npm:4.2.10"],\
+            ["jsonfile", "npm:6.1.0"],\
+            ["universalify", "npm:2.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.1.0", {\
+          "packageLocation": "./.yarn/cache/fs-extra-npm-9.1.0-983c2ddb4c-ba71ba32e0.zip/node_modules/fs-extra/",\
+          "packageDependencies": [\
+            ["fs-extra", "npm:9.1.0"],\
+            ["at-least-node", "npm:1.0.0"],\
             ["graceful-fs", "npm:4.2.10"],\
             ["jsonfile", "npm:6.1.0"],\
             ["universalify", "npm:2.0.0"]\
