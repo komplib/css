@@ -1,3 +1,21 @@
+# [1.3.0](https://github.com/komplib/css/compare/v1.2.0...v1.3.0) (2022-06-05)
+
+
+### Features
+
+* add @semantic-release/release-notes-generator ([d849a5e](https://github.com/komplib/css/commit/d849a5ed35d8b790be6258a75c08395d85b11d02))
+
+
+
+
+
+# [1.3.0](https://github.com/komplib/css/compare/v1.2.0...v1.3.0) (2022-06-05)
+
+
+### Features
+
+* add @semantic-release/release-notes-generator ([d849a5e](https://github.com/komplib/css/commit/d849a5ed35d8b790be6258a75c08395d85b11d02))
+
 # [1.2.0](https://github.com/komplib/css/compare/v1.1.0...v1.2.0) (2022-06-05)
 
 
