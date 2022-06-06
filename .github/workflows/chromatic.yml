@@ -1,0 +1,22 @@
+name: "Chromatic Deployment"
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install dependencies
+        run: |
+          echo 'nodeLinker: "node-modules"' >> .yarnrc.yml
+          yarn rebuild
+          yarn build:storybook
+      - name: Publish Chromatic
+        uses: chromaui/action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          exitOnceUploaded: true

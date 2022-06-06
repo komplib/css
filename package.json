@@ -43,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
     "babel-loader": "^8.2.5",
+    "chromatic": "^6.5.6",
     "eslint": "^8.2.0",
     "eslint-config-airbnb-base": "latest",
     "eslint-config-prettier": "^8.5.0",

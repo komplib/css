@@ -16,3 +16,5 @@
 build/
 storybook-static/
 node_modules/
+node_modules/.cache/storybook/
+build-storybook.log
