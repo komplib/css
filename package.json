@@ -61,7 +61,8 @@
   },
   "resolutions": {
     "glob-parent": "^5.1.2",
-    "trim-newlines": "^3.0.1"
+    "trim-newlines": "^3.0.1",
+    "trim": "^0.0.3"
   },
   "lint-staged": {
     "*.{js,json,md,yml,yaml,css,scss,less,vue}": "yarn format"
