@@ -11,6 +11,7 @@
 #.pnp.*
 
 @todo.md
+*.ignore
 
 # Builded files
 build/
