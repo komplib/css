@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/komplib/css/compare/v1.3.0...v1.3.1) (2022-06-06)
+
+
+### Bug Fixes
+
+* **ci,release:** remove duplicated step ([04fe20a](https://github.com/komplib/css/commit/04fe20a6d82d4f324200b5f8479327e6f6bfae5b))
+
 # [1.3.0](https://github.com/komplib/css/compare/v1.2.0...v1.3.0) (2022-06-05)
 
 ### Features
