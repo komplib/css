@@ -10549,7 +10549,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["async-each", "npm:1.0.3"],\
             ["braces", "npm:2.3.2"],\
             ["fsevents", "patch:fsevents@npm%3A1.2.13#~builtin<compat/fsevents>::version=1.2.13&hash=18f3a7"],\
-            ["glob-parent", "npm:3.1.0"],\
+            ["glob-parent", "npm:5.1.2"],\
             ["inherits", "npm:2.0.4"],\
             ["is-binary-path", "npm:1.0.1"],\
             ["is-glob", "npm:4.0.3"],\
@@ -12527,7 +12527,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-deep-equal", "npm:3.1.3"],\
             ["file-entry-cache", "npm:6.0.1"],\
             ["functional-red-black-tree", "npm:1.0.1"],\
-            ["glob-parent", "npm:6.0.2"],\
+            ["glob-parent", "npm:5.1.2"],\
             ["globals", "npm:13.15.0"],\
             ["ignore", "npm:5.2.0"],\
             ["import-fresh", "npm:3.3.0"],\
@@ -13097,7 +13097,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["fast-glob", "npm:2.2.7"],\
             ["@mrmlnc/readdir-enhanced", "npm:2.2.1"],\
             ["@nodelib/fs.stat", "npm:1.1.3"],\
-            ["glob-parent", "npm:3.1.0"],\
+            ["glob-parent", "npm:5.1.2"],\
             ["is-glob", "npm:4.0.3"],\
             ["merge2", "npm:1.4.1"],\
             ["micromatch", "npm:3.1.10"]\
@@ -13899,27 +13899,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["glob-parent", [\
-        ["npm:3.1.0", {\
-          "packageLocation": "./.yarn/cache/glob-parent-npm-3.1.0-31416ad085-653d559237.zip/node_modules/glob-parent/",\
-          "packageDependencies": [\
-            ["glob-parent", "npm:3.1.0"],\
-            ["is-glob", "npm:3.1.0"],\
-            ["path-dirname", "npm:1.0.2"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:5.1.2", {\
           "packageLocation": "./.yarn/cache/glob-parent-npm-5.1.2-021ab32634-f4f2bfe242.zip/node_modules/glob-parent/",\
           "packageDependencies": [\
             ["glob-parent", "npm:5.1.2"],\
-            ["is-glob", "npm:4.0.3"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
-        ["npm:6.0.2", {\
-          "packageLocation": "./.yarn/cache/glob-parent-npm-6.0.2-2cbef12738-c13ee97978.zip/node_modules/glob-parent/",\
-          "packageDependencies": [\
-            ["glob-parent", "npm:6.0.2"],\
             ["is-glob", "npm:4.0.3"]\
           ],\
           "linkType": "HARD"\
@@ -18426,15 +18409,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/path-browserify-npm-0.0.1-bb8b2a97b1-ae8dcd45d0.zip/node_modules/path-browserify/",\
           "packageDependencies": [\
             ["path-browserify", "npm:0.0.1"]\
-          ],\
-          "linkType": "HARD"\
-        }]\
-      ]],\
-      ["path-dirname", [\
-        ["npm:1.0.2", {\
-          "packageLocation": "./.yarn/cache/path-dirname-npm-1.0.2-d158cba006-0d2f6604ae.zip/node_modules/path-dirname/",\
-          "packageDependencies": [\
-            ["path-dirname", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
