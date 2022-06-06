@@ -16795,7 +16795,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["object-assign", "npm:4.1.1"],\
             ["read-pkg-up", "npm:1.0.1"],\
             ["redent", "npm:1.0.0"],\
-            ["trim-newlines", "npm:1.0.0"]\
+            ["trim-newlines", "npm:3.0.1"]\
           ],\
           "linkType": "HARD"\
         }],\
@@ -21963,13 +21963,6 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["trim-newlines", [\
-        ["npm:1.0.0", {\
-          "packageLocation": "./.yarn/cache/trim-newlines-npm-1.0.0-04abefc015-ed96eea318.zip/node_modules/trim-newlines/",\
-          "packageDependencies": [\
-            ["trim-newlines", "npm:1.0.0"]\
-          ],\
-          "linkType": "HARD"\
-        }],\
         ["npm:3.0.1", {\
           "packageLocation": "./.yarn/cache/trim-newlines-npm-3.0.1-22f1f216de-b530f3fadf.zip/node_modules/trim-newlines/",\
           "packageDependencies": [\

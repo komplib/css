@@ -59,6 +59,9 @@
     "stylus": "^0.58.1",
     "stylus-loader": "^4.0.0"
   },
+  "resolutions": {
+    "trim-newlines": "^3.0.1"
+  },
   "lint-staged": {
     "*.{js,json,md,yml,yaml,css,scss,less,vue}": "yarn format"
   }
