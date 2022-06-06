@@ -62,7 +62,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:13.0.0"],\
             ["pinst", "npm:2.1.6"],\
             ["prettier", "npm:2.6.2"],\
-            ["semantic-release", "npm:19.0.2"]\
+            ["semantic-release", "npm:19.0.2"],\
+            ["stylus", "npm:0.58.1"],\
+            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -10929,6 +10931,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["css", [\
+        ["npm:3.0.0", {\
+          "packageLocation": "./.yarn/cache/css-npm-3.0.0-ef426b63b3-4273ac816d.zip/node_modules/css/",\
+          "packageDependencies": [\
+            ["css", "npm:3.0.0"],\
+            ["inherits", "npm:2.0.4"],\
+            ["source-map", "npm:0.6.1"],\
+            ["source-map-resolve", "npm:0.6.0"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["workspace:.", {\
           "packageLocation": "./",\
           "packageDependencies": [\
@@ -10962,7 +10974,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lint-staged", "npm:13.0.0"],\
             ["pinst", "npm:2.1.6"],\
             ["prettier", "npm:2.6.2"],\
-            ["semantic-release", "npm:19.0.2"]\
+            ["semantic-release", "npm:19.0.2"],\
+            ["stylus", "npm:0.58.1"],\
+            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -19498,6 +19512,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["sax", [\
+        ["npm:1.2.4", {\
+          "packageLocation": "./.yarn/cache/sax-npm-1.2.4-178f05f12f-d3df7d32b8.zip/node_modules/sax/",\
+          "packageDependencies": [\
+            ["sax", "npm:1.2.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["scheduler", [\
         ["npm:0.19.1", {\
           "packageLocation": "./.yarn/cache/scheduler-npm-0.19.1-a4dd0ffd3a-73e185a59e.zip/node_modules/scheduler/",\
@@ -20022,6 +20045,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["urix", "npm:0.1.0"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:0.6.0", {\
+          "packageLocation": "./.yarn/cache/source-map-resolve-npm-0.6.0-6e67c9e55f-fe503b9e5d.zip/node_modules/source-map-resolve/",\
+          "packageDependencies": [\
+            ["source-map-resolve", "npm:0.6.0"],\
+            ["atob", "npm:2.1.2"],\
+            ["decode-uri-component", "npm:0.2.0"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["source-map-support", [\
@@ -20524,6 +20556,51 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["style-to-object", "npm:0.3.0"],\
             ["inline-style-parser", "npm:0.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["stylus", [\
+        ["npm:0.58.1", {\
+          "packageLocation": "./.yarn/cache/stylus-npm-0.58.1-7490b02b60-58057736de.zip/node_modules/stylus/",\
+          "packageDependencies": [\
+            ["stylus", "npm:0.58.1"],\
+            ["css", "npm:3.0.0"],\
+            ["debug", "virtual:e9768252e43aa6de65fb854961d56a022a412f93016571f7cfd339a91f5a5fc7545f1bcf4252cbdf5b29e03fc6994a47e8fc72f12f0404c4b962ba5757f205c9#npm:4.3.4"],\
+            ["glob", "npm:7.2.3"],\
+            ["sax", "npm:1.2.4"],\
+            ["source-map", "npm:0.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["stylus-loader", [\
+        ["npm:4.3.3", {\
+          "packageLocation": "./.yarn/cache/stylus-loader-npm-4.3.3-29d82709b9-07aec3cdb2.zip/node_modules/stylus-loader/",\
+          "packageDependencies": [\
+            ["stylus-loader", "npm:4.3.3"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3", {\
+          "packageLocation": "./.yarn/__virtual__/stylus-loader-virtual-91acc7c47d/0/cache/stylus-loader-npm-4.3.3-29d82709b9-07aec3cdb2.zip/node_modules/stylus-loader/",\
+          "packageDependencies": [\
+            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"],\
+            ["@types/stylus", null],\
+            ["@types/webpack", null],\
+            ["fast-glob", "npm:3.2.11"],\
+            ["klona", "npm:2.0.5"],\
+            ["loader-utils", "npm:2.0.2"],\
+            ["normalize-path", "npm:3.0.0"],\
+            ["schema-utils", "npm:3.1.1"],\
+            ["stylus", "npm:0.58.1"],\
+            ["webpack", null]\
+          ],\
+          "packagePeers": [\
+            "@types/stylus",\
+            "@types/webpack",\
+            "stylus",\
+            "webpack"\
           ],\
           "linkType": "HARD"\
         }]\

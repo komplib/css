@@ -11,3 +11,6 @@
 #.pnp.*
 
 @todo.md
+
+# Builded files
+build/

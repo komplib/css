@@ -6775,6 +6775,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "css@npm:3.0.0"
+  dependencies:
+    inherits: ^2.0.4
+    source-map: ^0.6.1
+    source-map-resolve: ^0.6.0
+  checksum: 4273ac816ddf99b99acb9c1d1a27d86d266a533cc01118369d941d8e8a78277a83cad3315e267a398c509d930fbb86504e193ea1ebc620a4a4212e06fe76e8be
+  languageName: node
+  linkType: hard
+
 "css@workspace:.":
   version: 0.0.0-use.local
   resolution: "css@workspace:."
@@ -6809,6 +6820,8 @@ __metadata:
     pinst: ^2
     prettier: 2.6.2
     semantic-release: ^19.0.2
+    stylus: ^0.58.1
+    stylus-loader: ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -8048,7 +8061,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.4, fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -14264,6 +14277,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"sax@npm:~1.2.4":
+  version: 1.2.4
+  resolution: "sax@npm:1.2.4"
+  checksum: d3df7d32b897a2c2f28e941f732c71ba90e27c24f62ee918bd4d9a8cfb3553f2f81e5493c7f0be94a11c1911b643a9108f231dd6f60df3fa9586b5d2e3e9e1fe
+  languageName: node
+  linkType: hard
+
 "scheduler@npm:^0.19.1":
   version: 0.19.1
   resolution: "scheduler@npm:0.19.1"
@@ -14746,6 +14766,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"source-map-resolve@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "source-map-resolve@npm:0.6.0"
+  dependencies:
+    atob: ^2.1.2
+    decode-uri-component: ^0.2.0
+  checksum: fe503b9e5dac1c54be835282fcfec10879434e7b3ee08a9774f230299c724a8d403484d9531276d1670c87390e0e4d1d3f92b14cca6e4a2445ea3016b786ecd4
+  languageName: node
+  linkType: hard
+
 "source-map-support@npm:^0.5.16, source-map-support@npm:~0.5.12, source-map-support@npm:~0.5.20":
   version: 0.5.21
   resolution: "source-map-support@npm:0.5.21"
@@ -15213,6 +15243,37 @@ __metadata:
   dependencies:
     inline-style-parser: 0.1.1
   checksum: 4d7084015207f2a606dfc10c29cb5ba569f2fe8005551df7396110dd694d6ff650f2debafa95bd5d147dfb4ca50f57868e2a7f91bf5d11ef734fe7ccbd7abf59
+  languageName: node
+  linkType: hard
+
+"stylus-loader@npm:^4.0.0":
+  version: 4.3.3
+  resolution: "stylus-loader@npm:4.3.3"
+  dependencies:
+    fast-glob: ^3.2.4
+    klona: ^2.0.4
+    loader-utils: ^2.0.0
+    normalize-path: ^3.0.0
+    schema-utils: ^3.0.0
+  peerDependencies:
+    stylus: ">=0.52.4"
+    webpack: ^4.0.0 || ^5.0.0
+  checksum: 07aec3cdb2cd648b2d2ebc73fd44e9601aeedbcf592c3db4c4d081e8fd768ec8431b1dcd0654aac3e1071968a9c7c71486a90b1c9b2cf528beeccbc6f37b6057
+  languageName: node
+  linkType: hard
+
+"stylus@npm:^0.58.1":
+  version: 0.58.1
+  resolution: "stylus@npm:0.58.1"
+  dependencies:
+    css: ^3.0.0
+    debug: ^4.3.2
+    glob: ^7.1.6
+    sax: ~1.2.4
+    source-map: ^0.7.3
+  bin:
+    stylus: bin/stylus
+  checksum: 58057736deca6cb4c8b1c8811def119ed093436e6b48448b14a246b28070cbeb996fa944444ff02fd84f89d6b566251d04c56e8dc193a53a9053783da850baa2
   languageName: node
   linkType: hard
 
