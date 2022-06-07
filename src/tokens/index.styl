@@ -1,4 +1,12 @@
-$tokens = json('.tokens.json', { hash: true })
+use('stylus-plugin.js')
+$tokens = json('tokens.json', { hash: true })
+
+for itemToken in tokenPaths()
+  // define all tokens as variables with value
+  define('$v' + itemToken[0], itemToken[1])
+  // define all tokens as variables with the custom property
+  define('$cp' + itemToken[0], unquote('var(--' + itemToken[0] + ')'))
 
 :root
-  --fontFamilyPrimary: $tokens.font.family.primary.value
+  for itemToken in tokenPaths()
+    {'--' + itemToken[0]} itemToken[1]
