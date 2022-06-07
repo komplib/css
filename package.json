@@ -6,7 +6,8 @@
     "url": "https://github.com/komplib/css.git"
   },
   "scripts": {
-    "build:css": "yarn stylus ./src/index.styl --out ./build/styles --compress",
+    "build:css": "yarn stylus ./src/index.styl --out ./build/styles --compress ",
+    "build:css:dev": "yarn stylus ./src/index.styl --out ./build/styles ",
     "build:storybook": "build-storybook",
     "format": "prettier --write \"**/*.{js,json,md,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
     "install:ci": "yarn install --immutable --immutable-cache --check-cache",
@@ -17,7 +18,8 @@
     "prepack": "pinst --disable",
     "prepublishOnly": "pinst --disable",
     "semantic-release": "semantic-release",
-    "watch:css": "yarn build:css --watch --sourcemap",
+    "watch:css": "yarn build:css:dev --watch --sourcemap",
+    "watch:css:tokens": "nodemon --watch 'src/**/*' -e js,json --exec \"yarn build:css:dev --watch --sourcemap\"",
     "watch:storybook": "start-storybook -p 6006",
     "test": "echo \"Error: no test specified\""
   },
@@ -52,6 +54,7 @@
     "eslint-plugin-storybook": "^0.5.12",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.0",
+    "nodemon": "^2.0.16",
     "pinst": "^2",
     "prettier": "2.6.2",
     "pug": "^3.0.2",
