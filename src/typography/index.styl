@@ -1,55 +1,68 @@
 @require '../tokens/'
 
+[class*="font"]
+  --fontFamily $cpfontFamilyDefault
+  --fontSize $cpfontSizeDefault
+  --fontWeight $cpfontWeightRegular
+  --fontStyle $cpfontStyleNormal
+  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
+
 .font
 
   &Family
     &Default
-      font-family $cpfontFamilyDefault
+      --fontFamily $cpfontFamilyDefault
     &Primary
-      font-family $cpfontFamilyPrimary
+      --fontFamily $cpfontFamilyPrimary
     &Monospaced
-      font-family $cpfontFamilyMonospaced
+      --fontFamily $cpfontFamilyMonospaced
 
   &Size
     &Large4
-      font-size $cpfontSizeLarge4
+      --fontSize $cpfontSizeLarge4
     &Large3
-      font-size $cpfontSizeLarge3
+      --fontSize $cpfontSizeLarge3
     &Large2
-      font-size $cpfontSizeLarge2
+      --fontSize $cpfontSizeLarge2
     &Large1
-      font-size $cpfontSizeLarge1
+      --fontSize $cpfontSizeLarge1
     &Large
-      font-size $cpfontSizeLarge
+      --fontSize $cpfontSizeLarge
     &Default
-      font-size $cpfontSizeDefault
+      --fontSize $cpfontSizeDefault
     &Small
-      font-size $cpfontSizeSmall
+      --fontSize $cpfontSizeSmall
     &Small1
-      font-size $cpfontSizeSmall1
+      --fontSize $cpfontSizeSmall1
     &Small2
-      font-size $cpfontSizeSmall2
+      --fontSize $cpfontSizeSmall2
 
   &Weight
     &Black
-      font-weight $cpfontWeightBlack
+      --fontWeight $cpfontWeightBlack
     &ExtraBold
-      font-weight $cpfontWeightExtraBold
+      --fontWeight $cpfontWeightExtraBold
     &Bold
-      font-weight $cpfontWeightBold
+      --fontWeight $cpfontWeightBold
     &SemiBold
-      font-weight $cpfontWeightSemiBold
+      --fontWeight $cpfontWeightSemiBold
     &Medium
-      font-weight $cpfontWeightMedium
+      --fontWeight $cpfontWeightMedium
     &Regular
-      font-weight $cpfontWeightRegular
+      --fontWeight $cpfontWeightRegular
     &Light
-      font-weight $cpfontWeightLight
+      --fontWeight $cpfontWeightLight
     &ExtraLight
-      font-weight $cpfontWeightExtraLight
+      --fontWeight $cpfontWeightExtraLight
     &Thin
-      font-weight $cpfontWeightThin
+      --fontWeight $cpfontWeightThin
     &Bolder
-      font-weight $cpfontWeightBolder
+      --fontWeight $cpfontWeightBolder
     &Lighter
-      font-weight $cpfontWeightLighter
+      --fontWeight $cpfontWeightLighter
+
+  &Style
+    &Normal
+      --fontStyle $cpfontStyleNormal
+    &Italic
+      --fontStyle $cpfontStyleItalic
