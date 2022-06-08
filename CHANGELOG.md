@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/komplib/css/compare/v0.3.0...v0.4.0) (2022-06-08)
+
+
+### Features
+
+* add font sizes tokens and helper classes ([9593baa](https://github.com/komplib/css/commit/9593baa068c955404b3d8d590070667b3a9e890b))
+
 # [0.3.0](https://github.com/komplib/css/compare/v0.2.0...v0.3.0) (2022-06-08)
 
 
