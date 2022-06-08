@@ -5,7 +5,9 @@
   --fontSize $cpfontSizeDefault
   --fontWeight $cpfontWeightRegular
   --fontStyle $cpfontStyleNormal
+  --textTransform $cpfontTransformNone
   font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
+  text-transform var(--textTransform)
 
 .font
 
@@ -66,3 +68,13 @@
       --fontStyle $cpfontStyleNormal
     &Italic
       --fontStyle $cpfontStyleItalic
+
+  &Transform
+    &Uppercase
+      --textTransform $cpfontTransformUppercase
+    &Lowercase
+      --textTransform $cpfontTransformLowercase
+    &Capitalize
+      --textTransform $cpfontTransformCapitalize
+    &None
+      --textTransform $cpfontTransformNone
