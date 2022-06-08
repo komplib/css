@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/komplib/css/compare/v0.4.0...v0.5.0) (2022-06-08)
+
+
+### Features
+
+* add font weights tokens and helper classes ([9b8bf72](https://github.com/komplib/css/commit/9b8bf72bef30c45cc2bb53c6b79d76b6b5274c59))
+
 # [0.4.0](https://github.com/komplib/css/compare/v0.3.0...v0.4.0) (2022-06-08)
 
 
