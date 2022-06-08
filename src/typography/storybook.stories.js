@@ -38,3 +38,20 @@ FontSize.args = {
     "fontSizeSmall2",
   ],
 };
+
+export const FontWeight = Template.bind({});
+FontWeight.args = {
+  classes: [
+    "fontWeightBlack",
+    "fontWeightExtraBold",
+    "fontWeightBold",
+    "fontWeightSemiBold",
+    "fontWeightMedium",
+    "fontWeightRegular",
+    "fontWeightLight",
+    "fontWeightExtraLight",
+    "fontWeightThin",
+    "fontWeightBolder",
+    "fontWeightLighter",
+  ],
+};
