@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/komplib/css/compare/v0.6.0...v0.7.0) (2022-06-08)
+
+
+### Features
+
+* add text transform tokens and helper classes ([a18ec4f](https://github.com/komplib/css/commit/a18ec4f69a5297156716a93981c112b79a81c80c))
+
 # [0.6.0](https://github.com/komplib/css/compare/v0.5.0...v0.6.0) (2022-06-08)
 
 
