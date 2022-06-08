@@ -1,3 +1,15 @@
+# [0.3.0](https://github.com/komplib/css/compare/v0.2.0...v0.3.0) (2022-06-08)
+
+
+### Bug Fixes
+
+* unquote values from tokens.json ([975c837](https://github.com/komplib/css/commit/975c837b10e8a9107e819d3b8fba22ed027b9e9b))
+
+
+### Features
+
+* add font family classes and story ([ebb64ca](https://github.com/komplib/css/commit/ebb64ca4840d0a5a400325108f1a199faf4aaa8e))
+
 # [0.2.0](https://github.com/komplib/css/compare/v0.1.0...v0.2.0) (2022-06-07)
 
 
