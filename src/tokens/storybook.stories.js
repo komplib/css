@@ -46,7 +46,7 @@ const Template = ({ name, group, ...args }) => {
     </ul>`;
 };
 
-export const FontFamily = Template.bind({});
-FontFamily.args = {
+export const All = Template.bind({});
+All.args = {
   group: tokenPaths(tokens),
 };
