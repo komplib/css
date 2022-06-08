@@ -60,3 +60,13 @@ export const FontStyle = Template.bind({});
 FontStyle.args = {
   classes: ["fontStyleNormal", "fontStyleItalic"],
 };
+
+export const TextTransform = Template.bind({});
+TextTransform.args = {
+  classes: [
+    "fontTransformUppercase",
+    "fontTransformLowercase",
+    "fontTransformCapitalize",
+    "fontTransformNone",
+  ],
+};
