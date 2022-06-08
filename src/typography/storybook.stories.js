@@ -55,3 +55,8 @@ FontWeight.args = {
     "fontWeightLighter",
   ],
 };
+
+export const FontStyle = Template.bind({});
+FontStyle.args = {
+  classes: ["fontStyleNormal", "fontStyleItalic"],
+};
