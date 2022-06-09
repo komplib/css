@@ -8,6 +8,7 @@
   "scripts": {
     "build:css": "yarn stylus ./src/index.styl --out ./build/styles --compress ",
     "build:css:dev": "yarn stylus ./src/index.styl --out ./build/styles ",
+    "build:doc": "yarn pug src --out ./build",
     "build:storybook": "build-storybook",
     "format": "prettier --write \"**/*.{js,json,md,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
     "install:ci": "yarn install --immutable --immutable-cache --check-cache",
@@ -19,6 +20,7 @@
     "prepublishOnly": "pinst --disable",
     "semantic-release": "semantic-release",
     "watch:css": "yarn build:css:dev --watch --sourcemap",
+    "watch:doc": "yarn build:doc --watch",
     "watch:css:tokens": "nodemon --watch 'src/**/*' -e js,json --exec \"yarn build:css:dev --watch --sourcemap\"",
     "watch:storybook": "start-storybook -p 6006",
     "test": "echo \"Error: no test specified\""
@@ -58,6 +60,7 @@
     "pinst": "^2",
     "prettier": "2.6.2",
     "pug": "^3.0.2",
+    "pug-cli": "^1.0.0-alpha6",
     "pug-runtime": "^3.0.1",
     "semantic-release": "^19.0.2",
     "storybook-addon-pseudo-states": "^1.14.0",
