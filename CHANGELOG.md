@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/komplib/css/compare/v0.7.0...v0.8.0) (2022-06-11)
+
+
+### Features
+
+* add grid flex with fluid columns ([846fd95](https://github.com/komplib/css/commit/846fd95fe62e7f777ca2d9b273eda4960f2a4f26))
+
 # [0.7.0](https://github.com/komplib/css/compare/v0.6.0...v0.7.0) (2022-06-08)
 
 ### Features
