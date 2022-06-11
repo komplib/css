@@ -59,7 +59,7 @@
     "prettier": "2.6.2",
     "pug": "^3.0.2",
     "pug-runtime": "^3.0.1",
-    "semantic-release": "^19.0.2",
+    "semantic-release": "^19.0.3",
     "storybook-addon-pseudo-states": "^1.14.0",
     "storypug": "^1.0.0-rc.8",
     "stylus": "^0.58.1",
