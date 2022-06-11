@@ -1,5 +1,23 @@
+mixin repeatColumns(quantity)
+  each _, i in Array(quantity)
+    div=i+ 1
+
+mixin rowWithColumns(quantity)
+  .row
+    +repeatColumns(quantity)
+
 html
   head
     link(rel='stylesheet', href='./index.css')
-  body
+    link(rel='stylesheet', href='../_docs/index.css')
+  body.doc
     h1 Grid
+
+    article
+      h1 Fluid columns
+
+      p Adding .row to a container will make all the children of that container behave like block elements.
+      p There is no limit on the number of columns
+
+      each _, i in Array(16)
+        +rowWithColumns(i+1)
