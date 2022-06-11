@@ -1,0 +1,30 @@
+.row
+  --alignContent normal
+  --alignItems flex-start
+  --flexDirection row
+  --flexWrap nowrap
+  --gapColumn 10px
+  --gapRow 10px
+  --justifyContent flex-start
+  align-content var(--alignContent)
+  align-items var(--alignItems)
+  contain layout // strict
+  display flex
+  flex-flow var(--flexDirection) var(--flexWrap)
+  gap var(--gapRow) var(--gapColumn)
+  justify-content var(--justifyContent)
+
+  & > *
+    --alignSelf auto
+    --col 0
+    --flexBasis auto
+    --flexGrow 0
+    --flexShrink 1
+    --order 0
+    --width 100%
+    align-self var(--alignSelf)
+    flex var(--flexGrow) var(--flexShrink) var(--flexBasis)
+    margin 0
+    order var(--order)
+    width var(--width)
+
