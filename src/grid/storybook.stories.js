@@ -125,3 +125,45 @@ AlignItems.args = {
     },
   ],
 };
+
+export const AlignContent = Template.bind({});
+AlignContent.args = {
+  rows: [
+    {
+      cols: 3,
+      rowClasses: "align-content-start wrap-yes",
+      colClasses: "col-7",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-content-end wrap-yes",
+      colClasses: "col-7",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-content-center wrap-yes",
+      colClasses: "col-7",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-content-spacebetween wrap-yes",
+      colClasses: "col-7",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-content-spacearound wrap-yes",
+      colClasses: "col-7",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-content-stretch wrap-yes",
+      colClasses: "col-7",
+      rowStyles: "height: 80px;",
+    },
+  ],
+};
