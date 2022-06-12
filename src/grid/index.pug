@@ -70,3 +70,14 @@ html
           .col-5 1 .col-5
           .col-5 2 .col-5
           .col-5 3 .col-5
+
+    article
+      h1 Offset
+      .demo
+        .row
+          +repeatColumns(12)
+
+        each _, i in Array(12)
+          .row
+            div(class=`col-1 offset-${i+1}`)
+              | offset-#{i+1}
