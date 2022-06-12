@@ -1,3 +1,10 @@
+# [0.15.0](https://github.com/komplib/css/compare/v0.14.0...v0.15.0) (2022-06-12)
+
+
+### Features
+
+* add grid row modifier align content ([9dc68f3](https://github.com/komplib/css/commit/9dc68f3d7c0ec0b5a787cd6b9706e635722e7cc4))
+
 # [0.14.0](https://github.com/komplib/css/compare/v0.13.0...v0.14.0) (2022-06-12)
 
 
