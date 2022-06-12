@@ -3,7 +3,7 @@ $tokens = json('tokens.json', { hash: true })
 
 for itemToken in tokenPaths()
   // define all tokens as variables with value
-  define('$v' + itemToken[0], itemToken[1])
+  define('$v' + itemToken[0], unquote(itemToken[1]))
   // define all tokens as variables with the custom property
   define('$cp' + itemToken[0], unquote('var(--' + itemToken[0] + ')'))
 

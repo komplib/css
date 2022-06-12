@@ -14,9 +14,11 @@ const Template = ({ rows, ...args }) => {
           <div class="row">
             ${Array(row.cols)
               .fill()
-              .map((_, index) => {
+              .map((col, index) => {
                 return `
-                <div>${index + 1}</div>
+                <div class="${row.classes}">${
+                  row.text ? row.text : index + 1
+                }</div>
                 `;
               })
               .join("")}
@@ -33,5 +35,14 @@ FluidColumns.args = {
     .fill()
     .map((_, index) => {
       return { cols: index + 1 };
+    }),
+};
+
+export const FixedColumns = Template.bind({});
+FixedColumns.args = {
+  rows: Array(12)
+    .fill()
+    .map((_, index) => {
+      return { cols: 1, classes: `col-${index + 1}`, text: `${index + 1}` };
     }),
 };
