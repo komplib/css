@@ -1,3 +1,10 @@
+# [0.9.0](https://github.com/komplib/css/compare/v0.8.0...v0.9.0) (2022-06-12)
+
+
+### Features
+
+* add grid columns fixed width ([84d676f](https://github.com/komplib/css/commit/84d676fa2b5eaa16687f9111e98cd5caf41af51e))
+
 # [0.8.0](https://github.com/komplib/css/compare/v0.7.0...v0.8.0) (2022-06-11)
 
 
