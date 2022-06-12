@@ -68,3 +68,13 @@ ColumnOffset.args = {
       };
     }),
 };
+
+export const RowDirection = Template.bind({});
+RowDirection.args = {
+  rows: [
+    { cols: 2, rowClasses: "direction-row", colClasses: "col-2" },
+    { cols: 2, rowClasses: "direction-rowReverse", colClasses: "col-2" },
+    { cols: 2, rowClasses: "direction-column", colClasses: "col-2" },
+    { cols: 2, rowClasses: "direction-columnReverse", colClasses: "col-2" },
+  ],
+};

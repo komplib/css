@@ -72,12 +72,33 @@ html
           .col-5 3 .col-5
 
     article
-      h1 Offset
+      h1 Column offset
       .demo
-        .row
-          +repeatColumns(12)
-
         each _, i in Array(12)
           .row
             div(class=`col-1 offset-${i+1}`)
               | offset-#{i+1}
+    article
+      h1 Direction
+      .demo
+        p default direction-row
+        .row.direction-row
+          .col-1 1
+          .col-1 2
+          .col-1 3
+        p direction-rowReverse
+        .row.direction-rowReverse
+          .col-1 1
+          .col-1 2
+          .col-1 3
+        p direction-column
+        .row.direction-column
+          .col-1 1
+          .col-2 2
+          .col-3 3
+        p direction-columnReverse
+        .row.direction-columnReverse
+          .col-1 1
+          .col-2 2
+          .col-3 3
+

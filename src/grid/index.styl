@@ -25,12 +25,13 @@
     --flexShrink 1
     --marginLeft 0
     --order 0
-    --width 100%
+    --width unset
     align-self var(--alignSelf)
     flex var(--flexGrow) var(--flexShrink) var(--flexBasis)
     margin 0
     margin-left var(--marginLeft)
     order var(--order)
+    width var(--width)
 
 [class*="col"]
   --flexBasis calc( ((100% - (var(--columns) - 1) * var(--gapColumn)) / var(--columns)) * var(--col) + var(--gapColumn) * (var(--col) - 1) )
@@ -52,6 +53,20 @@
     --flexWrap nowrap
   &reverse
     --flexWrap wrap-reverse
+
+.direction-
+  &row
+    --flexDirection row
+  &rowReverse
+    --flexDirection row-reverse
+  &column
+    --flexDirection column
+    & > *
+      --width var(--flexBasis)
+  &columnReverse
+    --flexDirection column-reverse
+    & > *
+      --width var(--flexBasis)
 
 .col
   for $num in (1..convert($vgridColumns))
