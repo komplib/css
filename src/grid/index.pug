@@ -19,5 +19,18 @@ html
       p Adding .row to a container will make all the children of that container behave like block elements.
       p There is no limit on the number of columns
 
-      each _, i in Array(16)
-        +rowWithColumns(i+1)
+      .demo
+        each _, i in Array(16)
+          +rowWithColumns(i+1)
+
+    article
+      h1 Fixed columns
+
+      p Adding .col-NUMBER will make the column use a fixed width.
+      p The default number of columns is 12
+
+      .demo
+        each _, i in Array(12)
+          .row
+            div(class=`col-${i+1}`)
+              | col-#{i+1}

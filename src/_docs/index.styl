@@ -1,11 +1,23 @@
-.doc
-  .row
-    background #007FFF
-    padding 8px 0
-    margin-bottom 8px
-    & > *
-      background #036
-      border-radius 5px
-      text-align center
-      color #fff
-      min-height 1rem
+@css {
+  @layer doc;
+  @layer doc {
+    .doc .demo {
+      background-color: #eee;
+      padding: 20px;
+    }
+    .doc .row {
+      background: #007fff;
+      padding: 8px 0;
+      margin-bottom: 8px;
+      border-radius: 5px;
+    }
+    .doc .row > * {
+      background: #036;
+      border-radius: 5px;
+      text-align: center;
+      color: #fff;
+      min-height: 1rem;
+    }
+
+  }
+}
