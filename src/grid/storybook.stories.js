@@ -55,3 +55,16 @@ ColumnWrap.args = {
     { cols: 2, rowClasses: "wrap-reverse", colClasses: "col-7" },
   ],
 };
+
+export const ColumnOffset = Template.bind({});
+ColumnOffset.args = {
+  rows: Array(12)
+    .fill()
+    .map((_, index) => {
+      return {
+        cols: 1,
+        colClasses: `col-1 offset-${index + 1}`,
+        text: `${index + 1}`,
+      };
+    }),
+};
