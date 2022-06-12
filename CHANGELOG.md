@@ -1,30 +1,26 @@
 # [0.11.0](https://github.com/komplib/css/compare/v0.10.0...v0.11.0) (2022-06-12)
 
-
 ### Features
 
-* add columns offset ([1d3b7f0](https://github.com/komplib/css/commit/1d3b7f0e71e21083df735d87e6e192ed507eb355))
+- add columns offset ([1d3b7f0](https://github.com/komplib/css/commit/1d3b7f0e71e21083df735d87e6e192ed507eb355))
 
 # [0.10.0](https://github.com/komplib/css/compare/v0.9.0...v0.10.0) (2022-06-12)
 
-
 ### Features
 
-* add grid column wrap modifier ([e58821a](https://github.com/komplib/css/commit/e58821ac247ce84c7e822b58517100d9e4591f1d))
+- add grid column wrap modifier ([e58821a](https://github.com/komplib/css/commit/e58821ac247ce84c7e822b58517100d9e4591f1d))
 
 # [0.9.0](https://github.com/komplib/css/compare/v0.8.0...v0.9.0) (2022-06-12)
 
-
 ### Features
 
-* add grid columns fixed width ([84d676f](https://github.com/komplib/css/commit/84d676fa2b5eaa16687f9111e98cd5caf41af51e))
+- add grid columns fixed width ([84d676f](https://github.com/komplib/css/commit/84d676fa2b5eaa16687f9111e98cd5caf41af51e))
 
 # [0.8.0](https://github.com/komplib/css/compare/v0.7.0...v0.8.0) (2022-06-11)
 
-
 ### Features
 
-* add grid flex with fluid columns ([846fd95](https://github.com/komplib/css/commit/846fd95fe62e7f777ca2d9b273eda4960f2a4f26))
+- add grid flex with fluid columns ([846fd95](https://github.com/komplib/css/commit/846fd95fe62e7f777ca2d9b273eda4960f2a4f26))
 
 # [0.7.0](https://github.com/komplib/css/compare/v0.6.0...v0.7.0) (2022-06-08)
 
