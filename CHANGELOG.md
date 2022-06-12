@@ -1,3 +1,10 @@
+# [0.12.0](https://github.com/komplib/css/compare/v0.11.0...v0.12.0) (2022-06-12)
+
+
+### Features
+
+* add grid row direction ([50da711](https://github.com/komplib/css/commit/50da71124ffed28878e0e3510e519a5bbfdba0af))
+
 # [0.11.0](https://github.com/komplib/css/compare/v0.10.0...v0.11.0) (2022-06-12)
 
 ### Features
