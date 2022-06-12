@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/komplib/css/compare/v0.9.0...v0.10.0) (2022-06-12)
+
+
+### Features
+
+* add grid column wrap modifier ([e58821a](https://github.com/komplib/css/commit/e58821ac247ce84c7e822b58517100d9e4591f1d))
+
 # [0.9.0](https://github.com/komplib/css/compare/v0.8.0...v0.9.0) (2022-06-12)
 
 
