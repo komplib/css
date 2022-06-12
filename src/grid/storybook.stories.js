@@ -11,7 +11,7 @@ const Template = ({ rows, ...args }) => {
       ${rows
         .map((row, index) => {
           return `
-          <div class="row ${row.rowClasses}">
+          <div class="row ${row.rowClasses}" style="${row.rowStyles}">
             ${Array(row.cols)
               .fill()
               .map((col, index) => {
@@ -87,5 +87,41 @@ ContentPosition.args = {
     { cols: 2, rowClasses: "content-spacebetween", colClasses: "col-2" },
     { cols: 2, rowClasses: "content-spacearound", colClasses: "col-2" },
     { cols: 2, rowClasses: "content-spaceevenly", colClasses: "col-2" },
+  ],
+};
+
+export const AlignItems = Template.bind({});
+AlignItems.args = {
+  rows: [
+    {
+      cols: 3,
+      rowClasses: "align-items-start",
+      colClasses: "col-2",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-items-end",
+      colClasses: "col-2",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-items-center",
+      colClasses: "col-2",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-items-baseline",
+      colClasses: "col-2",
+      rowStyles: "height: 80px;",
+    },
+    {
+      cols: 3,
+      rowClasses: "align-items-stretch",
+      colClasses: "col-2",
+      rowStyles: "height: 80px;",
+    },
   ],
 };

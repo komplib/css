@@ -1,9 +1,10 @@
 @require '../tokens/'
 
 .row
-  --columns $cpgridColumns
   --alignContent normal
   --alignItems flex-start
+  --alignSelf auto
+  --columns $cpgridColumns
   --flexDirection row
   --flexWrap nowrap
   --gapColumn $cpgridGapColumn
@@ -18,7 +19,6 @@
   justify-content var(--justifyContent)
 
   & > *
-    --alignSelf auto
     --col 0
     --flexBasis 100%
     --flexGrow 0
@@ -82,6 +82,20 @@
     --justifyContent space-around
   &spaceevenly
     --justifyContent space-evenly
+
+.align-
+  &items-
+    &start
+      --alignItems flex-start
+    &end
+      --alignItems flex-end
+    &center
+      --alignItems center
+    &baseline
+      --alignItems baseline
+    &stretch
+      --alignItems stretch
+      --alignSelf normal
 
 .col
   for $num in (1..convert($vgridColumns))
