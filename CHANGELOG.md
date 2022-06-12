@@ -1,3 +1,10 @@
+## [0.15.1](https://github.com/komplib/css/compare/v0.15.0...v0.15.1) (2022-06-12)
+
+
+### Bug Fixes
+
+* add missing paddings in grid rows ([d1c1199](https://github.com/komplib/css/commit/d1c1199f56f6c43f99d7ae3a345ff3411100b657))
+
 # [0.15.0](https://github.com/komplib/css/compare/v0.14.0...v0.15.0) (2022-06-12)
 
 ### Features
