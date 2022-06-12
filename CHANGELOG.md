@@ -1,30 +1,26 @@
 # [0.15.0](https://github.com/komplib/css/compare/v0.14.0...v0.15.0) (2022-06-12)
 
-
 ### Features
 
-* add grid row modifier align content ([9dc68f3](https://github.com/komplib/css/commit/9dc68f3d7c0ec0b5a787cd6b9706e635722e7cc4))
+- add grid row modifier align content ([9dc68f3](https://github.com/komplib/css/commit/9dc68f3d7c0ec0b5a787cd6b9706e635722e7cc4))
 
 # [0.14.0](https://github.com/komplib/css/compare/v0.13.0...v0.14.0) (2022-06-12)
 
-
 ### Features
 
-* add grid row modifier align items ([48e1f3c](https://github.com/komplib/css/commit/48e1f3ccacb2353033f6207e782a5743febd6594))
+- add grid row modifier align items ([48e1f3c](https://github.com/komplib/css/commit/48e1f3ccacb2353033f6207e782a5743febd6594))
 
 # [0.13.0](https://github.com/komplib/css/compare/v0.12.0...v0.13.0) (2022-06-12)
 
-
 ### Features
 
-* add grid content justify modifiers ([f2cf48c](https://github.com/komplib/css/commit/f2cf48c15d35689f82c205d44f5f16f2242fdb3e))
+- add grid content justify modifiers ([f2cf48c](https://github.com/komplib/css/commit/f2cf48c15d35689f82c205d44f5f16f2242fdb3e))
 
 # [0.12.0](https://github.com/komplib/css/compare/v0.11.0...v0.12.0) (2022-06-12)
 
-
 ### Features
 
-* add grid row direction ([50da711](https://github.com/komplib/css/commit/50da71124ffed28878e0e3510e519a5bbfdba0af))
+- add grid row direction ([50da711](https://github.com/komplib/css/commit/50da71124ffed28878e0e3510e519a5bbfdba0af))
 
 # [0.11.0](https://github.com/komplib/css/compare/v0.10.0...v0.11.0) (2022-06-12)
 
