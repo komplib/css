@@ -77,3 +77,15 @@ RowDirection.args = {
     { cols: 2, rowClasses: "direction-columnReverse", colClasses: "col-2" },
   ],
 };
+
+export const ContentPosition = Template.bind({});
+ContentPosition.args = {
+  rows: [
+    { cols: 2, rowClasses: "content-start", colClasses: "col-2" },
+    { cols: 2, rowClasses: "content-end", colClasses: "col-2" },
+    { cols: 2, rowClasses: "content-center", colClasses: "col-2" },
+    { cols: 2, rowClasses: "content-spacebetween", colClasses: "col-2" },
+    { cols: 2, rowClasses: "content-spacearound", colClasses: "col-2" },
+    { cols: 2, rowClasses: "content-spaceevenly", colClasses: "col-2" },
+  ],
+};

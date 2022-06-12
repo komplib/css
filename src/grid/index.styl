@@ -68,6 +68,21 @@
     & > *
       --width var(--flexBasis)
 
+// Justify content
+.content-
+  &start
+    --justifyContent flex-start
+  &end
+    --justifyContent flex-end
+  &center
+    --justifyContent center
+  &spacebetween
+    --justifyContent space-between
+  &spacearound
+    --justifyContent space-around
+  &spaceevenly
+    --justifyContent space-evenly
+
 .col
   for $num in (1..convert($vgridColumns))
     &-{$num}
