@@ -34,3 +34,39 @@ html
           .row
             div(class=`col-${i+1}`)
               | col-#{i+1}
+
+    article
+      h1 Row Wrap
+
+      h2 Default
+      p The default is now to wrap the columns in the row.
+      p The content will overflow the row and be visible
+      .demo
+        .row
+          .col-5 1 .col-5
+          .col-5 2 .col-5
+          .col-5 3 .col-5
+
+      h2 Force wrap / break
+      p Adding `wrap-yes` will force the columns to break if they dont fit the row
+      .demo
+        .row.wrap-yes
+          .col-5 1 .col-5
+          .col-5 2 .col-5
+          .col-5 3 .col-5
+
+      h2 No wrap / break
+      p Adding `wrap-no` will force the columns to not break, reseting back to the default behavior
+      .demo
+        .row.wrap-no
+          .col-5 1 .col-5
+          .col-5 2 .col-5
+          .col-5 3 .col-5
+
+      h2 Force wrap reverse / break reverse
+      p Adding `wrap-yes` will force the columns to break, in reverse order, if they dont fit the row
+      .demo
+        .row.wrap-reverse
+          .col-5 1 .col-5
+          .col-5 2 .col-5
+          .col-5 3 .col-5

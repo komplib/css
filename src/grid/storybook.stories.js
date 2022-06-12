@@ -11,12 +11,12 @@ const Template = ({ rows, ...args }) => {
       ${rows
         .map((row, index) => {
           return `
-          <div class="row">
+          <div class="row ${row.rowClasses}">
             ${Array(row.cols)
               .fill()
               .map((col, index) => {
                 return `
-                <div class="${row.classes}">${
+                <div class="${row.colClasses}">${
                   row.text ? row.text : index + 1
                 }</div>
                 `;
@@ -43,6 +43,15 @@ FixedColumns.args = {
   rows: Array(12)
     .fill()
     .map((_, index) => {
-      return { cols: 1, classes: `col-${index + 1}`, text: `${index + 1}` };
+      return { cols: 1, colClasses: `col-${index + 1}`, text: `${index + 1}` };
     }),
+};
+
+export const ColumnWrap = Template.bind({});
+ColumnWrap.args = {
+  rows: [
+    { cols: 2, rowClasses: "wrap-yes", colClasses: "col-7" },
+    { cols: 2, rowClasses: "wrap-no", colClasses: "col-7" },
+    { cols: 2, rowClasses: "wrap-reverse", colClasses: "col-7" },
+  ],
 };
