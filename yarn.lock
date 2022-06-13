@@ -4548,22 +4548,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/babel-types@npm:*, @types/babel-types@npm:^7.0.0":
-  version: 7.0.11
-  resolution: "@types/babel-types@npm:7.0.11"
-  checksum: 9b02719c7cf5062c9ab656a3b4efe3dd79e7a4ab49b5a2ce18d4ec1cb326588a1b40fc03863c24c9dec962f56762c53ed06cdc2a1c241c84e76e54a37a6195fc
-  languageName: node
-  linkType: hard
-
-"@types/babylon@npm:^6.16.2":
-  version: 6.16.6
-  resolution: "@types/babylon@npm:6.16.6"
-  dependencies:
-    "@types/babel-types": "*"
-  checksum: c011e028bc09457b9a488e5ad8bc081b43c0c7919419343eaef95aeda5e5bb825dc93c323af8e60d97373702d94ae006016e7c641a9be24fef0d9f5ecc2e54c0
-  languageName: node
-  linkType: hard
-
 "@types/component-emitter@npm:^1.2.10":
   version: 1.2.11
   resolution: "@types/component-emitter@npm:1.2.11"
@@ -5276,15 +5260,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn-globals@npm:^3.0.0":
-  version: 3.1.0
-  resolution: "acorn-globals@npm:3.1.0"
-  dependencies:
-    acorn: ^4.0.4
-  checksum: d6919d5e6c6f72b620ce93b9b762031bd100948dd1f947cf639f0760af29c57844c99bb4c3e4519b94d1da085afa62d56fc7c72d5592b8e5614cc52eb29671a1
-  languageName: node
-  linkType: hard
-
 "acorn-jsx@npm:^5.3.2":
   version: 5.3.2
   resolution: "acorn-jsx@npm:5.3.2"
@@ -5298,24 +5273,6 @@ __metadata:
   version: 8.2.0
   resolution: "acorn-walk@npm:8.2.0"
   checksum: 1715e76c01dd7b2d4ca472f9c58968516a4899378a63ad5b6c2d668bba8da21a71976c14ec5f5b75f887b6317c4ae0b897ab141c831d741dc76024d8745f1ad1
-  languageName: node
-  linkType: hard
-
-"acorn@npm:^3.1.0":
-  version: 3.3.0
-  resolution: "acorn@npm:3.3.0"
-  bin:
-    acorn: ./bin/acorn
-  checksum: d24aee1c838a3467c5ab493601ed4b646e4fd0599ca19b16f47f764e7929d0ffcb4d536935283a8d823d64ca3817d27dd5f93830bb86f592249d9feb0fcf78f9
-  languageName: node
-  linkType: hard
-
-"acorn@npm:^4.0.4, acorn@npm:~4.0.2":
-  version: 4.0.13
-  resolution: "acorn@npm:4.0.13"
-  bin:
-    acorn: ./bin/acorn
-  checksum: 1b7105ba91dc7797dbcfa6262e1b79b062e6e1bf9c9c627db0bf3454f97ba5ddc671c1da1b4a3b637d88dc453c839cb902263123d281998f0cfd876dfe8616b9
   languageName: node
   linkType: hard
 
@@ -5435,17 +5392,6 @@ __metadata:
     json-schema-traverse: ^0.4.1
     uri-js: ^4.2.2
   checksum: 874972efe5c4202ab0a68379481fbd3d1b5d0a7bd6d3cc21d40d3536ebff3352a2a1fabb632d4fd2cc7fe4cbdcd5ed6782084c9bbf7f32a1536d18f9da5007d4
-  languageName: node
-  linkType: hard
-
-"align-text@npm:^0.1.1, align-text@npm:^0.1.3":
-  version: 0.1.4
-  resolution: "align-text@npm:0.1.4"
-  dependencies:
-    kind-of: ^3.0.2
-    longest: ^1.0.1
-    repeat-string: ^1.5.2
-  checksum: b4970e6bcca5b436b1f5645d4efca4d8ea18fd3d0f2dfcbde79df92aa21019076def35d9b5b0428d1c69ee77b21290f8f108f86c497e6f834cddf270dccb5829
   languageName: node
   linkType: hard
 
@@ -6106,43 +6052,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-runtime@npm:^6.26.0":
-  version: 6.26.0
-  resolution: "babel-runtime@npm:6.26.0"
-  dependencies:
-    core-js: ^2.4.0
-    regenerator-runtime: ^0.11.0
-  checksum: 8aeade94665e67a73c1ccc10f6fd42ba0c689b980032b70929de7a6d9a12eb87ef51902733f8fefede35afea7a5c3ef7e916a64d503446c1eedc9e3284bd3d50
-  languageName: node
-  linkType: hard
-
-"babel-types@npm:^6.26.0":
-  version: 6.26.0
-  resolution: "babel-types@npm:6.26.0"
-  dependencies:
-    babel-runtime: ^6.26.0
-    esutils: ^2.0.2
-    lodash: ^4.17.4
-    to-fast-properties: ^1.0.3
-  checksum: d16b0fa86e9b0e4c2623be81d0a35679faff24dd2e43cde4ca58baf49f3e39415a011a889e6c2259ff09e1228e4c3a3db6449a62de59e80152fe1ce7398fde76
-  languageName: node
-  linkType: hard
-
 "babel-walk@npm:3.0.0-canary-5":
   version: 3.0.0-canary-5
   resolution: "babel-walk@npm:3.0.0-canary-5"
   dependencies:
     "@babel/types": ^7.9.6
   checksum: 6fe7ee3889343a6602f665c28ea135956a0767d7f7ca5fc1d72c5243e2f6e9d8a64f51254bf2fd0cce47b79fceeccf7a357f37cfa755a509dfb930a21151837c
-  languageName: node
-  linkType: hard
-
-"babylon@npm:^6.18.0":
-  version: 6.18.0
-  resolution: "babylon@npm:6.18.0"
-  bin:
-    babylon: ./bin/babylon.js
-  checksum: 0777ae0c735ce1cbfc856d627589ed9aae212b84fb0c03c368b55e6c5d3507841780052808d0ad46e18a2ba516e93d55eeed8cd967f3b2938822dfeccfb2a16d
   languageName: node
   linkType: hard
 
@@ -6798,13 +6713,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"camelcase@npm:^1.0.2":
-  version: 1.2.1
-  resolution: "camelcase@npm:1.2.1"
-  checksum: 3da5ab4bb997f33e57023ddee39887e0d3f34ce5a2d41bcfe84454ee528c4fd769a4f9a428168bf9b24aca9338699885ffb63527acb02834c31b864d4b0d2299
-  languageName: node
-  linkType: hard
-
 "camelcase@npm:^2.0.0":
   version: 2.1.1
   resolution: "camelcase@npm:2.1.1"
@@ -6868,16 +6776,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"center-align@npm:^0.1.1":
-  version: 0.1.3
-  resolution: "center-align@npm:0.1.3"
-  dependencies:
-    align-text: ^0.1.3
-    lazy-cache: ^1.0.3
-  checksum: f3a4e224f0eeb7a9ebc09e6519639acadd8b65942ae33db2b6f38946fcee6320499bd6b980894f7e33fec4f1b66c056d55bb96a9b05a2ca0fde25876e9ee2ab8
-  languageName: node
-  linkType: hard
-
 "chalk@npm:^1.0.0, chalk@npm:^1.1.3":
   version: 1.1.3
   resolution: "chalk@npm:1.1.3"
@@ -6933,7 +6831,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"character-parser@npm:^2.1.1, character-parser@npm:^2.2.0":
+"character-parser@npm:^2.2.0":
   version: 2.2.0
   resolution: "character-parser@npm:2.2.0"
   dependencies:
@@ -7082,7 +6980,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clean-css@npm:^4.1.11, clean-css@npm:^4.2.3":
+"clean-css@npm:^4.2.3":
   version: 4.2.4
   resolution: "clean-css@npm:4.2.4"
   dependencies:
@@ -7154,17 +7052,6 @@ __metadata:
     slice-ansi: ^5.0.0
     string-width: ^5.0.0
   checksum: c3243e41974445691c63f8b405df1d5a24049dc33d324fe448dc572e561a7b772ae982692900b1a5960901cc4fc7def25a629b9c69a4208ee89d12ab3332617a
-  languageName: node
-  linkType: hard
-
-"cliui@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "cliui@npm:2.1.0"
-  dependencies:
-    center-align: ^0.1.1
-    right-align: ^0.1.1
-    wordwrap: 0.0.2
-  checksum: 6ea62222bd60ea94bca6321766a300a6ad3f742960b6c6d1e42a730f28df8b1dd81c6fedfbc327d100986ac21fdd7eafb7da34e09a96eb4ffe0c9590754053cb
   languageName: node
   linkType: hard
 
@@ -7480,18 +7367,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"constantinople@npm:^3.0.1, constantinople@npm:^3.1.2":
-  version: 3.1.2
-  resolution: "constantinople@npm:3.1.2"
-  dependencies:
-    "@types/babel-types": ^7.0.0
-    "@types/babylon": ^6.16.2
-    babel-types: ^6.26.0
-    babylon: ^6.18.0
-  checksum: 8b33090009cb2238eb8728d0868e2e7a8e654db5761b099325821a430688270ab0b057e73fd62c8aef737c6d8d9d3a98100e80abff422cc44140402b230b50ad
-  languageName: node
-  linkType: hard
-
 "constantinople@npm:^4.0.1":
   version: 4.0.1
   resolution: "constantinople@npm:4.0.1"
@@ -7649,13 +7524,6 @@ __metadata:
     browserslist: ^4.20.3
     semver: 7.0.0
   checksum: 0c82d9110dcb267c2f5547c61b62f8043793d203523048169176b8badf0b73f3792624342b85d9c923df8eb8971b4aa468b160abb81a023d183c5951e4f05a66
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^2.4.0":
-  version: 2.6.12
-  resolution: "core-js@npm:2.6.12"
-  checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
   languageName: node
   linkType: hard
 
@@ -8074,7 +7942,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"decamelize@npm:^1.0.0, decamelize@npm:^1.1.0, decamelize@npm:^1.1.2, decamelize@npm:^1.2.0":
+"decamelize@npm:^1.1.0, decamelize@npm:^1.1.2, decamelize@npm:^1.2.0":
   version: 1.2.0
   resolution: "decamelize@npm:1.2.0"
   checksum: ad8c51a7e7e0720c70ec2eeb1163b66da03e7616d7b98c9ef43cce2416395e84c1e9548dd94f5f6ffecfee9f8b94251fc57121a8b021f2ff2469b2bae247b8aa
@@ -11266,16 +11134,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"is-expression@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "is-expression@npm:3.0.0"
-  dependencies:
-    acorn: ~4.0.2
-    object-assign: ^4.0.1
-  checksum: f80537cefbb3e1921617b1f5977def431ff99e3145e2506f17ac293fe66781d9ec0af219eeba36320bb186ba04298dc7aa3dcebbbb5f0167c5f0184efc0a648a
-  languageName: node
-  linkType: hard
-
 "is-expression@npm:^4.0.0":
   version: 4.0.0
   resolution: "is-expression@npm:4.0.0"
@@ -11849,7 +11707,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"js-stringify@npm:^1.0.1, js-stringify@npm:^1.0.2":
+"js-stringify@npm:^1.0.2":
   version: 1.0.2
   resolution: "js-stringify@npm:1.0.2"
   checksum: f9701d9e535d3ac0f62bbf2624b76c5d0af5b889187232817ae284a41ba21fd7a8b464c2dce3815d8cf52c8bea3480be6b368cfc2c67da799cad458058e8bbf5
@@ -12097,13 +11955,6 @@ eslint-config-airbnb-base@latest:
   dependencies:
     package-json: ^6.3.0
   checksum: fbc72b071eb66c40f652441fd783a9cca62f08bf42433651937f078cd9ef94bf728ec7743992777826e4e89305aef24f234b515e6030503a2cbee7fc9bdc2c0f
-  languageName: node
-  linkType: hard
-
-"lazy-cache@npm:^1.0.3":
-  version: 1.0.4
-  resolution: "lazy-cache@npm:1.0.4"
-  checksum: e6650c22e5de1cc3f4a0c25d2b35fe9cd400473c1b3562be9fceadf8f368d708b54d24f5aa51b321b090da65b36426823a8f706b8dbdd68270db0daba812c5d3
   languageName: node
   linkType: hard
 
@@ -12527,13 +12378,6 @@ eslint-config-airbnb-base@latest:
     slice-ansi: ^4.0.0
     wrap-ansi: ^6.2.0
   checksum: ae2f85bbabc1906034154fb7d4c4477c79b3e703d22d78adee8b3862fa913942772e7fa11713e3d96fb46de4e3cabefbf5d0a544344f03b58d3c4bff52aa9eb2
-  languageName: node
-  linkType: hard
-
-"longest@npm:^1.0.1":
-  version: 1.0.1
-  resolution: "longest@npm:1.0.1"
-  checksum: 21717f95670675b8fec7ce78d255af664fc28273e8ac7d6893bce6063f63efa107634daa186d142172904053e0e39034b21e61a6c52538d3d37f715bf149c47f
   languageName: node
   linkType: hard
 
@@ -13915,7 +13759,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"object-assign@npm:^4, object-assign@npm:^4.0.1, object-assign@npm:^4.1.0, object-assign@npm:^4.1.1":
+"object-assign@npm:^4, object-assign@npm:^4.0.1, object-assign@npm:^4.1.1":
   version: 4.1.1
   resolution: "object-assign@npm:4.1.1"
   checksum: fcc6e4ea8c7fe48abfbb552578b1c53e0d194086e2e6bbbf59e0a536381a292f39943c6e9628af05b5528aa5e3318bb30d6b2e53cadaf5b8fe9e12c4b69af23f
@@ -15128,17 +14972,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-attrs@npm:^2.0.4":
-  version: 2.0.4
-  resolution: "pug-attrs@npm:2.0.4"
-  dependencies:
-    constantinople: ^3.0.1
-    js-stringify: ^1.0.1
-    pug-runtime: ^2.0.5
-  checksum: 5e17e3ce2955f67f2a8aa0c4e08e75b3f76c8ddd9b869dde5c33fec2a46497e5d9268212a04bf7fef1bc2c8681575360e352f8ba45e891592ac98a72e6ff595b
-  languageName: node
-  linkType: hard
-
 "pug-attrs@npm:^3.0.0":
   version: 3.0.0
   resolution: "pug-attrs@npm:3.0.0"
@@ -15164,22 +14997,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-code-gen@npm:^2.0.2":
-  version: 2.0.3
-  resolution: "pug-code-gen@npm:2.0.3"
-  dependencies:
-    constantinople: ^3.1.2
-    doctypes: ^1.1.0
-    js-stringify: ^1.0.1
-    pug-attrs: ^2.0.4
-    pug-error: ^1.3.3
-    pug-runtime: ^2.0.5
-    void-elements: ^2.0.1
-    with: ^5.0.0
-  checksum: 379c55f45306047b1978a33020009c670d8c1cb1bbdd15354cb7804898cca65d71739708c3a071ebb36fef53b074e47527a4fe78b66f78e95459c745cf622182
-  languageName: node
-  linkType: hard
-
 "pug-code-gen@npm:^3.0.2":
   version: 3.0.2
   resolution: "pug-code-gen@npm:3.0.2"
@@ -15196,32 +15013,10 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-error@npm:^1.3.3":
-  version: 1.3.3
-  resolution: "pug-error@npm:1.3.3"
-  checksum: 1034a216585e5c037dc8c34b3dcc1bb76abaf20d74a79ec92500dc0efe25cdf56066d26d25d280d00c5adb9cc9d4ede6f4e4941f95a356ef1a34800545de087f
-  languageName: node
-  linkType: hard
-
 "pug-error@npm:^2.0.0":
   version: 2.0.0
   resolution: "pug-error@npm:2.0.0"
   checksum: c5372d018c897c1d6a141dd803c50957feecfda1f3d84a6adc6149801315d6c7f8c28b05f3e186d98d774fc9718699d1e1caa675630dd3c4453f8c5ec4e4a986
-  languageName: node
-  linkType: hard
-
-"pug-filters@npm:^3.1.1":
-  version: 3.1.1
-  resolution: "pug-filters@npm:3.1.1"
-  dependencies:
-    clean-css: ^4.1.11
-    constantinople: ^3.0.1
-    jstransformer: 1.0.0
-    pug-error: ^1.3.3
-    pug-walk: ^1.1.8
-    resolve: ^1.1.6
-    uglify-js: ^2.6.1
-  checksum: c0bccf0ac3ad3e6a024ad5f0f03767237fb36ab089233fefa88147ba284992e2d7da2a80b6496790af60d513594a0c8033719f6b16678a825a712d66703ecd0f
   languageName: node
   linkType: hard
 
@@ -15238,17 +15033,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-lexer@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "pug-lexer@npm:4.1.0"
-  dependencies:
-    character-parser: ^2.1.1
-    is-expression: ^3.0.0
-    pug-error: ^1.3.3
-  checksum: 5bd8744e7fdbe5632611837231b64e35bf06cbb999a27909251cb420f403fb4edf007924a98654b6ff52f564716410da1d6912b1fd6cbe5d46f20770b072ad88
-  languageName: node
-  linkType: hard
-
 "pug-lexer@npm:^5.0.1":
   version: 5.0.1
   resolution: "pug-lexer@npm:5.0.1"
@@ -15260,16 +15044,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-linker@npm:^3.0.6":
-  version: 3.0.6
-  resolution: "pug-linker@npm:3.0.6"
-  dependencies:
-    pug-error: ^1.3.3
-    pug-walk: ^1.1.8
-  checksum: 07c34849a0a7ed221862b0864bc59f3768a4cdb567b9404e0926c8d26452d67da3ce8243b3f3a704335fc6f9de8586e96affb1b88adea3bd1466e1a0b453c013
-  languageName: node
-  linkType: hard
-
 "pug-linker@npm:^4.0.0":
   version: 4.0.0
   resolution: "pug-linker@npm:4.0.0"
@@ -15277,16 +15051,6 @@ eslint-config-airbnb-base@latest:
     pug-error: ^2.0.0
     pug-walk: ^2.0.0
   checksum: 7433aa65181cd5b7bc631ab5f14baae7496fd8da98608cbd55bbea9bc72fe69a863e72026781a9fe76ab429d7037465b942145455420ee1178e2875ec87a1e12
-  languageName: node
-  linkType: hard
-
-"pug-load@npm:^2.0.12":
-  version: 2.0.12
-  resolution: "pug-load@npm:2.0.12"
-  dependencies:
-    object-assign: ^4.1.0
-    pug-walk: ^1.1.8
-  checksum: 5170e030114c046cc2a56af69f11a39e334fdbb0653775be58b5e281c0af6132af8d8c57d5222253178426045694919894fb1cd2eb22ec54314f7ea03444b2f6
   languageName: node
   linkType: hard
 
@@ -15313,16 +15077,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-parser@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "pug-parser@npm:5.0.1"
-  dependencies:
-    pug-error: ^1.3.3
-    token-stream: 0.0.1
-  checksum: d7810caa62be2a17a2879d91bed06df8783f070dab0e89dfcf430ff121db3654c0b3c73a12458ec00ba52261afd946c44a875c94a216af2c3c520a2fb56796da
-  languageName: node
-  linkType: hard
-
 "pug-parser@npm:^6.0.0":
   version: 6.0.0
   resolution: "pug-parser@npm:6.0.0"
@@ -15333,26 +15087,10 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-runtime@npm:^2.0.5":
-  version: 2.0.5
-  resolution: "pug-runtime@npm:2.0.5"
-  checksum: 451611c37ac2db0ffe1b53b7e79fe3622e60f84410d2ff487157fdf325365bdfaa2aae973f61333299e9b5d6be531d72ec5f95e00a9aca15f564690eec698fab
-  languageName: node
-  linkType: hard
-
 "pug-runtime@npm:^3.0.0, pug-runtime@npm:^3.0.1":
   version: 3.0.1
   resolution: "pug-runtime@npm:3.0.1"
   checksum: 48a71b587caa08a5bccf9c1164206a34067edc1d13c2164bebad2dc562b529317578f889a0c41f0e16ddab3853c599696ff29a085f2d4554b783228f0002c41b
-  languageName: node
-  linkType: hard
-
-"pug-strip-comments@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "pug-strip-comments@npm:1.0.4"
-  dependencies:
-    pug-error: ^1.3.3
-  checksum: 2718a8a2cf0f5a6d7959297670801de496322bd4a48a1fe521dcb392d93dff5f891b72d75ca1c8f539b3276a645a0dc98e92f1051fe615bba41043c6e7973253
   languageName: node
   linkType: hard
 
@@ -15365,7 +15103,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"pug-walk@npm:^1.0.0, pug-walk@npm:^1.1.8":
+"pug-walk@npm:^1.0.0":
   version: 1.1.8
   resolution: "pug-walk@npm:1.1.8"
   checksum: b302b5ad6d2d1fbda73b8dc86f6963da5935371949fa5952735bebd7ace8a59c04c83f61800e78a5e5a0735a925e6674541b435a08db075bf029fbedb0dcaf08
@@ -15376,22 +15114,6 @@ eslint-config-airbnb-base@latest:
   version: 2.0.0
   resolution: "pug-walk@npm:2.0.0"
   checksum: bee64e133b711e1ed58022c0869b59e62f9f3ebb7084293857f074120b3cb588e7b8f74c4566426bf2b26dc1ec176ca6b64a2d1e53782f3fbbe039c5d4816638
-  languageName: node
-  linkType: hard
-
-"pug@npm:^2.0.0-alpha7":
-  version: 2.0.4
-  resolution: "pug@npm:2.0.4"
-  dependencies:
-    pug-code-gen: ^2.0.2
-    pug-filters: ^3.1.1
-    pug-lexer: ^4.1.0
-    pug-linker: ^3.0.6
-    pug-load: ^2.0.12
-    pug-parser: ^5.0.1
-    pug-runtime: ^2.0.5
-    pug-strip-comments: ^1.0.4
-  checksum: 8644eca7d90c5eb5378639c298efa5f079f5ae1f8c6a178d81f437a4abb327acc57153e0b2f20acf785ddb799dbf4a87a3ad146f0b134150560eb80ef8862444
   languageName: node
   linkType: hard
 
@@ -15880,13 +15602,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.11.0":
-  version: 0.11.1
-  resolution: "regenerator-runtime@npm:0.11.1"
-  checksum: 3c97bd2c7b2b3247e6f8e2147a002eb78c995323732dad5dc70fac8d8d0b758d0295e7015b90d3d444446ae77cbd24b9f9123ec3a77018e81d8999818301b4f4
-  languageName: node
-  linkType: hard
-
 "regenerator-runtime@npm:^0.13.2, regenerator-runtime@npm:^0.13.4, regenerator-runtime@npm:^0.13.7":
   version: 0.13.9
   resolution: "regenerator-runtime@npm:0.13.9"
@@ -16095,7 +15810,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"repeat-string@npm:^1.5.2, repeat-string@npm:^1.5.4, repeat-string@npm:^1.6.1":
+"repeat-string@npm:^1.5.4, repeat-string@npm:^1.6.1":
   version: 1.6.1
   resolution: "repeat-string@npm:1.6.1"
   checksum: 1b809fc6db97decdc68f5b12c4d1a671c8e3f65ec4a40c238bc5200e44e85bcc52a54f78268ab9c29fcf5fe4f1343e805420056d1f30fa9a9ee4c2d93e3cc6c0
@@ -16169,7 +15884,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"resolve@npm:^1.1.6, resolve@npm:^1.1.7, resolve@npm:^1.10.0, resolve@npm:^1.12.0, resolve@npm:^1.14.2, resolve@npm:^1.15.1, resolve@npm:^1.19.0, resolve@npm:^1.20.0, resolve@npm:^1.22.0, resolve@npm:^1.3.2":
+"resolve@npm:^1.1.7, resolve@npm:^1.10.0, resolve@npm:^1.12.0, resolve@npm:^1.14.2, resolve@npm:^1.15.1, resolve@npm:^1.19.0, resolve@npm:^1.20.0, resolve@npm:^1.22.0, resolve@npm:^1.3.2":
   version: 1.22.0
   resolution: "resolve@npm:1.22.0"
   dependencies:
@@ -16182,7 +15897,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"resolve@patch:resolve@^1.1.6#~builtin<compat/resolve>, resolve@patch:resolve@^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.12.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.15.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#~builtin<compat/resolve>":
+"resolve@patch:resolve@^1.1.7#~builtin<compat/resolve>, resolve@patch:resolve@^1.10.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.12.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.14.2#~builtin<compat/resolve>, resolve@patch:resolve@^1.15.1#~builtin<compat/resolve>, resolve@patch:resolve@^1.19.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.20.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.22.0#~builtin<compat/resolve>, resolve@patch:resolve@^1.3.2#~builtin<compat/resolve>":
   version: 1.22.0
   resolution: "resolve@patch:resolve@npm%3A1.22.0#~builtin<compat/resolve>::version=1.22.0&hash=07638b"
   dependencies:
@@ -16256,15 +15971,6 @@ eslint-config-airbnb-base@latest:
   version: 1.3.0
   resolution: "rfdc@npm:1.3.0"
   checksum: fb2ba8512e43519983b4c61bd3fa77c0f410eff6bae68b08614437bc3f35f91362215f7b4a73cbda6f67330b5746ce07db5dd9850ad3edc91271ad6deea0df32
-  languageName: node
-  linkType: hard
-
-"right-align@npm:^0.1.1":
-  version: 0.1.3
-  resolution: "right-align@npm:0.1.3"
-  dependencies:
-    align-text: ^0.1.1
-  checksum: 7011dc8c0eb2ee04daab45d1251b5efff9956607e130b4a4005ed76e48bddf97c1de3cc70463ca0476949fce5d0af7d652619a538c1b9105b6eff6a59f15c4b9
   languageName: node
   linkType: hard
 
@@ -17036,7 +16742,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"source-map@npm:^0.5.0, source-map@npm:^0.5.6, source-map@npm:^0.5.7, source-map@npm:~0.5.1":
+"source-map@npm:^0.5.0, source-map@npm:^0.5.6, source-map@npm:^0.5.7":
   version: 0.5.7
   resolution: "source-map@npm:0.5.7"
   checksum: 5dc2043b93d2f194142c7f38f74a24670cd7a0063acdaf4bf01d2964b402257ae843c2a8fa822ad5b71013b5fcafa55af7421383da919752f22ff488bc553f4d
@@ -17895,13 +17601,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"to-fast-properties@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "to-fast-properties@npm:1.0.3"
-  checksum: bd0abb58c4722851df63419de3f6d901d5118f0440d3f71293ed776dd363f2657edaaf2dc470e3f6b7b48eb84aa411193b60db8a4a552adac30de9516c5cc580
-  languageName: node
-  linkType: hard
-
 "to-fast-properties@npm:^2.0.0":
   version: 2.0.0
   resolution: "to-fast-properties@npm:2.0.0"
@@ -17960,13 +17659,6 @@ eslint-config-airbnb-base@latest:
   version: 1.0.1
   resolution: "toidentifier@npm:1.0.1"
   checksum: 952c29e2a85d7123239b5cfdd889a0dde47ab0497f0913d70588f19c53f7e0b5327c95f4651e413c74b785147f9637b17410ac8c846d5d4a20a5a33eb6dc3a45
-  languageName: node
-  linkType: hard
-
-"token-stream@npm:0.0.1":
-  version: 0.0.1
-  resolution: "token-stream@npm:0.0.1"
-  checksum: 45b7bb2f582e6fb1098f19386cf5d9c41121f81a371f810cc3459be552c0543ac081302ca3323c3469c3ef95112883d6f0b5544a58c2cb2057e9b815f058b640
   languageName: node
   linkType: hard
 
@@ -18254,35 +17946,12 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"uglify-js@npm:^2.6.1":
-  version: 2.8.29
-  resolution: "uglify-js@npm:2.8.29"
-  dependencies:
-    source-map: ~0.5.1
-    uglify-to-browserify: ~1.0.0
-    yargs: ~3.10.0
-  dependenciesMeta:
-    uglify-to-browserify:
-      optional: true
-  bin:
-    uglifyjs: bin/uglifyjs
-  checksum: 24f2ae09b96bbb56cc3802f575ee2cdbc6822d942c6877ee4a5637e949f269e48f4baa8d193c47324cdfc1cc8e6853e1479d26e228be2412bc0da3649eaedb35
-  languageName: node
-  linkType: hard
-
 "uglify-js@npm:^3.1.4":
   version: 3.16.0
   resolution: "uglify-js@npm:3.16.0"
   bin:
     uglifyjs: bin/uglifyjs
   checksum: be0207e57ef70b13e92196cd0351f28908b80121d809901b511593c0bd1043d9c0b21d22f2a83001da873407a02572b67ccd21ce5e053cf7c787b2ca8a3773fb
-  languageName: node
-  linkType: hard
-
-"uglify-to-browserify@npm:~1.0.0":
-  version: 1.0.2
-  resolution: "uglify-to-browserify@npm:1.0.2"
-  checksum: cfa7e2c233b33dc952fcf6ddb2a1e04f48b733fc00314d7282447dde0d7cebc7cf0085d4752abbc82127a4b458c2bf66c63bd8a574be3b2faa0effaabd971370
   languageName: node
   linkType: hard
 
@@ -18765,13 +18434,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"void-elements@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "void-elements@npm:2.0.1"
-  checksum: 700c07ba9cfa2dff88bb23974b3173118f9ad8107143db9e5d753552be15cf93380954d4e7f7d7bc80e7306c35c3a7fb83ab0ce4d4dcc18abf90ca8b31452126
-  languageName: node
-  linkType: hard
-
 "void-elements@npm:^3.1.0":
   version: 3.1.0
   resolution: "void-elements@npm:3.1.0"
@@ -19036,23 +18698,6 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"window-size@npm:0.1.0":
-  version: 0.1.0
-  resolution: "window-size@npm:0.1.0"
-  checksum: ca88d06a353e2ab264f68d8684c3e6bb461ac3b2205c372c290785cb4367e57a025d7760a0b030ea6af4daf5884394b78d0b2480e8d6699d8d799d5c65edcbd0
-  languageName: node
-  linkType: hard
-
-"with@npm:^5.0.0":
-  version: 5.1.1
-  resolution: "with@npm:5.1.1"
-  dependencies:
-    acorn: ^3.1.0
-    acorn-globals: ^3.0.0
-  checksum: 09266872ae4a7c35df39c1d133b40119c5e20459ce712071c63a016350ba3d1aeb80b0ea970a03d6710b69af183feeeea205e25b315fc11e94ea2a4c159c7e2a
-  languageName: node
-  linkType: hard
-
 "with@npm:^7.0.0":
   version: 7.0.2
   resolution: "with@npm:7.0.2"
@@ -19069,13 +18714,6 @@ eslint-config-airbnb-base@latest:
   version: 1.2.3
   resolution: "word-wrap@npm:1.2.3"
   checksum: 30b48f91fcf12106ed3186ae4fa86a6a1842416df425be7b60485de14bec665a54a68e4b5156647dec3a70f25e84d270ca8bc8cd23182ed095f5c7206a938c1f
-  languageName: node
-  linkType: hard
-
-"wordwrap@npm:0.0.2":
-  version: 0.0.2
-  resolution: "wordwrap@npm:0.0.2"
-  checksum: 1152eb7f04c3771df4fd8ea817e3945586f6be2e906cd7d95e60248e136a7f506c911cc738f963b7b18f74c215d7fe61f5b276fc82c3cee930abfc61a215afec
   languageName: node
   linkType: hard
 
@@ -19357,18 +18995,6 @@ eslint-config-airbnb-base@latest:
     y18n: ^5.0.5
     yargs-parser: ^21.0.0
   checksum: 00d58a2c052937fa044834313f07910fd0a115dec5ee35919e857eeee3736b21a4eafa8264535800ba8bac312991ce785ecb8a51f4d2cc8c4676d865af1cfbde
-  languageName: node
-  linkType: hard
-
-"yargs@npm:~3.10.0":
-  version: 3.10.0
-  resolution: "yargs@npm:3.10.0"
-  dependencies:
-    camelcase: ^1.0.2
-    cliui: ^2.1.0
-    decamelize: ^1.0.0
-    window-size: 0.1.0
-  checksum: 73fd1978a311c853ae4c2c2da12642878912a33e4a8e9e8fec00900dc3b5db31a334c337cff04a542ebba7a32f64a9330419ba45249002f45f349a5d41010cab
   languageName: node
   linkType: hard
 
