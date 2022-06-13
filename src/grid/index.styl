@@ -17,6 +17,8 @@
   flex-flow var(--flexDirection) var(--flexWrap)
   gap var(--gapRow) var(--gapColumn)
   justify-content var(--justifyContent)
+  padding-left var(--gapColumn)
+  padding-right var(--gapColumn)
 
   & > *
     --col 0
@@ -95,6 +97,19 @@
       --alignItems baseline
     &stretch
       --alignItems stretch
+  &content-
+    &start
+      --alignContent flex-start
+    &end
+      --alignContent flex-end
+    &center
+      --alignContent center
+    &spacebetween
+      --alignContent space-between
+    &spacearound
+      --alignContent space-around
+    &stretch
+      --alignContent stretch
       --alignSelf normal
 
 .col

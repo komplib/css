@@ -173,3 +173,44 @@ html
           .col-1 2
           .col-1 3
 
+    article
+      h1 Align content
+      p This modifier only takes effect on multi-line flexible containers, where flex-wrap is set to either wrap or wrap-reverse)
+      .demo
+        p start
+        .row.wrap-yes.align-content-start(style="height: 100px;")
+          .col-6 1
+          .col-3 2
+          .col-5 3
+          .col-7 4
+        p end
+        .row.wrap-yes.align-content-end(style="height: 100px;")
+          .col-6 1
+          .col-3 2
+          .col-5 3
+          .col-7 4
+        p center
+        .row.wrap-yes.align-content-center(style="height: 100px;")
+          .col-6 1
+          .col-3 2
+          .col-5 3
+          .col-7 4
+        p spacebetween
+        .row.wrap-yes.align-content-spacebetween(style="height: 100px;")
+          .col-6 1
+          .col-3 2
+          .col-5 3
+          .col-7 4
+        p spacearound
+        .row.wrap-yes.align-content-spacearound(style="height: 100px;")
+          .col-6 1
+          .col-3 2
+          .col-5 3
+          .col-7 4
+        p stretch
+        .row.wrap-yes.align-content-stretch(style="height: 100px;")
+          .col-6
+            p 1
+          .col-3 2
+          .col-5 3
+          .col-7 4
