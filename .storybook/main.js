@@ -12,7 +12,6 @@ module.exports = {
     "@storybook/addon-docs",
     "storybook/addon-viewport",
     "storybook-addon-pseudo-states",
-    "storypug",
   ],
   features: {
     postcss: false,

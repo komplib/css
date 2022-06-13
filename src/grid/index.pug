@@ -6,10 +6,19 @@ mixin rowWithColumns(quantity)
   .row
     +repeatColumns(quantity)
 
+mixin allOrders(quantity)
+  each _, $indexRow in Array(quantity)
+    .row
+      each __, $indexCol in Array(quantity)
+        if $indexCol == 11
+          div(class=`col-1 order-${$indexRow}`)=`--${$indexCol+1}--`
+        else
+          .col-1=$indexCol+1
+
 html
   head
-    link(rel='stylesheet', href='./index.css')
     link(rel='stylesheet', href='../_docs/index.css')
+    link(rel='stylesheet', href='./index.css')
   body.doc
     h1 Grid
 
@@ -78,6 +87,7 @@ html
           .row
             div(class=`col-1 offset-${i+1}`)
               | offset-#{i+1}
+
     article
       h1 Direction
       .demo
@@ -214,3 +224,8 @@ html
           .col-3 2
           .col-5 3
           .col-7 4
+
+    article
+      h1 Order columns
+      .demo
+        +allOrders(12)

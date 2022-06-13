@@ -1,123 +1,134 @@
 @require '../tokens/'
 
-.row
-  --alignContent normal
-  --alignItems flex-start
-  --alignSelf auto
-  --columns $cpgridColumns
-  --flexDirection row
-  --flexWrap nowrap
-  --gapColumn $cpgridGapColumn
-  --gapRow $cpgridGapRow
-  --justifyContent flex-start
-  align-content var(--alignContent)
-  align-items var(--alignItems)
-  contain layout // strict
-  display flex
-  flex-flow var(--flexDirection) var(--flexWrap)
-  gap var(--gapRow) var(--gapColumn)
-  justify-content var(--justifyContent)
-  padding-left var(--gapColumn)
-  padding-right var(--gapColumn)
-
-  & > *
-    --col 0
-    --flexBasis 100%
-    --flexGrow 0
-    --flexShrink 1
-    --marginLeft 0
-    --order 0
-    --width unset
-    align-self var(--alignSelf)
-    flex var(--flexGrow) var(--flexShrink) var(--flexBasis)
-    margin 0
-    margin-left var(--marginLeft)
-    order var(--order)
-    width var(--width)
-
-[class*="col"]
-  --flexBasis calc( ((100% - (var(--columns) - 1) * var(--gapColumn)) / var(--columns)) * var(--col) + var(--gapColumn) * (var(--col) - 1) )
-  --flexShrink 0
-
-[class*="offset"]
-  --offset 0
-  --totalGaps calc( (var(--columns) - 1) * var(--gapColumn) )
-  --avaivalbeWidth calc(100% - var(--totalGaps))
-  --onecolumnWidth calc(var(--avaivalbeWidth) / var(--columns))
-  --gapsleft calc(var(--gapColumn) * var(--offset))
-  --marginLeft calc(var(--onecolumnWidth) * var(--offset) + var(--gapsleft))
-
-// Wrap columns
-.wrap-
-  &yes
-    --flexWrap wrap
-  &no
-    --flexWrap nowrap
-  &reverse
-    --flexWrap wrap-reverse
-
-.direction-
-  &row
+@layer grid
+  .row
+    --alignContent normal
+    --alignItems flex-start
+    --alignSelf auto
+    --columns $cpgridColumns
     --flexDirection row
-  &rowReverse
-    --flexDirection row-reverse
-  &column
-    --flexDirection column
-    & > *
-      --width var(--flexBasis)
-  &columnReverse
-    --flexDirection column-reverse
-    & > *
-      --width var(--flexBasis)
-
-// Justify content
-.content-
-  &start
+    --flexWrap nowrap
+    --gapColumn $cpgridGapColumn
+    --gapRow $cpgridGapRow
     --justifyContent flex-start
-  &end
-    --justifyContent flex-end
-  &center
-    --justifyContent center
-  &spacebetween
-    --justifyContent space-between
-  &spacearound
-    --justifyContent space-around
-  &spaceevenly
-    --justifyContent space-evenly
+    align-content var(--alignContent)
+    align-items var(--alignItems)
+    contain layout // strict
+    display flex
+    flex-flow var(--flexDirection) var(--flexWrap)
+    gap var(--gapRow) var(--gapColumn)
+    justify-content var(--justifyContent)
+    padding-left var(--gapColumn)
+    padding-right var(--gapColumn)
 
-.align-
-  &items-
+    & > *
+      --col 0
+      --flexBasis 100%
+      --flexGrow 0
+      --flexShrink 1
+      --marginLeft 0
+      --order 0
+      --width unset
+      align-self var(--alignSelf)
+      flex var(--flexGrow) var(--flexShrink) var(--flexBasis)
+      margin 0
+      margin-left var(--marginLeft)
+      order var(--order)
+      width var(--width)
+
+      for $num in (1..convert($vgridColumns))
+        &:nth-child({$num})
+          --order $num
+
+  [class*="col"]
+    --flexBasis calc( ((100% - (var(--columns) - 1) * var(--gapColumn)) / var(--columns)) * var(--col) + var(--gapColumn) * (var(--col) - 1) )
+    --flexShrink 0
+
+  [class*="offset"]
+    --offset 0
+    --totalGaps calc( (var(--columns) - 1) * var(--gapColumn) )
+    --avaivalbeWidth calc(100% - var(--totalGaps))
+    --onecolumnWidth calc(var(--avaivalbeWidth) / var(--columns))
+    --gapsleft calc(var(--gapColumn) * var(--offset))
+    --marginLeft calc(var(--onecolumnWidth) * var(--offset) + var(--gapsleft))
+
+@layer grid-modifier
+  // Wrap columns
+  .wrap-
+    &yes
+      --flexWrap wrap
+    &no
+      --flexWrap nowrap
+    &reverse
+      --flexWrap wrap-reverse
+
+  .direction-
+    &row
+      --flexDirection row
+    &rowReverse
+      --flexDirection row-reverse
+    &column
+      --flexDirection column
+      & > *
+        --width var(--flexBasis)
+    &columnReverse
+      --flexDirection column-reverse
+      & > *
+        --width var(--flexBasis)
+
+  // Justify content
+  .content-
     &start
-      --alignItems flex-start
+      --justifyContent flex-start
     &end
-      --alignItems flex-end
+      --justifyContent flex-end
     &center
-      --alignItems center
-    &baseline
-      --alignItems baseline
-    &stretch
-      --alignItems stretch
-  &content-
-    &start
-      --alignContent flex-start
-    &end
-      --alignContent flex-end
-    &center
-      --alignContent center
+      --justifyContent center
     &spacebetween
-      --alignContent space-between
+      --justifyContent space-between
     &spacearound
-      --alignContent space-around
-    &stretch
-      --alignContent stretch
-      --alignSelf normal
+      --justifyContent space-around
+    &spaceevenly
+      --justifyContent space-evenly
 
-.col
-  for $num in (1..convert($vgridColumns))
-    &-{$num}
-      --col $num
+  .align-
+    &items-
+      &start
+        --alignItems flex-start
+      &end
+        --alignItems flex-end
+      &center
+        --alignItems center
+      &baseline
+        --alignItems baseline
+      &stretch
+        --alignItems stretch
+    &content-
+      &start
+        --alignContent flex-start
+      &end
+        --alignContent flex-end
+      &center
+        --alignContent center
+      &spacebetween
+        --alignContent space-between
+      &spacearound
+        --alignContent space-around
+      &stretch
+        --alignContent stretch
+        --alignSelf normal
 
-.offset
-  for $num in (1..convert($vgridColumns))
-    &-{$num}
-      --offset $num
+  .col
+    for $num in (1..convert($vgridColumns))
+      &-{$num}
+        --col $num
+
+  .offset
+    for $num in (1..convert($vgridColumns))
+      &-{$num}
+        --offset $num
+
+  .order
+    for $num in (0..convert($vgridColumns))
+      &-{$num}
+        --order $num

@@ -9,16 +9,17 @@ const Template = ({ rows, ...args }) => {
   return `
     <div class="doc">
       ${rows
-        .map((row, index) => {
+        .map((row, indexRow) => {
           return `
           <div class="row ${row.rowClasses}" style="${row.rowStyles}">
             ${Array(row.cols)
               .fill()
-              .map((col, index) => {
+              .map((col, indexCol) => {
                 return `
-                <div class="${row.colClasses}">${
-                  row.text ? row.text : index + 1
-                }</div>
+                <div class="${row.colClasses} ${
+                  row.colClassesCustom &&
+                  row.colClassesCustom(indexRow, indexCol)
+                }">${row.text ? row.text : indexCol + 1}</div>
                 `;
               })
               .join("")}
@@ -166,4 +167,17 @@ AlignContent.args = {
       rowStyles: "height: 80px;",
     },
   ],
+};
+
+export const OrderColumns = Template.bind({});
+OrderColumns.args = {
+  rows: Array(12)
+    .fill("")
+    .map(() => ({
+      cols: 12,
+      colClasses: "col-1",
+      colClassesCustom: (indexRow, indexCol) => {
+        return indexCol === 11 ? `order-${indexRow}` : "";
+      },
+    })),
 };
