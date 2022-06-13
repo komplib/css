@@ -73,6 +73,7 @@
     "stylus-loader": "^4.0.0"
   },
   "resolutions": {
+    "pug": "^3.0.2",
     "glob-parent": "^5.1.2",
     "trim-newlines": "^3.0.1",
     "trim": "^0.0.3"
