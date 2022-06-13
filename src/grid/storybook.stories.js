@@ -16,10 +16,10 @@ const Template = ({ rows, ...args }) => {
               .fill()
               .map((col, indexCol) => {
                 return `
-                <div class="${row.colClasses} ${row.colClassesCustom(
-                  indexRow,
-                  indexCol
-                )}">${row.text ? row.text : indexCol + 1}</div>
+                <div class="${row.colClasses} ${
+                  row.colClassesCustom &&
+                  row.colClassesCustom(indexRow, indexCol)
+                }">${row.text ? row.text : indexCol + 1}</div>
                 `;
               })
               .join("")}
