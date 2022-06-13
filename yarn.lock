@@ -2952,15 +2952,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-links@npm:^6.5.7":
-  version: 6.5.7
-  resolution: "@storybook/addon-links@npm:6.5.7"
+"@storybook/addon-links@npm:^6.5.8":
+  version: 6.5.8
+  resolution: "@storybook/addon-links@npm:6.5.8"
   dependencies:
-    "@storybook/addons": 6.5.7
-    "@storybook/client-logger": 6.5.7
-    "@storybook/core-events": 6.5.7
+    "@storybook/addons": 6.5.8
+    "@storybook/client-logger": 6.5.8
+    "@storybook/core-events": 6.5.8
     "@storybook/csf": 0.0.2--canary.4566f4d.1
-    "@storybook/router": 6.5.7
+    "@storybook/router": 6.5.8
     "@types/qs": ^6.9.5
     core-js: ^3.8.2
     global: ^4.4.0
@@ -2976,7 +2976,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 9ab79830055dbb0b406c7c167c8ad2cf00bd128ddcf85460622643595886db4aa270212a807d5776a4ca430c7c1ff146c60c9657bdf0dadf24ecca08182c015c
+  checksum: 667e2ae8a16ba079299d53cc05b3ff102dcb8db2d42dc4330b594d6a0769c9d568fcb6255dc6dea904575e324ca4909acde9842327e2613efbf5368c61ed6ea6
   languageName: node
   linkType: hard
 
@@ -7928,7 +7928,7 @@ __metadata:
     "@storybook/addon-docs": ^6.5.7
     "@storybook/addon-essentials": ^6.5.7
     "@storybook/addon-interactions": ^6.5.7
-    "@storybook/addon-links": ^6.5.7
+    "@storybook/addon-links": ^6.5.8
     "@storybook/addon-viewport": ^6.5.7
     "@storybook/builder-webpack4": ^6.5.7
     "@storybook/html": ^6.5.8
