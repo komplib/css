@@ -192,4 +192,12 @@ GapColumn.args = {
     })),
 };
 
-// rowClasses: `row gap-scol-${index + 1}`,
+export const GapRow = Template.bind({});
+GapRow.args = {
+  rows: Array(6)
+    .fill("")
+    .map((_, index) => ({
+      cols: 2,
+      rowClasses: `row wrap-yes gap-row-${index + 1}`,
+    })),
+};
