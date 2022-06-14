@@ -229,3 +229,12 @@ html
       h1 Order columns
       .demo
         +allOrders(12)
+
+    article
+      h1 Gaps
+
+      h2 Columns gaps
+      .demo
+        each _, $indexRow in Array(6)
+          div(class=`row gap-col-${$indexRow}`)
+            +repeatColumns(12)

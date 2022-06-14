@@ -181,3 +181,15 @@ OrderColumns.args = {
       },
     })),
 };
+
+export const GapColumn = Template.bind({});
+GapColumn.args = {
+  rows: Array(6)
+    .fill("")
+    .map((_, index) => ({
+      cols: 6,
+      rowClasses: `row gap-col-${index + 1}`,
+    })),
+};
+
+// rowClasses: `row gap-scol-${index + 1}`,
