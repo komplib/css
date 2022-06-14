@@ -36,6 +36,11 @@
       order var(--order)
       width var(--width)
 
+      & > .row
+        padding-left 0
+        padding-right 0
+        --flexWrap wrap
+
       for $num in (1..convert($vgridColumns))
         &:nth-child({$num})
           --order $num
