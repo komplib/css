@@ -1,3 +1,10 @@
+# [0.18.0](https://github.com/komplib/css/compare/v0.17.0...v0.18.0) (2022-06-14)
+
+
+### Features
+
+* add grid columns gap modifiers ([7733704](https://github.com/komplib/css/commit/7733704335ce20830bda8ae6109ac5028ca804c8))
+
 # [0.17.0](https://github.com/komplib/css/compare/v0.16.0...v0.17.0) (2022-06-14)
 
 
