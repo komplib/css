@@ -1,3 +1,15 @@
+# [0.17.0](https://github.com/komplib/css/compare/v0.16.0...v0.17.0) (2022-06-14)
+
+
+### Bug Fixes
+
+* avoid conflict with default order and modifier order ([98cc990](https://github.com/komplib/css/commit/98cc9906fea7571d9169eeb5abd37b15a8eca698))
+
+
+### Features
+
+* add grid nested ([3f042c3](https://github.com/komplib/css/commit/3f042c3c96567f71fca6bd23dcf0e0e3a12b14e1))
+
 # [0.16.0](https://github.com/komplib/css/compare/v0.15.1...v0.16.0) (2022-06-13)
 
 

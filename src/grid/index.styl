@@ -38,9 +38,14 @@
       order var(--order)
       width var(--width)
 
+      & > .row
+        padding-left 0
+        padding-right 0
+        --flexWrap wrap
+
       for $num in (1..convert($vgridColumns))
         &:nth-child({$num})
-          --order $num
+          --order $num + 1
 
   [class*="col"]
     --flexBasis calc( ((100% - (var(--columns) - 1) * var(--gapColumn)) / var(--columns)) * var(--col) + var(--gapColumn) * (var(--col) - 1) )
@@ -131,7 +136,7 @@
         --offset $num
 
   .order
-    for $num in (0..convert($vgridColumns))
+    for $num in (1..convert($vgridColumns))
       &-{$num}
         --order $num
 

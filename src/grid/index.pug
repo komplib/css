@@ -11,7 +11,7 @@ mixin allOrders(quantity)
     .row
       each __, $indexCol in Array(quantity)
         if $indexCol == 11
-          div(class=`col-1 order-${$indexRow}`)=`--${$indexCol+1}--`
+          div(class=`col-1 order-${$indexRow + 1}`)=`--${$indexCol+1}--`
         else
           .col-1=$indexCol+1
 
@@ -229,6 +229,23 @@ html
       h1 Order columns
       .demo
         +allOrders(12)
+
+    article
+      h1 Nested Grids
+      .demo
+        .row
+          .col-6 6
+          .col-6 6
+        .row
+          .col-6
+            .row
+              .col-6 6
+              .col-6
+                .row
+                  .col-6 6
+                  .col-6 6
+          .col-3 3
+          .col-3 3
 
     article
       h1 Gaps
