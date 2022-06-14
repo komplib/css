@@ -8,7 +8,9 @@
     --columns $cpgridColumns
     --flexDirection row
     --flexWrap nowrap
-    --gapColumn $cpgridGapColumn
+    --gapMultiplier 1
+    --gapBase $cpgridGapColumn
+    --gapColumn calc(var(--gapBase) * var(--gapMultiplier))
     --gapRow $cpgridGapRow
     --justifyContent flex-start
     align-content var(--alignContent)
@@ -137,3 +139,9 @@
     for $num in (1..convert($vgridColumns))
       &-{$num}
         --order $num
+
+  .gap
+    &-col
+      for $num in (1..6)
+        &-{$num}
+          --gapMultiplier $num

@@ -232,7 +232,6 @@ html
 
     article
       h1 Nested Grids
-
       .demo
         .row
           .col-6 6
@@ -247,3 +246,12 @@ html
                   .col-6 6
           .col-3 3
           .col-3 3
+
+    article
+      h1 Gaps
+
+      h2 Columns gaps
+      .demo
+        each _, $indexRow in Array(6)
+          div(class=`row gap-col-${$indexRow}`)
+            +repeatColumns(12)
