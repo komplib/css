@@ -255,3 +255,10 @@ html
         each _, $indexRow in Array(6)
           div(class=`row gap-col-${$indexRow}`)
             +repeatColumns(12)
+
+      h2 Row gaps
+      .demo
+        each _, $indexRow in Array(6)
+          div(class=`row wrap-yes gap-row-${$indexRow+1}`)
+            each _, i in Array(6)
+              div.col-4=i+ 1

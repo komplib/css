@@ -8,10 +8,12 @@
     --columns $cpgridColumns
     --flexDirection row
     --flexWrap nowrap
-    --gapMultiplier 1
-    --gapBase $cpgridGapColumn
-    --gapColumn calc(var(--gapBase) * var(--gapMultiplier))
-    --gapRow $cpgridGapRow
+    --gapColumnMultiplier 1
+    --gapColumnBase $cpgridGapColumn
+    --gapColumn calc(var(--gapColumnBase) * var(--gapColumnMultiplier))
+    --gapRowMultiplier 1
+    --gapRowBase $cpgridGapRow
+    --gapRow calc(var(--gapRowBase) * var(--gapRowMultiplier))
     --justifyContent flex-start
     align-content var(--alignContent)
     align-items var(--alignItems)
@@ -144,4 +146,8 @@
     &-col
       for $num in (1..6)
         &-{$num}
-          --gapMultiplier $num
+          --gapColumnMultiplier $num
+    &-row
+      for $num in (1..6)
+        &-{$num}
+          --gapRowMultiplier $num
