@@ -2900,7 +2900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-viewport@npm:6.5.7, @storybook/addon-viewport@npm:^6.5.7":
+"@storybook/addon-viewport@npm:6.5.7":
   version: 6.5.7
   resolution: "@storybook/addon-viewport@npm:6.5.7"
   dependencies:
@@ -2924,6 +2924,33 @@ __metadata:
     react-dom:
       optional: true
   checksum: a90971937eec7a83a583da88a6e1d1b770db228d5bbe7c0b7833fe02661be3a8e16261683cff4c2201387367a7289c440bcc1ab9cfd888028c7f5c07603d24e8
+  languageName: node
+  linkType: hard
+
+"@storybook/addon-viewport@npm:^6.5.9":
+  version: 6.5.9
+  resolution: "@storybook/addon-viewport@npm:6.5.9"
+  dependencies:
+    "@storybook/addons": 6.5.9
+    "@storybook/api": 6.5.9
+    "@storybook/client-logger": 6.5.9
+    "@storybook/components": 6.5.9
+    "@storybook/core-events": 6.5.9
+    "@storybook/theming": 6.5.9
+    core-js: ^3.8.2
+    global: ^4.4.0
+    memoizerific: ^1.11.3
+    prop-types: ^15.7.2
+    regenerator-runtime: ^0.13.7
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    react:
+      optional: true
+    react-dom:
+      optional: true
+  checksum: 5255319e8089b9ff7bc3bebd0265e83f4cc51c0b7475c5f6729fac6a43c56532697efe6351e2a4b02d35d2b9b587b27fd159a2e3f76bd3d29689c1ec4ee4d799
   languageName: node
   linkType: hard
 
@@ -7477,7 +7504,7 @@ __metadata:
     "@storybook/addon-essentials": ^6.5.7
     "@storybook/addon-interactions": ^6.5.7
     "@storybook/addon-links": ^6.5.9
-    "@storybook/addon-viewport": ^6.5.7
+    "@storybook/addon-viewport": ^6.5.9
     "@storybook/builder-webpack4": ^6.5.7
     "@storybook/html": ^6.5.9
     "@storybook/manager-webpack4": ^6.5.7
