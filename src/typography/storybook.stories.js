@@ -1,3 +1,4 @@
+import "../_docs/index.styl";
 import "./index.styl";
 
 export default {
@@ -22,41 +23,13 @@ const Template = ({ name, classes, ...args }) => {
 export const Heading = Template.bind({});
 Heading.args = {
   classes: [
-    "fontSizeLarge4",
-    "fontSizeLarge3",
-    "fontSizeLarge2",
-    "fontSizeLarge1",
-    "fontSizeLarge",
-    "fontSizeDefault",
-    "fontSizeSmall",
-    "fontSizeSmall1",
-    "fontSizeSmall2",
+    "heading00",
+    "heading0",
+    "heading1",
+    "heading2",
+    "heading3",
+    "heading4",
+    "heading5",
+    "heading6",
   ],
-};
-
-export const Paragraph = Template.bind({});
-Paragraph.args = {
-  classes: [
-    "fontWeightBlack",
-    "fontWeightExtraBold",
-    "fontWeightBold",
-    "fontWeightSemiBold",
-    "fontWeightMedium",
-    "fontWeightRegular",
-    "fontWeightLight",
-    "fontWeightExtraLight",
-    "fontWeightThin",
-    "fontWeightBolder",
-    "fontWeightLighter",
-  ],
-};
-
-export const List = Template.bind({});
-List.args = {
-  classes: ["fontStyleNormal", "fontStyleItalic"],
-};
-
-export const Code = Template.bind({});
-Code.args = {
-  classes: ["fontFamilyDefault", "fontFamilyPrimary", "fontFamilyMonospaced"],
 };
