@@ -1,43 +1,36 @@
 # [0.19.0](https://github.com/komplib/css/compare/v0.18.0...v0.19.0) (2022-06-14)
 
-
 ### Features
 
-* add grid row gap modifiers ([fd27e65](https://github.com/komplib/css/commit/fd27e6519b33287474a9a7e109d05b11352911f0))
+- add grid row gap modifiers ([fd27e65](https://github.com/komplib/css/commit/fd27e6519b33287474a9a7e109d05b11352911f0))
 
 # [0.18.0](https://github.com/komplib/css/compare/v0.17.0...v0.18.0) (2022-06-14)
 
-
 ### Features
 
-* add grid columns gap modifiers ([7733704](https://github.com/komplib/css/commit/7733704335ce20830bda8ae6109ac5028ca804c8))
+- add grid columns gap modifiers ([7733704](https://github.com/komplib/css/commit/7733704335ce20830bda8ae6109ac5028ca804c8))
 
 # [0.17.0](https://github.com/komplib/css/compare/v0.16.0...v0.17.0) (2022-06-14)
 
-
 ### Bug Fixes
 
-* avoid conflict with default order and modifier order ([98cc990](https://github.com/komplib/css/commit/98cc9906fea7571d9169eeb5abd37b15a8eca698))
-
+- avoid conflict with default order and modifier order ([98cc990](https://github.com/komplib/css/commit/98cc9906fea7571d9169eeb5abd37b15a8eca698))
 
 ### Features
 
-* add grid nested ([3f042c3](https://github.com/komplib/css/commit/3f042c3c96567f71fca6bd23dcf0e0e3a12b14e1))
+- add grid nested ([3f042c3](https://github.com/komplib/css/commit/3f042c3c96567f71fca6bd23dcf0e0e3a12b14e1))
 
 # [0.16.0](https://github.com/komplib/css/compare/v0.15.1...v0.16.0) (2022-06-13)
 
-
 ### Features
 
-* add grid modifier column order ([72b8fb7](https://github.com/komplib/css/commit/72b8fb73fdd9c17fde075cf99c3f6d6d27578ff0))
+- add grid modifier column order ([72b8fb7](https://github.com/komplib/css/commit/72b8fb73fdd9c17fde075cf99c3f6d6d27578ff0))
 
 ## [0.15.1](https://github.com/komplib/css/compare/v0.15.0...v0.15.1) (2022-06-12)
 
-
 ### Bug Fixes
 
-* add missing paddings in grid rows ([d1c1199](https://github.com/komplib/css/commit/d1c1199f56f6c43f99d7ae3a345ff3411100b657))
-
+- add missing paddings in grid rows ([d1c1199](https://github.com/komplib/css/commit/d1c1199f56f6c43f99d7ae3a345ff3411100b657))
 
 # [0.15.0](https://github.com/komplib/css/compare/v0.14.0...v0.15.0) (2022-06-12)
 
