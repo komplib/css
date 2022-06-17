@@ -2803,20 +2803,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-interactions@npm:^6.5.7":
-  version: 6.5.7
-  resolution: "@storybook/addon-interactions@npm:6.5.7"
+"@storybook/addon-interactions@npm:^6.5.9":
+  version: 6.5.9
+  resolution: "@storybook/addon-interactions@npm:6.5.9"
   dependencies:
     "@devtools-ds/object-inspector": ^1.1.2
-    "@storybook/addons": 6.5.7
-    "@storybook/api": 6.5.7
-    "@storybook/client-logger": 6.5.7
-    "@storybook/components": 6.5.7
-    "@storybook/core-common": 6.5.7
-    "@storybook/core-events": 6.5.7
+    "@storybook/addons": 6.5.9
+    "@storybook/api": 6.5.9
+    "@storybook/client-logger": 6.5.9
+    "@storybook/components": 6.5.9
+    "@storybook/core-common": 6.5.9
+    "@storybook/core-events": 6.5.9
     "@storybook/csf": 0.0.2--canary.4566f4d.1
-    "@storybook/instrumenter": 6.5.7
-    "@storybook/theming": 6.5.7
+    "@storybook/instrumenter": 6.5.9
+    "@storybook/theming": 6.5.9
     core-js: ^3.8.2
     global: ^4.4.0
     jest-mock: ^27.0.6
@@ -2830,7 +2830,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: d6b241f681b0152479c5d3dff32c29189e69536c8006d3dbab4b672e2d1286262498e14498f4152990170ae8f9d189abf482781059f1e2822bced8c0d5a55553
+  checksum: a41611b991d32f34b985e4a5bd391e9766fa42f4dd511929cd71fd0fba16384f66a96fc57eb3fd25204625d39d65c35f06ceab8215e6533502f1d255198dffb5
   languageName: node
   linkType: hard
 
@@ -3819,7 +3819,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/instrumenter@npm:6.5.7, @storybook/instrumenter@npm:^6.4.0 || >=6.5.0-0":
+"@storybook/instrumenter@npm:6.5.9":
+  version: 6.5.9
+  resolution: "@storybook/instrumenter@npm:6.5.9"
+  dependencies:
+    "@storybook/addons": 6.5.9
+    "@storybook/client-logger": 6.5.9
+    "@storybook/core-events": 6.5.9
+    core-js: ^3.8.2
+    global: ^4.4.0
+  checksum: 90b83a30177794cbbd9e388b4ee68ee6c86c28d5bbb4c992607f3e5ed189abdb8191cfa392d912a45b6a42e5eb603e90a853032205a4b9a4388f3af8f49d5064
+  languageName: node
+  linkType: hard
+
+"@storybook/instrumenter@npm:^6.4.0 || >=6.5.0-0":
   version: 6.5.7
   resolution: "@storybook/instrumenter@npm:6.5.7"
   dependencies:
@@ -7537,7 +7550,7 @@ __metadata:
     "@storybook/addon-actions": ^6.5.9
     "@storybook/addon-docs": ^6.5.7
     "@storybook/addon-essentials": ^6.5.7
-    "@storybook/addon-interactions": ^6.5.7
+    "@storybook/addon-interactions": ^6.5.9
     "@storybook/addon-links": ^6.5.9
     "@storybook/addon-viewport": ^6.5.9
     "@storybook/builder-webpack4": ^6.5.7
