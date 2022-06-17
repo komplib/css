@@ -1,7 +1,7 @@
 import "./index.styl";
 
 export default {
-  title: "Typography",
+  title: "Typography/Modifiers",
 };
 
 const Template = ({ name, classes, ...args }) => {
@@ -19,8 +19,13 @@ const Template = ({ name, classes, ...args }) => {
     </ul>`;
 };
 
-export const Heading = Template.bind({});
-Heading.args = {
+export const FontFamily = Template.bind({});
+FontFamily.args = {
+  classes: ["fontFamilyDefault", "fontFamilyPrimary", "fontFamilyMonospaced"],
+};
+
+export const size = Template.bind({});
+size.args = {
   classes: [
     "fontSizeLarge4",
     "fontSizeLarge3",
@@ -34,8 +39,8 @@ Heading.args = {
   ],
 };
 
-export const Paragraph = Template.bind({});
-Paragraph.args = {
+export const weight = Template.bind({});
+weight.args = {
   classes: [
     "fontWeightBlack",
     "fontWeightExtraBold",
@@ -51,12 +56,19 @@ Paragraph.args = {
   ],
 };
 
-export const List = Template.bind({});
-List.args = {
+export const FontStyle = Template.bind({});
+FontStyle.storyName = "Italic";
+FontStyle.args = {
   classes: ["fontStyleNormal", "fontStyleItalic"],
 };
 
-export const Code = Template.bind({});
-Code.args = {
-  classes: ["fontFamilyDefault", "fontFamilyPrimary", "fontFamilyMonospaced"],
+export const TextTransform = Template.bind({});
+TextTransform.storyName = "Case";
+TextTransform.args = {
+  classes: [
+    "fontTransformUppercase",
+    "fontTransformLowercase",
+    "fontTransformCapitalize",
+    "fontTransformNone",
+  ],
 };
