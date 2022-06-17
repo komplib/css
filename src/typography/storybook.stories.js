@@ -1,3 +1,4 @@
+import "../_docs/index.styl";
 import "./index.styl";
 
 export default {
@@ -19,54 +20,16 @@ const Template = ({ name, classes, ...args }) => {
     </ul>`;
 };
 
-export const FontFamily = Template.bind({});
-FontFamily.args = {
-  classes: ["fontFamilyDefault", "fontFamilyPrimary", "fontFamilyMonospaced"],
-};
-
-export const FontSize = Template.bind({});
-FontSize.args = {
+export const Heading = Template.bind({});
+Heading.args = {
   classes: [
-    "fontSizeLarge4",
-    "fontSizeLarge3",
-    "fontSizeLarge2",
-    "fontSizeLarge1",
-    "fontSizeLarge",
-    "fontSizeDefault",
-    "fontSizeSmall",
-    "fontSizeSmall1",
-    "fontSizeSmall2",
-  ],
-};
-
-export const FontWeight = Template.bind({});
-FontWeight.args = {
-  classes: [
-    "fontWeightBlack",
-    "fontWeightExtraBold",
-    "fontWeightBold",
-    "fontWeightSemiBold",
-    "fontWeightMedium",
-    "fontWeightRegular",
-    "fontWeightLight",
-    "fontWeightExtraLight",
-    "fontWeightThin",
-    "fontWeightBolder",
-    "fontWeightLighter",
-  ],
-};
-
-export const FontStyle = Template.bind({});
-FontStyle.args = {
-  classes: ["fontStyleNormal", "fontStyleItalic"],
-};
-
-export const TextTransform = Template.bind({});
-TextTransform.args = {
-  classes: [
-    "fontTransformUppercase",
-    "fontTransformLowercase",
-    "fontTransformCapitalize",
-    "fontTransformNone",
+    "heading00",
+    "heading0",
+    "heading1",
+    "heading2",
+    "heading3",
+    "heading4",
+    "heading5",
+    "heading6",
   ],
 };

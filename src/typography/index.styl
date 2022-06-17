@@ -9,6 +9,46 @@
   font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
   text-transform var(--textTransform)
 
+@property --ceilLines
+  syntax '<integer>'
+  initial-value 0
+  inherits false
+
+@property --ceilHalfLine
+  syntax '<integer>'
+  initial-value 0
+  inherits false
+
+[class*="heading"]
+  --baseline var(--rhythmVertical, 8px)
+  --ceilHalfLine calc(calc(var(--lines) / 2) + .5)
+  --ceilLines calc(var(--lines) + .5)
+  --fontSize calc(var(--baseline) * calc(var(--lines)))
+  --lines 3
+  font-size calc(var(--baseline) * calc(var(--lines)))
+  font-weight $cpfontWeightSemiBold
+  line-height calc(var(--baseline) * var(--ceilLines))
+  margin 0 0 calc(var(--ceilHalfLine) * var(--baseline)) 0
+  padding 0
+
+.heading
+  &00
+    --lines 6
+  &0
+    --lines 5
+  &1
+    --lines 4
+  &2
+    --lines 3
+  &3
+    --lines 2.5
+  &4
+    --lines 2
+  &5
+    --lines 1.75
+  &6
+    --lines 1.5
+
 .font
 
   &Family
