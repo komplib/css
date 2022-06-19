@@ -17,3 +17,74 @@ html
         h4.heading4 Heading 4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         h5.heading5 Heading 5 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         h6.heading6 Heading 6 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+
+    section
+      h1 Inline text elements
+
+      .demo
+        p
+          | You can use the mark tag to
+          mark highlight
+          |  text.
+        p
+          del This line of text is meant to be treated as deleted text.
+        p
+          s This line of text is meant to be treated as no longer accurate.
+        p
+          ins This line of text is meant to be treated as an addition to the document.
+        p
+          u This line of text will render as underlined.
+        p
+          small This line of text is meant to be treated as fine print.
+        p
+          strong This line rendered as bold text.
+        p
+          em This line rendered as italicized text.
+
+    section
+      h1 Abbreviations
+
+      .demo
+        p
+          abbr(title='attribute') attr
+        p
+          abbr.initialism(title='HyperText Markup Language') HTML
+
+    section
+      h1 Blockquotes
+
+      .demo
+        blockquote.blockquote
+          p
+            | A well-known quote, contained in a blockquote element.
+
+    section
+      h1 Lists
+
+      .demo
+        ul.list
+          li This is a list.
+          li It appears completely unstyled.
+          li Structurally, it&apos;s still a list.
+          li However, this style only applies to immediate child elements.
+          li
+            | Nested lists:
+            ul
+              li are unaffected by this style
+              li will still show a bullet
+              li and have appropriate left margin
+          li This may still come in handy in some situations.
+
+        ul.list.unstyled
+          li This is a list.
+          li It appears completely unstyled.
+          li Structurally, it&apos;s still a list.
+          li However, this style only applies to immediate child elements.
+          li
+            | Nested lists:
+            ul
+              li are unaffected by this style
+              li will still show a bullet
+              li and have appropriate left margin
+          li This may still come in handy in some situations.
+

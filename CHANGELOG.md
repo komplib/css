@@ -1,9 +1,8 @@
 # [0.20.0](https://github.com/komplib/css/compare/v0.19.0...v0.20.0) (2022-06-17)
 
-
 ### Features
 
-* add typography headings ([579785b](https://github.com/komplib/css/commit/579785b331d8cc22ad4ec9582355d30dda1a0bf7))
+- add typography headings ([579785b](https://github.com/komplib/css/commit/579785b331d8cc22ad4ec9582355d30dda1a0bf7))
 
 # [0.19.0](https://github.com/komplib/css/compare/v0.18.0...v0.19.0) (2022-06-14)
 
