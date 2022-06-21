@@ -1,10 +1,9 @@
 # [0.21.0](https://github.com/komplib/css/compare/v0.20.0...v0.21.0) (2022-06-19)
 
-
 ### Features
 
-* add list and list unstyled ([58ec937](https://github.com/komplib/css/commit/58ec937ddeb85a20f2ce0f8f4cf2f1c61c7dff29))
-* paragraph and blockquote ([3693c67](https://github.com/komplib/css/commit/3693c67adb9c76125b35752ef3e15eecb419f08c))
+- add list and list unstyled ([58ec937](https://github.com/komplib/css/commit/58ec937ddeb85a20f2ce0f8f4cf2f1c61c7dff29))
+- paragraph and blockquote ([3693c67](https://github.com/komplib/css/commit/3693c67adb9c76125b35752ef3e15eecb419f08c))
 
 # [0.20.0](https://github.com/komplib/css/compare/v0.19.0...v0.20.0) (2022-06-17)
 
