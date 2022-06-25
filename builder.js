@@ -42,8 +42,10 @@ function server() {
   });
 }
 
-function serverReload() {
-  browserSync.reload("*.html");
+function serverReload(path) {
+  const bsPath = path.replace("./build/", "./");
+  log.info(`Reloading ${bsPath}`);
+  browserSync.reload();
 }
 
 function ensureDirectoryExistence(filePath) {
@@ -95,16 +97,22 @@ function chooseBuild(eventName, path) {
   log.info(`${eventName} file ${path}`);
   path.includes(".pug") && buildPug(path);
   path.includes(".styl") && buildStylus(path);
-  path.includes(".json") && buildAll();
+  path.includes(".json") && buildTokens();
+}
+
+function buildTokens() {
+  log.info("Building Tokens");
+  buildStylus("tokens/index.styl");
 }
 
 function buildAll() {
-  const pugFiles = glob.sync(`${folders.src}/**/*.pug`);
-  pugFiles.forEach((pugFile) => buildPug(pugFile.replace("./src/", "")));
+  log.info("Building All");
   const stylusFiles = glob.sync(`${folders.src}/**/*.styl`);
   stylusFiles.forEach((stylusFile) =>
     buildStylus(stylusFile.replace("./src/", ""))
   );
+  const pugFiles = glob.sync(`${folders.src}/**/*.pug`);
+  pugFiles.forEach((pugFile) => buildPug(pugFile.replace("./src/", "")));
 }
 
 function buildPug(relativeFilePath) {
@@ -114,24 +122,28 @@ function buildPug(relativeFilePath) {
   ensureDirectoryExistence(htmlPath);
   const html = pug.renderFile(pugPath, { pretty: true });
   fs.writeFileSync(htmlPath, html);
-  serverReload();
+  serverReload(htmlPath);
 }
 
-function buildStylus(relativeFilePath) {
+function buildStylus(relativeFilePath, buildIndex = true) {
+  if (buildIndex) {
+    buildStylus("index.styl", false);
+  }
   log.info("Building stylus file " + relativeFilePath);
   const stylusPath = `${folders.src}/${relativeFilePath}`;
   const stylusFile = fs.readFileSync(stylusPath, "utf8");
+  const cssPath = stylusPath
+    .replace(".styl", ".css")
+    .replace("/src/", "/build/");
   stylus(stylusFile)
+    .set("filename", cssPath)
     .set("paths", [path.dirname(stylusPath)])
     .render((err, css) => {
       if (err) {
         log.error(err);
       }
-      const cssPath = stylusPath
-        .replace(".styl", ".css")
-        .replace("/src/", "/build/");
       ensureDirectoryExistence(cssPath);
       fs.writeFileSync(cssPath, css);
-      serverReload();
+      serverReload(cssPath);
     });
 }
