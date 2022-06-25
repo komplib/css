@@ -11,22 +11,26 @@
   inherits false
 
 [class*="font"]
-  --fontFamily $cpfontFamilyDefault
-  --fontSize $cpfontSizeDefault
-  --fontWeight $cpfontWeightRegular
-  --fontStyle $cpfontStyleNormal
-  --textTransform $cpfontTransformNone
+  --fontFamily $tk.FontFamilyDefault.val
+  --fontSize $tk.FontSizeDefault.varDef
+  --fontWeight $tk.FontWeightRegular.varDef
+  --fontStyle $tk.FontStyleNormal.varDef
+  --textTransform $tk.FontTransformNone.varDef
   font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
   text-transform var(--textTransform)
 
 [class*="heading"]
-  --baseline var(--rhythmVertical, 8px)
+  --fontFamily $tk.FontFamilyDefault.val
+  --baseline $tk.RhythmVertical.varDef
   --ceilHalfLine calc(calc(var(--lines) / 2) + .5)
   --ceilLines calc(var(--lines) + .5)
-  --fontSize calc(var(--baseline) * calc(var(--lines)))
   --lines 3
-  font-size calc(var(--baseline) * calc(var(--lines)))
-  font-weight $cpfontWeightSemiBold
+  --fontSize calc(var(--baseline) * calc(var(--lines)))
+  --fontStyle $tk.FontStyleNormal.varDef
+  --fontWeight $tk.FontWeightSemiBold.varDef
+
+  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
+  color var(--color, var(--ColorText, #212529))
   line-height calc(var(--baseline) * var(--ceilLines))
   margin 0 0 calc(var(--ceilHalfLine) * var(--baseline)) 0
   padding 0
@@ -49,21 +53,40 @@
   &6
     --lines 1.5
 
-p
-  --baseline var(--rhythmVertical, 8px)
+
+.paragraph
+  --baseline $tk.RhythmVertical.varDef
+  --fontStyle $tk.FontStyleNormal.varDef
+  --fontWeight $tk.FontWeightRegular.varDef
+  --fontSize $tk.FontSizeDefault.varDef
+  --fontFamily $tk.FontFamilyDefault.val
+  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
+  color var(--color, var(--ColorText, #212529))
+  line-height var(--baseline)
   margin 0 0 var(--baseline) 0
   &:only-child
     margin 0
 
 .blockquote
-  --baseline var(--rhythmVertical, 8px)
+  --baseline $tk.RhythmVertical.varDef
   margin 0
   padding var(--baseline)
 
 .list
-  --baseline var(--rhythmVertical, 8px)
+  --baseline $tk.RhythmVertical.varDef
+  --fontStyle $tk.FontStyleNormal.varDef
+  --fontWeight $tk.FontWeightRegular.varDef
+  --fontSize $tk.FontSizeDefault.varDef
+  --fontFamily $tk.FontFamilyDefault.val
+  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
+  color var(--color, var(--ColorText, #212529))
+  line-height var(--baseline)
   margin 0
   padding var(--baseline)
+
+  & > *
+    display block
+    margin 0 0 var(--baseline) 0
 
   &.unstyled
     list-style none
@@ -72,68 +95,68 @@ p
 
   &Family
     &Default
-      --fontFamily $cpfontFamilyDefault
+      --fontFamily $tk.FontFamilyDefault.val
     &Primary
-      --fontFamily $cpfontFamilyPrimary
+      --fontFamily $tk.FontFamilyPrimary.val
     &Monospaced
-      --fontFamily $cpfontFamilyMonospaced
+      --fontFamily $tk.FontFamilyMonospaced.val
 
   &Size
     &Large4
-      --fontSize $cpfontSizeLarge4
+      --fontSize $tk.FontSizeLarge4.val
     &Large3
-      --fontSize $cpfontSizeLarge3
+      --fontSize $tk.FontSizeLarge3.val
     &Large2
-      --fontSize $cpfontSizeLarge2
+      --fontSize $tk.FontSizeLarge2.val
     &Large1
-      --fontSize $cpfontSizeLarge1
+      --fontSize $tk.FontSizeLarge1.val
     &Large
-      --fontSize $cpfontSizeLarge
+      --fontSize $tk.FontSizeLarge.val
     &Default
-      --fontSize $cpfontSizeDefault
+      --fontSize $tk.FontSizeDefault.val
     &Small
-      --fontSize $cpfontSizeSmall
+      --fontSize $tk.FontSizeSmall.val
     &Small1
-      --fontSize $cpfontSizeSmall1
+      --fontSize $tk.FontSizeSmall1.val
     &Small2
-      --fontSize $cpfontSizeSmall2
+      --fontSize $tk.FontSizeSmall2.val
 
   &Weight
     &Black
-      --fontWeight $cpfontWeightBlack
+      --fontWeight $tk.FontWeightBlack.val
     &ExtraBold
-      --fontWeight $cpfontWeightExtraBold
+      --fontWeight $tk.FontWeightExtraBold.val
     &Bold
-      --fontWeight $cpfontWeightBold
+      --fontWeight $tk.FontWeightBold.val
     &SemiBold
-      --fontWeight $cpfontWeightSemiBold
+      --fontWeight $tk.FontWeightSemiBold.val
     &Medium
-      --fontWeight $cpfontWeightMedium
+      --fontWeight $tk.FontWeightMedium.val
     &Regular
-      --fontWeight $cpfontWeightRegular
+      --fontWeight $tk.FontWeightRegular.val
     &Light
-      --fontWeight $cpfontWeightLight
+      --fontWeight $tk.FontWeightLight.val
     &ExtraLight
-      --fontWeight $cpfontWeightExtraLight
+      --fontWeight $tk.FontWeightExtraLight.val
     &Thin
-      --fontWeight $cpfontWeightThin
+      --fontWeight $tk.FontWeightThin.val
     &Bolder
-      --fontWeight $cpfontWeightBolder
+      --fontWeight $tk.FontWeightBolder.val
     &Lighter
-      --fontWeight $cpfontWeightLighter
+      --fontWeight $tk.FontWeightLighter.val
 
   &Style
     &Normal
-      --fontStyle $cpfontStyleNormal
+      --fontStyle $tk.FontStyleNormal.val
     &Italic
-      --fontStyle $cpfontStyleItalic
+      --fontStyle $tk.FontStyleItalic.val
 
   &Transform
     &Uppercase
-      --textTransform $cpfontTransformUppercase
+      --textTransform $tk.FontTransformUppercase.val
     &Lowercase
-      --textTransform $cpfontTransformLowercase
+      --textTransform $tk.FontTransformLowercase.val
     &Capitalize
-      --textTransform $cpfontTransformCapitalize
+      --textTransform $tk.FontTransformCapitalize.val
     &None
-      --textTransform $cpfontTransformNone
+      --textTransform $tk.FontTransformNone.val
