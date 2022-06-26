@@ -25,3 +25,20 @@ html
           .docBox
             div(class=`paddingLeft${$i}`) paddingLeft#{$i}
 
+    section
+      h1.heading1 Margins
+
+      .demo.font
+
+        each _, $i in Array(13)
+          .docBox
+            div(class=`marginTop${$i}`) marginTop#{$i}
+        each _, $i in Array(13)
+          .docBox
+            div(class=`marginRight${$i}`) marginRight#{$i}
+        each _, $i in Array(13)
+          .docBox
+            div(class=`marginBottom${$i}`) marginBottom#{$i}
+        each _, $i in Array(13)
+          .docBox
+            div(class=`marginLeft${$i}`) marginLeft#{$i}

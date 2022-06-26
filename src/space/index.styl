@@ -29,3 +29,33 @@
     for $num in (0..$tk.GridColumns.val)
       &{$num}
         --linesPadLeft $num
+
+[class*="margin"]
+  --baseline $tk.RhythmVertical.varDef
+  --linesMarginTop 0
+  --linesMarginRight 0
+  --linesMarginBottom 0
+  --linesMarginLeft 0
+  --marginTop calc(var(--baseline) * var(--linesMarginTop, 0))
+  --marginRight calc(var(--baseline) * var(--linesMarginRight, 0))
+  --marginBottom calc(var(--baseline) * var(--linesMarginBottom, 0))
+  --marginLeft calc(var(--baseline) * var(--linesMarginLeft, 0))
+  margin var(--marginTop) var(--marginRight) var(--marginBottom) var(--marginLeft)
+
+.margin
+  &Top
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesMarginTop $num
+  &Right
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesMarginRight $num
+  &Bottom
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesMarginBottom $num
+  &Left
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesMarginLeft $num
