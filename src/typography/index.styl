@@ -10,7 +10,7 @@
   initial-value 0
   inherits false
 
-[class*="font"], [class*="heading"], .paragraph, .list
+[class*="font"], [class*="text"], [class*="heading"], .paragraph, .list
   --baseline $tk.RhythmVertical.varDef
   --ceilLines calc(var(--lines))
   --FontFamily $tk.FontFamilyDefault.val
@@ -23,6 +23,7 @@
   --lines 1
   --TextTransform none
   --MarginBottom 0
+  --TextAlign var(--TextAlign, left)
   color var(--color, var(--ColorText, #212529))
   font var(--FontStyle) var(--FontVariant) var(--FontWeight) unquote('var(--FontSizeCalc)/var(--LineHeight)') var(--FontFamily)
   // bug with custom properties with sintax var/var for font shorthand
@@ -30,6 +31,7 @@
   margin 0 0 calc(var(--MarginBottom) * var(--baseline)) 0
   padding 0
   text-transform var(--TextTransform)
+  text-align var(--TextAlign)
 
 [class*="heading"]
   --lines 3
@@ -189,7 +191,7 @@
       --FontStyle normal
     &Italic
       --FontStyle italic
-
+.Text
   &Transform
     &Uppercase
       --TextTransform uppercase
@@ -199,3 +201,12 @@
       --TextTransform capitalize
     &None
       --TextTransform none
+  &Align
+    &Left
+      --TextAlign left
+    &Center
+      --TextAlign center
+    &Right
+      --TextAlign right
+    &Justify
+      --TextAlign justify
