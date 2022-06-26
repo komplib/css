@@ -10,60 +10,57 @@
   initial-value 0
   inherits false
 
-[class*="font"]
-  --fontFamily $tk.FontFamilyDefault.val
-  --fontSize $tk.FontSizeDefault.varDef
-  --fontWeight $tk.FontWeightRegular.varDef
-  --fontStyle $tk.FontStyleNormal.varDef
-  --textTransform $tk.FontTransformNone.varDef
-  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
-  text-transform var(--textTransform)
+[class*="font"], [class*="heading"], .paragraph, .list
+  --baseline $tk.RhythmVertical.varDef
+  --ceilLines calc(var(--lines))
+  --FontFamily $tk.FontFamilyDefault.val
+  --FontSize $tk.FontSizeDefault.varDef
+  --FontSizeCalc var(--FontSizeDefault, calc(var(--baseline) * var(--lines)  ))
+  --FontStyle normal
+  --FontVariant normal
+  --FontWeight 400
+  --LineHeight calc(var(--baseline) * var(--ceilLines))
+  --lines 1
+  --TextTransform none
+  --MarginBottom 0
+  color var(--color, var(--ColorText, #212529))
+  font var(--FontStyle) var(--FontVariant) var(--FontWeight) unquote('var(--FontSizeCalc)/var(--LineHeight)') var(--FontFamily)
+  // bug with custom properties with sintax var/var for font shorthand
+  font-family var(--FontFamily)
+  margin 0 0 calc(var(--MarginBottom) * var(--baseline)) 0
+  padding 0
+  text-transform var(--TextTransform)
 
 [class*="heading"]
-  --fontFamily $tk.FontFamilyDefault.val
-  --baseline $tk.RhythmVertical.varDef
-  --ceilHalfLine calc(calc(var(--lines) / 2) + .5)
-  --ceilLines calc(var(--lines) + .5)
   --lines 3
-  --fontSize calc(var(--baseline) * calc(var(--lines)))
-  --fontStyle $tk.FontStyleNormal.varDef
-  --fontWeight $tk.FontWeightSemiBold.varDef
-
-  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
-  color var(--color, var(--ColorText, #212529))
-  line-height calc(var(--baseline) * var(--ceilLines))
-  margin 0 0 calc(var(--ceilHalfLine) * var(--baseline)) 0
-  padding 0
+  --ceilHalfLine calc(calc(var(--lines) / 2) + .5)
+  --FontWeight 600
+  --FontSize calc(var(--baseline) * calc(var(--lines)))
+  --LineHeight calc(var(--baseline) * var(--ceilLines))
+  --FontFamily $tk.FontFamilyHeading.val
+  //??? --FontFamily $tk.FontFamilyDefault.val
+  --MarginBottom var(--ceilHalfLine)
 
 .heading
   &00
     --lines 6
   &0
-    --lines 5
-  &1
     --lines 4
-  &2
+  &1
     --lines 3
+  &2
+    --lines 2.75
   &3
-    --lines 2.5
+    --lines 2.25
   &4
-    --lines 2
-  &5
     --lines 1.75
-  &6
+  &5
     --lines 1.5
-
+  &6
+    --lines 1.25
 
 .paragraph
-  --baseline $tk.RhythmVertical.varDef
-  --fontStyle $tk.FontStyleNormal.varDef
-  --fontWeight $tk.FontWeightRegular.varDef
-  --fontSize $tk.FontSizeDefault.varDef
-  --fontFamily $tk.FontFamilyDefault.val
-  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
-  color var(--color, var(--ColorText, #212529))
-  line-height var(--baseline)
-  margin 0 0 var(--baseline) 0
+  --MarginBottom 1
   &:only-child
     margin 0
 
@@ -73,90 +70,132 @@
   padding var(--baseline)
 
 .list
-  --baseline $tk.RhythmVertical.varDef
-  --fontStyle $tk.FontStyleNormal.varDef
-  --fontWeight $tk.FontWeightRegular.varDef
-  --fontSize $tk.FontSizeDefault.varDef
-  --fontFamily $tk.FontFamilyDefault.val
-  font var(--fontStyle) var(--fontWeight) var(--fontSize) var(--fontFamily)
-  color var(--color, var(--ColorText, #212529))
-  line-height var(--baseline)
-  margin 0
-  padding var(--baseline)
+  --listCounterSeparator ''
+  --listStyleType disc
+  --marginLeft 0
+  counter-reset listCounter
+  list-style none
+  margin-bottom calc(var(--baseline) * 2)
 
   & > *
-    display block
-    margin 0 0 var(--baseline) 0
+    counter-increment listCounter
+    margin-bottom calc(var(--baseline) / 1)
 
-  &.unstyled
-    list-style none
+    &:before
+      display inline-block
+      min-width calc(var(--baseline) * 1.5)
+      margin-right calc(var(--baseline) / 2)
+
+      margin-left calc(var(--baseline) * var(--marginLeft))
+      text-align right
+      content counter(listCounter, var(--listStyleType)) var(--listCounterSeparator)
+
+  &Style
+    &Position
+      &Inside
+        --listStylePosition inside
+      &Outside
+        --listStylePosition outside
+        --marginLeft -2
+
+    &Type
+      &None
+        --listStyleType none
+        & > *:before
+          display none
+      &Disc
+        --listStyleType disc
+      &Circle
+        --listStyleType circle
+      &Square
+        --listStyleType square
+      &Decimal, ^[0]:is(ol)
+        --listStyleType decimal
+        --listCounterSeparator '.'
+      &DecimalLeadingZero
+        --listStyleType decimal-leading-zero
+        --listCounterSeparator '.'
+      &LowerRoman
+        --listStyleType lower-roman
+        --listCounterSeparator '.'
+      &UpperRoman
+        --listStyleType upper-roman
+        --listCounterSeparator '.'
+      &LowerLatin
+        --listStyleType lower-latin
+        --listCounterSeparator '.'
+      &UpperLatin
+        --listStyleType upper-latin
+        --listCounterSeparator '.'
+      &LowerAlpha
+        --listStyleType lower-alpha
+        --listCounterSeparator '.'
+      &UpperAlpha
+        --listStyleType upper-alpha
+        --listCounterSeparator '.'
 
 .font
 
   &Family
     &Default
-      --fontFamily $tk.FontFamilyDefault.val
-    &Primary
-      --fontFamily $tk.FontFamilyPrimary.val
+      --FontFamily $tk.FontFamilyDefault.val
+    &Heading
+      --FontFamily $tk.FontFamilyHeading.val
     &Monospaced
-      --fontFamily $tk.FontFamilyMonospaced.val
+      --FontFamily $tk.FontFamilyMonospaced.val
 
   &Size
     &Large4
-      --fontSize $tk.FontSizeLarge4.val
+      --lines $tk.FontSizeLarge4.varDef
     &Large3
-      --fontSize $tk.FontSizeLarge3.val
+      --lines $tk.FontSizeLarge3.val
     &Large2
-      --fontSize $tk.FontSizeLarge2.val
+      --lines $tk.FontSizeLarge2.val
     &Large1
-      --fontSize $tk.FontSizeLarge1.val
+      --lines $tk.FontSizeLarge1.val
     &Large
-      --fontSize $tk.FontSizeLarge.val
+      --lines $tk.FontSizeLarge.val
     &Default
-      --fontSize $tk.FontSizeDefault.val
+      --lines $tk.FontSizeDefault.val
     &Small
-      --fontSize $tk.FontSizeSmall.val
+      --lines $tk.FontSizeSmall.val
     &Small1
-      --fontSize $tk.FontSizeSmall1.val
+      --lines $tk.FontSizeSmall1.val
     &Small2
-      --fontSize $tk.FontSizeSmall2.val
+      --lines $tk.FontSizeSmall2.val
 
   &Weight
-    &Black
-      --fontWeight $tk.FontWeightBlack.val
-    &ExtraBold
-      --fontWeight $tk.FontWeightExtraBold.val
-    &Bold
-      --fontWeight $tk.FontWeightBold.val
-    &SemiBold
-      --fontWeight $tk.FontWeightSemiBold.val
-    &Medium
-      --fontWeight $tk.FontWeightMedium.val
-    &Regular
-      --fontWeight $tk.FontWeightRegular.val
-    &Light
-      --fontWeight $tk.FontWeightLight.val
-    &ExtraLight
-      --fontWeight $tk.FontWeightExtraLight.val
-    &Thin
-      --fontWeight $tk.FontWeightThin.val
-    &Bolder
-      --fontWeight $tk.FontWeightBolder.val
-    &Lighter
-      --fontWeight $tk.FontWeightLighter.val
+    &9 //Black
+      --FontWeight 900
+    &8 //ExtraBold
+      --FontWeight 800
+    &7 //Bold
+      --FontWeight 700
+    &6 //SemiBold
+      --FontWeight 600
+    &5 //Medium
+      --FontWeight 500
+    &4 //Regular
+      --FontWeight 400
+    &3 //Light
+      --FontWeight 300
+    &2 //ExtraLight
+      --FontWeight 200
+    &1 //Thin
+      --FontWeight 100
 
   &Style
     &Normal
-      --fontStyle $tk.FontStyleNormal.val
+      --FontStyle normal
     &Italic
-      --fontStyle $tk.FontStyleItalic.val
+      --FontStyle italic
 
   &Transform
     &Uppercase
-      --textTransform $tk.FontTransformUppercase.val
+      --TextTransform uppercase
     &Lowercase
-      --textTransform $tk.FontTransformLowercase.val
+      --TextTransform lowercase
     &Capitalize
-      --textTransform $tk.FontTransformCapitalize.val
+      --TextTransform capitalize
     &None
-      --textTransform $tk.FontTransformNone.val
+      --TextTransform none

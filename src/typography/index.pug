@@ -1,27 +1,77 @@
 html
   head
     link(rel='stylesheet', href='../_docs/index.css')
+    link(rel='stylesheet', href='../reset/index.css')
     link(rel='stylesheet', href='./index.css')
   body.doc
     h1.heading0 Typography
 
     section
+      h1.heading1 Font Family
+
+      .demo
+        .fontFamilyDefault Default
+        .fontFamilyHeading Heading
+        .fontFamilyMonospaced Monospaced
+
+    section
+      h1.heading1 Font Size
+
+      .demo
+        .fontSizeLarge4 fontSizeLarge4
+        .fontSizeLarge3 fontSizeLarge3
+        .fontSizeLarge2 fontSizeLarge2
+        .fontSizeLarge1 fontSizeLarge1
+        .fontSizeLarge fontSizeLarge
+        .fontSizeDefault fontSizeDefault
+        .fontSizeSmall fontSizeSmall
+        .fontSizeSmall1 fontSizeSmall1
+        .fontSizeSmall2 fontSizeSmall2
+
+    section
+      h1.heading1 Font Weight
+      .demo
+        .fontWeight9 fontWeight9
+        .fontWeight8 fontWeight8
+        .fontWeight7 fontWeight7
+        .fontWeight6 fontWeight6
+        .fontWeight5 fontWeight5
+        .fontWeight4 fontWeight4
+        .fontWeight3 fontWeight3
+        .fontWeight2 fontWeight2
+        .fontWeight1 fontWeight1
+
+    section
+      h1.heading1 Font transform
+      .demo
+        .fontTransformUppercase fontTransformUppercase
+        .fontTransformLowercase fontTransformLowercase
+        .fontTransformCapitalize fontTransformCapitalize
+        .fontTransformNone fontTransformNone
+
+    section
+      h1.heading1 Font style
+      .demo
+        .fontStyleNormal fontStyleNormal
+        .fontStyleItalic fontStyleItalic
+
+    section
       h1.heading1 Headings
 
-      .demo.fontFamilyDefault
-        h1.heading00 Heading 00 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        h1.heading0 Heading 0 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        h1.heading1 Heading 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        h2.heading2 Heading 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        h3.heading3 Heading 3 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        h4.heading4 Heading 4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        h5.heading5 Heading 5 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-        h6.heading6 Heading 6 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+      .demo
+        .heading00 Heading 00 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        .heading0 Heading 0 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        .heading1 Heading 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        .heading2 Heading 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        .heading3 Heading 3 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        .heading4 Heading 4 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        .heading5 Heading 5 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        .heading6 Heading 6 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
 
     section
       h1.heading1 Inline text elements
 
-      .demo.fontFamilyDefault
+      .demo
         p.paragraph
           | You can use the mark tag to
           mark highlight
@@ -44,7 +94,7 @@ html
     section
       h1.heading1 Abbreviations
 
-      .demo.fontFamilyDefault
+      .demo
         p.paragraph
           abbr(title='attribute') attr
         p.paragraph
@@ -53,7 +103,7 @@ html
     section
       h1.heading1 Blockquotes
 
-      .demo.fontFamilyDefault
+      .demo
         blockquote.blockquote
           p.paragraph
             | A well-known quote, contained in a blockquote element.
@@ -61,44 +111,90 @@ html
     section
       h1.heading1 Lists
 
-      .demo.fontFamilyDefault
+      .demo
         ul.list
-          li This is a list.
-          li It appears completely unstyled.
-          li Structurally, it&apos;s still a list.
-          li However, this style only applies to immediate child elements.
-          li
-            | Nested lists:
-            ul
-              li are unaffected by this style
-              li will still show a bullet
-              li and have appropriate left margin
-          li This may still come in handy in some situations.
+          li simple
+          li UL list
 
-        ul.list.unstyled
-          li This is a list.
-          li It appears completely unstyled.
-          li Structurally, it&apos;s still a list.
-          li However, this style only applies to immediate child elements.
-          li
-            | Nested lists:
-            ul
-              li are unaffected by this style
-              li will still show a bullet
-              li and have appropriate left margin
-          li This may still come in handy in some situations.
+        ol.list
+          li simple
+          li OL list
 
-        div.list
-          div This is a list.
-          div It appears completely unstyled.
-          div Structurally, it&apos;s still a list.
-          div However, this style only applies to immediate child elements.
-          div
-            | Nested lists:
-            div.list
-              h6 are unaffected by this style
-              span will still show a bullet
-              p and have appropriate left margin
-          div This may still come in handy in some situations.
+        .list
+          div simple
+          div DIV list
 
+        ul.list.listStylePositionInside
+          li listStylePositionInside
+          li item
+          li item
+
+        ul.list.listStylePositionOutside
+          li listStylePositionOutside
+          li item
+          li item
+
+        ul.list
+          li simple
+          li DIV list
+
+        ul.list.listStyleTypeDisc
+          li listStyleTypeDisc
+          li item
+          li item
+
+        ul.list.listStyleTypeCircle
+          li listStyleTypeCircle
+          li item
+          li item
+
+        ul.list.listStyleTypeSquare
+          li listStyleTypeSquare
+          li item
+          li item
+
+        ul.list.listStyleTypeDecimal
+          li listStyleTypeDecimal
+          li item
+          li item
+
+        ul.list.listStyleTypeDecimalLeadingZero
+          li listStyleTypeDecimalLeadingZero
+          li item
+          li item
+
+        ul.list.listStyleTypeLowerRoman
+          li listStyleTypeLowerRoman
+          li item
+          li item
+
+        ul.list.listStyleTypeUpperRoman
+          li listStyleTypeUpperRoman
+          li item
+          li item
+
+        ul.list.listStyleTypeLowerLatin
+          li listStyleTypeLowerLatin
+          li item
+          li item
+
+        ul.list.listStyleTypeUpperLatin
+          li listStyleTypeUpperLatin
+          li item
+          li item
+
+        ul.list.listStyleTypeLowerAlpha
+          li listStyleTypeLowerAlpha
+          li item
+          li item
+
+        ul.list.listStyleTypeUpperAlpha
+          li listStyleTypeUpperAlpha
+          li item
+          li item
+
+        ul.list.listStyleTypeNone
+          li listStyleTypeNone
+          li item
+          li item
 
