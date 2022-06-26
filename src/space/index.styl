@@ -1,0 +1,31 @@
+@require '../tokens/'
+
+[class*="padding"]
+  --baseline $tk.RhythmVertical.varDef
+  --linesPadTop 0
+  --linesPadRight 0
+  --linesPadBottom 0
+  --linesPadLeft 0
+  --paddingTop calc(var(--baseline) * var(--linesPadTop, 0))
+  --paddingRight calc(var(--baseline) * var(--linesPadRight, 0))
+  --paddingBottom calc(var(--baseline) * var(--linesPadBottom, 0))
+  --paddingLeft calc(var(--baseline) * var(--linesPadLeft, 0))
+  padding var(--paddingTop) var(--paddingRight) var(--paddingBottom) var(--paddingLeft)
+
+.padding
+  &Top
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesPadTop $num
+  &Right
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesPadRight $num
+  &Bottom
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesPadBottom $num
+  &Left
+    for $num in (0..$tk.GridColumns.val)
+      &{$num}
+        --linesPadLeft $num

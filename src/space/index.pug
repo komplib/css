@@ -1,0 +1,27 @@
+html
+  head
+    link(rel='stylesheet', href='../_docs/index.css')
+    link(rel='stylesheet', href='../reset/index.css')
+    link(rel='stylesheet', href='../typography/index.css')
+    link(rel='stylesheet', href='./index.css')
+  body.doc
+    h1.heading0 Space
+
+    section
+      h1.heading1 Paddings
+
+      .demo.font
+
+        each _, $i in Array(13)
+          .docBox
+            div(class=`paddingTop${$i}`) paddingTop#{$i}
+        each _, $i in Array(13)
+          .docBox
+            div(class=`paddingRight${$i}`) paddingRight#{$i}
+        each _, $i in Array(13)
+          .docBox
+            div(class=`paddingBottom${$i}`) paddingBottom#{$i}
+        each _, $i in Array(13)
+          .docBox
+            div(class=`paddingLeft${$i}`) paddingLeft#{$i}
+
