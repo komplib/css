@@ -29,7 +29,7 @@ html
       p.paragraph Adding .row to a container will make all the children of that container behave like block elements.
       p.paragraph There is no limit on the number of columns
 
-      .demo.fontFamilyDefault
+      .demo
         each _, i in Array(16)
           +rowWithColumns(i+1)
 
@@ -39,7 +39,7 @@ html
       p.paragraph Adding .col-NUMBER will make the column use a fixed width.
       p.paragraph The default number of columns is 12
 
-      .demo.fontFamilyDefault
+      .demo
         each _, i in Array(12)
           .row
             div(class=`col-${i+1}`)
@@ -51,7 +51,7 @@ html
       h2.heading2 Default
       p.paragraph The default is now to wrap the columns in the row.
       p.paragraph The content will overflow the row and be visible
-      .demo.fontFamilyDefault
+      .demo
         .row
           .col-5 1 .col-5
           .col-5 2 .col-5
@@ -59,7 +59,7 @@ html
 
       h2.heading2 Force wrap / break
       p.paragraph Adding `wrap-yes` will force the columns to break if they dont fit the row
-      .demo.fontFamilyDefault
+      .demo
         .row.wrap-yes
           .col-5 1 .col-5
           .col-5 2 .col-5
@@ -67,7 +67,7 @@ html
 
       h2.heading2 No wrap / break
       p.paragraph Adding `wrap-no` will force the columns to not break, reseting back to the default behavior
-      .demo.fontFamilyDefault
+      .demo
         .row.wrap-no
           .col-5 1 .col-5
           .col-5 2 .col-5
@@ -75,7 +75,7 @@ html
 
       h2.heading2 Force wrap reverse / break reverse
       p.paragraph Adding `wrap-yes` will force the columns to break, in reverse order, if they dont fit the row
-      .demo.fontFamilyDefault
+      .demo
         .row.wrap-reverse
           .col-5 1 .col-5
           .col-5 2 .col-5
@@ -83,7 +83,7 @@ html
 
     article
       h1.heading1 Column offset
-      .demo.fontFamilyDefault
+      .demo
         each _, i in Array(12)
           .row
             div(class=`col-1 offset-${i+1}`)
@@ -91,7 +91,7 @@ html
 
     article
       h1.heading1 Direction
-      .demo.fontFamilyDefault
+      .demo
         p.paragraph default direction-row
         .row.direction-row
           .col-1 1
@@ -115,7 +115,7 @@ html
 
     article
       h1.heading1 Justify content
-      .demo.fontFamilyDefault
+      .demo
         p.paragraph Start
         .row.content-start
           .col-1 1
@@ -154,7 +154,7 @@ html
 
     article
       h2.heading2 Align items
-      .demo.fontFamilyDefault
+      .demo
         p.paragraph alignItems-start
         .row.align-items-start(style="height: 100px;")
           .col-1(style="height: 80px;") 1
@@ -187,7 +187,7 @@ html
     article
       h1.heading1 Align content
       p.paragraph This modifier only takes effect on multi-line flexible containers, where flex-wrap is set to either wrap or wrap-reverse)
-      .demo.fontFamilyDefault
+      .demo
         p.paragraph start
         .row.wrap-yes.align-content-start(style="height: 100px;")
           .col-6 1
@@ -228,12 +228,12 @@ html
 
     article
       h1.heading1 Order columns
-      .demo.fontFamilyDefault
+      .demo
         +allOrders(12)
 
     article
       h1.heading1 Nested Grids
-      .demo.fontFamilyDefault
+      .demo
         .row
           .col-6 6
           .col-6 6
@@ -252,13 +252,13 @@ html
       h1.heading1 Gaps
 
       h2.heading2 Columns gaps
-      .demo.fontFamilyDefault
+      .demo
         each _, $indexRow in Array(6)
           div(class=`row gap-col-${$indexRow}`)
             +repeatColumns(12)
 
       h2.heading2 Row gaps
-      .demo.fontFamilyDefault
+      .demo
         each _, $indexRow in Array(6)
           div(class=`row wrap-yes gap-row-${$indexRow+1}`)
             each _, i in Array(6)
