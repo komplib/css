@@ -102,7 +102,7 @@ function chooseBuild(eventName, path) {
 
 function buildTokens() {
   log.info("Building Tokens");
-  buildStylus("tokens/index.styl");
+  buildAll();
 }
 
 function buildAll() {
