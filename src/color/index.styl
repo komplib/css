@@ -1,0 +1,27 @@
+@require '../tokens/'
+
+generateRootCustomProps()
+
+[class*="color"]
+  --color $tk.ColorDark.varDef
+  color var(--color)
+
+$colorsNames = ( Primary Secondary Success Danger Warning Info Light Dark )
+
+for $index in range(0,(length($colorsNames) - 1))
+  $colorName=$colorsNames[$index]
+  .color{$colorName}
+    --color convert('var(--Color' + $colorName + ')')
+
+[class*="background"]
+  --bgColor transparent
+  background-color var(--bgColor)
+
+for $index in range(0,(length($colorsNames) - 1))
+  $colorName=$colorsNames[$index]
+  .background{$colorName}
+    --bgColor convert('var(--Color' + $colorName + ')')
+
+
+
+
