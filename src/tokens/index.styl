@@ -4,22 +4,28 @@ $tokensJson = json('tokens.json', { hash: true })
 
 $tk = {}
 
-generateTokens($tokensLevel, $prevKey = '')
+generateTokens($tokensLevel, $prevKey = '', $rootProps = false )
   for $key, $val in $tokensLevel
     $currentPropName = $prevKey + capitalize($key)
     if !$val.value
-      generateTokens($val, $currentPropName)
+      generateTokens($val, $currentPropName, $rootProps)
     else
       $value=$val.value
       $propName=$currentPropName
       $customPropName='--' + $currentPropName
 
-      // {$customPropName}: $value
-      $tk[$currentPropName] = {
-        val: $value
-        var: unquote('var(--' + $currentPropName + ')')
-        varDef: unquote('var(--' + $currentPropName + ', ' + $value + ')')
-      }
+      if $rootProps
+        {$customPropName}: $value
+      else
+        $tk[$currentPropName] = {
+          val: $value
+          var: unquote('var(--' + $currentPropName + ')')
+          varDef: unquote('var(--' + $currentPropName + ', ' + $value + ')')
+        }
 
 
 generateTokens($tokensJson)
+
+// generateRootCustomProps()
+//   :root
+//     generateTokens($tokensJson, '', true)
