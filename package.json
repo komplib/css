@@ -9,6 +9,7 @@
 		"build:all": "yarn node builder.js  --build",
 		"build:storybook": "build-storybook",
 		"format": "prettier --write \"**/*.{styl,pug,js,json,md,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
+		"format:stylus": "yarn stylus-supremacy format ./src/**/*.styl",
 		"install:ci": "yarn install --immutable --immutable-cache --check-cache",
 		"lint": "yarn eslint --ext **/*.{js,ts} src",
 		"postinstall": "husky install",
@@ -66,6 +67,7 @@
 		"storybook-addon-pseudo-states": "^1.14.0",
 		"stylus": "^0.58.1",
 		"stylus-loader": "^4.0.0",
+		"stylus-supremacy": "^2.15.0",
 		"yargs": "^17.5.1"
 	},
 	"resolutions": {
