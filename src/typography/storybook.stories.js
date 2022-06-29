@@ -7,17 +7,17 @@ export default {
 
 const Template = ({ name, classes, ...args }) => {
 	return `
-    <ul>
-      ${classes
+		<ul>
+			${classes
 				.map((item) => {
 					return `
-            <li class="${item}">
-            <code>${item}</code>
-            lorem ipsum dolor sit amet </li>
-          `;
+						<li class="${item}">
+						<code>${item}</code>
+						lorem ipsum dolor sit amet </li>
+					`;
 				})
 				.join("")}
-    </ul>`;
+		</ul>`;
 };
 
 export const Heading = Template.bind({});

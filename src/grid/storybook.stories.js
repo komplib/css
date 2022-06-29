@@ -7,27 +7,27 @@ export default {
 
 const Template = ({ rows, ...args }) => {
 	return `
-    <div class="doc">
-      ${rows
+		<div class="doc">
+			${rows
 				.map((row, indexRow) => {
 					return `
-          <div class="row ${row.rowClasses}" style="${row.rowStyles}">
-            ${Array(row.cols)
+					<div class="row ${row.rowClasses}" style="${row.rowStyles}">
+						${Array(row.cols)
 							.fill()
 							.map((col, indexCol) => {
 								return `
-                <div class="${row.colClasses} ${
+								<div class="${row.colClasses} ${
 									row.colClassesCustom &&
 									row.colClassesCustom(indexRow, indexCol)
 								}">${row.text ? row.text : indexCol + 1}</div>
-                `;
+								`;
 							})
 							.join("")}
-          </div>`;
+					</div>`;
 				})
 				.join("")}
-    </div>
-  `;
+		</div>
+	`;
 };
 
 export const FluidColumns = Template.bind({});

@@ -1,154 +1,176 @@
 @require '../tokens/'
 
 @layer grid
-  .row
-    --alignContent normal
-    --alignItems flex-start
-    --alignSelf auto
-    --columns $tk.GridColumns.varDef
-    --flexDirection row
-    --flexWrap nowrap
-    --gapColumnMultiplier 1
-    --gapColumnBase $tk.GridGapColumn.varDef
-    --gapColumn calc(var(--gapColumnBase) * var(--gapColumnMultiplier))
-    --gapRowMultiplier 1
-    --gapRowBase $tk.GridGapRow.varDef
-    --gapRow calc(var(--gapRowBase) * var(--gapRowMultiplier))
-    --justifyContent flex-start
-    align-content var(--alignContent)
-    align-items var(--alignItems)
-    contain layout // strict
-    display flex
-    flex-flow var(--flexDirection) var(--flexWrap)
-    gap var(--gapRow) var(--gapColumn)
-    justify-content var(--justifyContent)
-    padding-left var(--gapColumn)
-    padding-right var(--gapColumn)
+	.row
+		--alignContent normal
+		--alignItems flex-start
+		--alignSelf auto
+		--columns: $tk.GridColumns.varDef
+		--flexDirection row
+		--flexWrap nowrap
+		--gapColumnMultiplier 1
+		--gapColumnBase: $tk.GridGapColumn.varDef
+		--gapColumn calc(var(--gapColumnBase) * var(--gapColumnMultiplier))
+		--gapRowMultiplier 1
+		--gapRowBase: $tk.GridGapRow.varDef
+		--gapRow calc(var(--gapRowBase) * var(--gapRowMultiplier))
+		--justifyContent flex-start
+		align-content var(--alignContent)
+		align-items var(--alignItems)
+		contain layout // strict
+		display flex
+		flex-flow var(--flexDirection) var(--flexWrap)
+		gap var(--gapRow) var(--gapColumn)
+		justify-content var(--justifyContent)
+		padding-left var(--gapColumn)
+		padding-right var(--gapColumn)
 
-    & > *
-      --col 0
-      --flexBasis 100%
-      --flexGrow 0
-      --flexShrink 1
-      --marginLeft 0
-      --order 0
-      --width unset
-      align-self var(--alignSelf)
-      flex var(--flexGrow) var(--flexShrink) var(--flexBasis)
-      margin 0
-      margin-left var(--marginLeft)
-      order var(--order)
-      width var(--width)
+		& > *
+			--col 0
+			--flexBasis 100%
+			--flexGrow 0
+			--flexShrink 1
+			--marginLeft 0
+			--order 0
+			--width unset
+			align-self var(--alignSelf)
+			flex var(--flexGrow) var(--flexShrink) var(--flexBasis)
+			margin 0
+			margin-left var(--marginLeft)
+			order var(--order)
+			width var(--width)
 
-      & > .row
-        padding-left 0
-        padding-right 0
-        --flexWrap wrap
+			& > .row
+				padding-left 0
+				padding-right 0
+				--flexWrap wrap
 
-      for $num in (1..$tk.GridColumns.val)
-        &:nth-child({$num})
-          --order $num + 1
+			for $num in 1 .. $tk.GridColumns.val
+				&:nth-child({$num})
+					--order: $num + 1
 
-  [class*="col"]
-    --flexBasis calc( ((100% - (var(--columns) - 1) * var(--gapColumn)) / var(--columns)) * var(--col) + var(--gapColumn) * (var(--col) - 1) )
-    --flexShrink 0
+	[class*='col']
+		--flexBasis calc(((100% - (var(--columns) - 1) * var(--gapColumn)) / var(--columns)) * var(--col) + var(--gapColumn) * (var(--col) - 1))
+		--flexShrink 0
 
-  [class*="offset"]
-    --offset 0
-    --totalGaps calc( (var(--columns) - 1) * var(--gapColumn) )
-    --avaivalbeWidth calc(100% - var(--totalGaps))
-    --onecolumnWidth calc(var(--avaivalbeWidth) / var(--columns))
-    --gapsleft calc(var(--gapColumn) * var(--offset))
-    --marginLeft calc(var(--onecolumnWidth) * var(--offset) + var(--gapsleft))
+	[class*='offset']
+		--offset 0
+		--totalGaps calc((var(--columns) - 1) * var(--gapColumn))
+		--avaivalbeWidth calc(100% - var(--totalGaps))
+		--onecolumnWidth calc((var(--avaivalbeWidth) / var(--columns)))
+		--gapsleft calc(var(--gapColumn) * var(--offset))
+		--marginLeft calc(var(--onecolumnWidth) * var(--offset) + var(--gapsleft))
 
 @layer grid-modifier
-  // Wrap columns
-  .wrap-
-    &yes
-      --flexWrap wrap
-    &no
-      --flexWrap nowrap
-    &reverse
-      --flexWrap wrap-reverse
+	// Wrap columns
+	.wrap-
+		&yes
+			--flexWrap wrap
 
-  .direction-
-    &row
-      --flexDirection row
-    &rowReverse
-      --flexDirection row-reverse
-    &column
-      --flexDirection column
-      & > *
-        --width var(--flexBasis)
-    &columnReverse
-      --flexDirection column-reverse
-      & > *
-        --width var(--flexBasis)
+		&no
+			--flexWrap nowrap
 
-  // Justify content
-  .content-
-    &start
-      --justifyContent flex-start
-    &end
-      --justifyContent flex-end
-    &center
-      --justifyContent center
-    &spacebetween
-      --justifyContent space-between
-    &spacearound
-      --justifyContent space-around
-    &spaceevenly
-      --justifyContent space-evenly
+		&reverse
+			--flexWrap wrap-reverse
 
-  .align-
-    &items-
-      &start
-        --alignItems flex-start
-      &end
-        --alignItems flex-end
-      &center
-        --alignItems center
-      &baseline
-        --alignItems baseline
-      &stretch
-        --alignItems stretch
-    &content-
-      &start
-        --alignContent flex-start
-      &end
-        --alignContent flex-end
-      &center
-        --alignContent center
-      &spacebetween
-        --alignContent space-between
-      &spacearound
-        --alignContent space-around
-      &stretch
-        --alignContent stretch
-        --alignSelf normal
+	.direction-
+		&row
+			--flexDirection row
 
+		&rowReverse
+			--flexDirection row-reverse
 
-  .col
-    for $num in (1..$tk.GridColumns.val)
-      &-{$num}
-        --col $num
+		&column
+			--flexDirection column
 
-  .offset
-    for $num in (1..$tk.GridColumns.val)
-      &-{$num}
-        --offset $num
+			& > *
+				--width var(--flexBasis)
 
-  .order
-    for $num in (1..$tk.GridColumns.val)
-      &-{$num}
-        --order $num
+		&columnReverse
+			--flexDirection column-reverse
 
-  .gap
-    &-col
-      for $num in (1..6)
-        &-{$num}
-          --gapColumnMultiplier $num
-    &-row
-      for $num in (1..6)
-        &-{$num}
-          --gapRowMultiplier $num
+			& > *
+				--width var(--flexBasis)
+
+	// Justify content
+	.content-
+		&start
+			--justifyContent flex-start
+
+		&end
+			--justifyContent flex-end
+
+		&center
+			--justifyContent center
+
+		&spacebetween
+			--justifyContent space-between
+
+		&spacearound
+			--justifyContent space-around
+
+		&spaceevenly
+			--justifyContent space-evenly
+
+	.align-
+		&items-
+			&start
+				--alignItems flex-start
+
+			&end
+				--alignItems flex-end
+
+			&center
+				--alignItems center
+
+			&baseline
+				--alignItems baseline
+
+			&stretch
+				--alignItems stretch
+
+		&content-
+			&start
+				--alignContent flex-start
+
+			&end
+				--alignContent flex-end
+
+			&center
+				--alignContent center
+
+			&spacebetween
+				--alignContent space-between
+
+			&spacearound
+				--alignContent space-around
+
+			&stretch
+				--alignContent stretch
+				--alignSelf normal
+
+	.col
+		for $num in 1 .. $tk.GridColumns.val
+			&-{$num}
+				--col $num
+
+	.offset
+		for $num in 1 .. $tk.GridColumns.val
+			&-{$num}
+				--offset $num
+
+	.order
+		for $num in 1 .. $tk.GridColumns.val
+			&-{$num}
+				--order $num
+
+	.gap
+		&-col
+			for $num in 1 .. 6
+				&-{$num}
+					--gapColumnMultiplier $num
+
+		&-row
+			for $num in 1 .. 6
+				&-{$num}
+					--gapRowMultiplier $num

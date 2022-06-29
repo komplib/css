@@ -34,16 +34,16 @@ export default {
 
 const Template = ({ name, group, ...args }) => {
 	return `
-    <ul>
-      ${Object.entries(group)
+		<ul>
+			${Object.entries(group)
 				.map(([key, value]) => {
 					return `
-          <li>
-            --${key}: ${value};
-          </li>`;
+					<li>
+						--${key}: ${value};
+					</li>`;
 				})
 				.join("")}
-    </ul>`;
+		</ul>`;
 };
 
 export const All = Template.bind({});

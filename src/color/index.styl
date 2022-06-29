@@ -2,31 +2,29 @@
 
 generateRootCustomProps()
 
-[class*="color"]
-  --color $tk.ColorDark.varDef
-  color var(--color)
+[class*='color']
+	--color: $tk.ColorDark.varDef
+	color var(--color)
 
-$colorsNames = ( Primary Secondary Success Danger Warning Info Light Dark )
-$colorsPairs = ( Light Light Light Light Dark Dark Dark Light )
+$colorsNames = Primary Secondary Success Danger Warning Info Light Dark
+$colorsPairs = Light Light Light Light Dark Dark Dark Light
 
-for $index in range(0,(length($colorsNames) - 1))
-  $colorName=$colorsNames[$index]
-  .color{$colorName}
-    --color convert('var(--Color' + $colorName + ')')
+for $index in range(0, length($colorsNames) - 1)
+	$colorName = $colorsNames[$index]
 
-[class*="background"]
-  --bgColor transparent
-  color var(--color)
-  background-color var(--bgColor)
-  color var(--color)
+	.color{$colorName}
+		--color convert('var(--Color' + $colorName + ')')
 
-for $index in range(0,(length($colorsNames) - 1))
-  $colorName=$colorsNames[$index]
-  $colorPair=$colorsPairs[$index]
-  .background{$colorName}
-    --bgColor convert('var(--Color' + $colorName + ')')
-    --color convert('var(--Color' + $colorPair + ')')
+[class*='background']
+	--bgColor transparent
+	color var(--color)
+	background-color var(--bgColor)
+	color var(--color)
 
+for $index in range(0, length($colorsNames) - 1)
+	$colorName = $colorsNames[$index]
+	$colorPair = $colorsPairs[$index]
 
-
-
+	.background{$colorName}
+		--bgColor convert('var(--Color' + $colorName + ')')
+		--color convert('var(--Color' + $colorPair + ')')

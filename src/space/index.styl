@@ -1,61 +1,67 @@
 @require '../tokens/'
 
-[class*="padding"]
-  --baseline $tk.RhythmVertical.varDef
-  --linesPadTop 0
-  --linesPadRight 0
-  --linesPadBottom 0
-  --linesPadLeft 0
-  --paddingTop calc(var(--baseline) * var(--linesPadTop, 0))
-  --paddingRight calc(var(--baseline) * var(--linesPadRight, 0))
-  --paddingBottom calc(var(--baseline) * var(--linesPadBottom, 0))
-  --paddingLeft calc(var(--baseline) * var(--linesPadLeft, 0))
-  padding var(--paddingTop) var(--paddingRight) var(--paddingBottom) var(--paddingLeft)
+[class*='padding']
+	--baseline: $tk.RhythmVertical.varDef
+	--linesPadTop 0
+	--linesPadRight 0
+	--linesPadBottom 0
+	--linesPadLeft 0
+	--paddingTop calc(var(--baseline) * var(--linesPadTop, 0))
+	--paddingRight calc(var(--baseline) * var(--linesPadRight, 0))
+	--paddingBottom calc(var(--baseline) * var(--linesPadBottom, 0))
+	--paddingLeft calc(var(--baseline) * var(--linesPadLeft, 0))
+	padding var(--paddingTop) var(--paddingRight) var(--paddingBottom) var(--paddingLeft)
 
 .padding
-  &Top
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesPadTop $num
-  &Right
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesPadRight $num
-  &Bottom
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesPadBottom $num
-  &Left
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesPadLeft $num
+	&Top
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesPadTop $num
 
-[class*="margin"]
-  --baseline $tk.RhythmVertical.varDef
-  --linesMarginTop 0
-  --linesMarginRight 0
-  --linesMarginBottom 0
-  --linesMarginLeft 0
-  --marginTop calc(var(--baseline) * var(--linesMarginTop, 0))
-  --marginRight calc(var(--baseline) * var(--linesMarginRight, 0))
-  --marginBottom calc(var(--baseline) * var(--linesMarginBottom, 0))
-  --marginLeft calc(var(--baseline) * var(--linesMarginLeft, 0))
-  margin var(--marginTop) var(--marginRight) var(--marginBottom) var(--marginLeft)
+	&Right
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesPadRight $num
+
+	&Bottom
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesPadBottom $num
+
+	&Left
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesPadLeft $num
+
+[class*='margin']
+	--baseline: $tk.RhythmVertical.varDef
+	--linesMarginTop 0
+	--linesMarginRight 0
+	--linesMarginBottom 0
+	--linesMarginLeft 0
+	--marginTop calc(var(--baseline) * var(--linesMarginTop, 0))
+	--marginRight calc(var(--baseline) * var(--linesMarginRight, 0))
+	--marginBottom calc(var(--baseline) * var(--linesMarginBottom, 0))
+	--marginLeft calc(var(--baseline) * var(--linesMarginLeft, 0))
+	margin var(--marginTop) var(--marginRight) var(--marginBottom) var(--marginLeft)
 
 .margin
-  &Top
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesMarginTop $num
-  &Right
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesMarginRight $num
-  &Bottom
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesMarginBottom $num
-  &Left
-    for $num in (0..$tk.GridColumns.val)
-      &{$num}
-        --linesMarginLeft $num
+	&Top
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesMarginTop $num
+
+	&Right
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesMarginRight $num
+
+	&Bottom
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesMarginBottom $num
+
+	&Left
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
+				--linesMarginLeft $num

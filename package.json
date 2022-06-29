@@ -6,10 +6,10 @@
 		"url": "https://github.com/komplib/css.git"
 	},
 	"scripts": {
-		"build:all": "yarn node builder.js  --build",
+		"build:all": "yarn node builder.js --build",
 		"build:storybook": "build-storybook",
 		"format": "prettier --write \"**/*.{styl,pug,js,json,md,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
-		"format:stylus": "yarn stylus-supremacy format ./src/**/*.styl",
+		"format:stylus": "yarn stylus-supremacy format ./src/**/*.styl --replace --options ./stylus-supremacy.json",
 		"install:ci": "yarn install --immutable --immutable-cache --check-cache",
 		"lint": "yarn eslint --ext **/*.{js,ts} src",
 		"postinstall": "husky install",
@@ -18,7 +18,7 @@
 		"prepack": "pinst --disable",
 		"prepublishOnly": "pinst --disable",
 		"semantic-release": "semantic-release",
-		"serve:all": "yarn node builder.js  --server --watch",
+		"serve:all": "yarn node builder.js --server --watch",
 		"serve:storybook": "start-storybook -p 6006",
 		"test": "echo \"Error: no test specified\""
 	},
