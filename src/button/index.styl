@@ -10,9 +10,9 @@ $colorsPairs = Light Light Light Light Dark Dark Dark Light
 		$tkcolor = $tk['Color' + $colorName]
 		--Color{$colorName}: $tkcolor.val
 
-	--lines 2
-	--baseline: $tk.RhythmVertical.varDef
-	--ceilLines calc(var(--lines))
+	--Lines 2
+	--Baseline: $tk.RhythmVertical.varDef
+	--CeilLines calc(var(--Lines))
 	--FontSize: $tk.FontSizeDefault.varDef
 	box-sizing border-box
 	cursor pointer
@@ -27,28 +27,28 @@ $colorsPairs = Light Light Light Light Dark Dark Dark Light
 	--FontStyle normal
 	--FontVariant normal
 	--FontWeight 400
-	--FontSizeCalc var(--FontSizeDefault, calc(var(--baseline) * (var(--lines) - 1)))
-	--LineHeight calc(var(--baseline) * var(--ceilLines))
+	--FontSizeCalc var(--FontSizeDefault, calc(var(--Baseline) * (var(--Lines) - 1)))
+	--LineHeight calc(var(--Baseline) * var(--CeilLines))
 	--FontFamily: $tk.FontFamilyDefault.val
 	// // bug with custom properties with sintax var/var for font shorthand
 	font var(--FontStyle) var(--FontVariant) var(--FontWeight) unquote('var(--FontSizeCalc)/var(--LineHeight)') var(--FontFamily)
 	font-family var(--FontFamily)
-	padding 0 calc(var(--baseline) * (var(--lines) / 2))
-	--BorderRadius calc((var(--baseline) / 3 * var(--lines) / 2))
+	padding 0 calc(var(--Baseline) * (var(--Lines) / 2))
+	--BorderRadius calc((var(--Baseline) / 3 * var(--Lines) / 2))
 	border-radius var(--BorderRadius)
-	--BorderWidth calc((var(--baseline) / 16 * var(--lines) / 2))
+	--BorderWidth calc((var(--Baseline) / 16 * var(--Lines) / 2))
 	--BorderStyle solid
-	--BorderColor var(--bgColor)
+	--BorderColor var(--BackgroundColor)
 	border var(--BorderWidth) var(--BorderStyle) var(--BorderColor)
 	--VerticalAlign middle
 	vertical-align var(--VerticalAlign)
-	--color: $tk.ColorLight.varDef
-	color var(--color)
-	--bgColor: $tk.ColorSecondary.varDef
-	background-color var(--bgColor)
+	--Color: $tk.ColorLight.varDef
+	color var(--Color)
+	--BackgroundColor: $tk.ColorSecondary.varDef
+	background-color var(--BackgroundColor)
 
 	& + [class*='button']
-		margin-left calc(var(--baseline) * 1)
+		margin-left calc(var(--Baseline) * 1)
 
 $colorsNames = Primary Secondary Success Danger Warning Info Light Dark
 $colorsPairs = Light Light Light Light Dark Dark Dark Light
@@ -58,9 +58,9 @@ for $index in range(0, length($colorsNames) - 1)
 	$colorPair = $colorsPairs[$index]
 
 	.button{$colorName}
-		--bgColor convert('var(--Color' + $colorName + ')')
-		--color convert('var(--Color' + $colorPair + ')')
+		--BackgroundColor convert('var(--Color' + $colorName + ')')
+		--Color convert('var(--Color' + $colorPair + ')')
 
 .outline
-	color var(--bgColor)
+	color var(--BackgroundColor)
 	background-color transparent

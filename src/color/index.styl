@@ -3,8 +3,8 @@
 generateRootCustomProps()
 
 [class*='color']
-	--color: $tk.ColorDark.varDef
-	color var(--color)
+	--Color: $tk.ColorDark.varDef
+	color var(--Color)
 
 $colorsNames = Primary Secondary Success Danger Warning Info Light Dark
 $colorsPairs = Light Light Light Light Dark Dark Dark Light
@@ -13,18 +13,18 @@ for $index in range(0, length($colorsNames) - 1)
 	$colorName = $colorsNames[$index]
 
 	.color{$colorName}
-		--color convert('var(--Color' + $colorName + ')')
+		--Color convert('var(--Color' + $colorName + ')')
 
 [class*='background']
-	--bgColor transparent
-	color var(--color)
-	background-color var(--bgColor)
-	color var(--color)
+	--BackgroundColor transparent
+	color var(--Color)
+	background-color var(--BackgroundColor)
+	color var(--Color)
 
 for $index in range(0, length($colorsNames) - 1)
 	$colorName = $colorsNames[$index]
 	$colorPair = $colorsPairs[$index]
 
 	.background{$colorName}
-		--bgColor convert('var(--Color' + $colorName + ')')
-		--color convert('var(--Color' + $colorPair + ')')
+		--BackgroundColor convert('var(--Color' + $colorName + ')')
+		--Color convert('var(--Color' + $colorPair + ')')

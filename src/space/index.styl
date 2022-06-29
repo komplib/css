@@ -1,67 +1,67 @@
 @require '../tokens/'
 
 [class*='padding']
-	--baseline: $tk.RhythmVertical.varDef
-	--linesPadTop 0
-	--linesPadRight 0
-	--linesPadBottom 0
-	--linesPadLeft 0
-	--paddingTop calc(var(--baseline) * var(--linesPadTop, 0))
-	--paddingRight calc(var(--baseline) * var(--linesPadRight, 0))
-	--paddingBottom calc(var(--baseline) * var(--linesPadBottom, 0))
-	--paddingLeft calc(var(--baseline) * var(--linesPadLeft, 0))
-	padding var(--paddingTop) var(--paddingRight) var(--paddingBottom) var(--paddingLeft)
+	--Baseline: $tk.RhythmVertical.varDef
+	--LinesPaddingTop 0
+	--LinesPaddingRight 0
+	--LinesPaddingBottom 0
+	--LinesPaddingLeft 0
+	--PaddingTop calc(var(--Baseline) * var(--LinesPaddingTop, 0))
+	--PaddingRight calc(var(--Baseline) * var(--LinesPaddingRight, 0))
+	--PaddingBottom calc(var(--Baseline) * var(--LinesPaddingBottom, 0))
+	--PaddingLeft calc(var(--Baseline) * var(--LinesPaddingLeft, 0))
+	padding var(--PaddingTop) var(--PaddingRight) var(--PaddingBottom) var(--PaddingLeft)
 
 .padding
 	&Top
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesPadTop $num
+				--LinesPaddingTop $num
 
 	&Right
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesPadRight $num
+				--LinesPaddingRight $num
 
 	&Bottom
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesPadBottom $num
+				--LinesPaddingBottom $num
 
 	&Left
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesPadLeft $num
+				--LinesPaddingLeft $num
 
 [class*='margin']
-	--baseline: $tk.RhythmVertical.varDef
-	--linesMarginTop 0
-	--linesMarginRight 0
-	--linesMarginBottom 0
-	--linesMarginLeft 0
-	--marginTop calc(var(--baseline) * var(--linesMarginTop, 0))
-	--marginRight calc(var(--baseline) * var(--linesMarginRight, 0))
-	--marginBottom calc(var(--baseline) * var(--linesMarginBottom, 0))
-	--marginLeft calc(var(--baseline) * var(--linesMarginLeft, 0))
-	margin var(--marginTop) var(--marginRight) var(--marginBottom) var(--marginLeft)
+	--Baseline: $tk.RhythmVertical.varDef
+	--LinesMarginTop 0
+	--LinesMarginRight 0
+	--LinesMarginBottom 0
+	--LinesMarginLeft 0
+	--MarginTop calc(var(--Baseline) * var(--LinesMarginTop, 0))
+	--MarginRight calc(var(--Baseline) * var(--LinesMarginRight, 0))
+	--MarginBottom calc(var(--Baseline) * var(--LinesMarginBottom, 0))
+	--MarginLeft calc(var(--Baseline) * var(--LinesMarginLeft, 0))
+	margin var(--MarginTop) var(--MarginRight) var(--MarginBottom) var(--MarginLeft)
 
 .margin
 	&Top
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesMarginTop $num
+				--LinesMarginTop $num
 
 	&Right
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesMarginRight $num
+				--LinesMarginRight $num
 
 	&Bottom
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesMarginBottom $num
+				--LinesMarginBottom $num
 
 	&Left
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
-				--linesMarginLeft $num
+				--LinesMarginLeft $num

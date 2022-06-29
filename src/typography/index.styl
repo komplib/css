@@ -1,72 +1,72 @@
 @require '../tokens/'
 
-@property --ceilLines
+@property --CeilLines
 	syntax '<integer>'
 	initial-value 0
 	inherits false
 
-@property --ceilHalfLine
+@property --CeilHalfLine
 	syntax '<integer>'
 	initial-value 0
 	inherits false
 
 [class*='font'], [class*='text'], [class*='heading'], .paragraph, .list
-	--baseline: $tk.RhythmVertical.varDef
-	--ceilLines calc(var(--lines))
+	--Baseline: $tk.RhythmVertical.varDef
+	--CeilLines calc(var(--Lines))
 	--FontFamily: $tk.FontFamilyDefault.val
 	--FontSize: $tk.FontSizeDefault.varDef
-	--FontSizeCalc var(--FontSizeDefault, calc(var(--baseline) * var(--lines)))
+	--FontSizeCalc var(--FontSizeDefault, calc(var(--Baseline) * var(--Lines)))
 	--FontStyle normal
 	--FontVariant normal
 	--FontWeight 400
-	--LineHeight calc(var(--baseline) * var(--ceilLines))
-	--lines 1
+	--LineHeight calc(var(--Baseline) * var(--CeilLines))
+	--Lines 1
 	--TextTransform none
 	--MarginBottom 0
 	--TextAlign var(--TextAlign, left)
-	color var(--color, var(--ColorText, #212529))
+	color var(--Color, var(--ColorText, #212529))
 	font var(--FontStyle) var(--FontVariant) var(--FontWeight) unquote('var(--FontSizeCalc)/var(--LineHeight)') var(--FontFamily)
 	// bug with custom properties with sintax var/var for font shorthand
 	font-family var(--FontFamily)
-	margin 0 0 calc(var(--MarginBottom) * var(--baseline)) 0
+	margin 0 0 calc(var(--MarginBottom) * var(--Baseline)) 0
 	padding 0
 	text-transform var(--TextTransform)
 	text-align var(--TextAlign)
 
 [class*='heading']
-	--lines 3
-	--ceilHalfLine calc(calc((var(--lines) / 2)) + 0.5)
+	--Lines 3
+	--CeilHalfLine calc(calc((var(--Lines) / 2)) + 0.5)
 	--FontWeight 600
-	--FontSize calc(var(--baseline) * calc(var(--lines)))
-	--LineHeight calc(var(--baseline) * var(--ceilLines))
+	--FontSize calc(var(--Baseline) * calc(var(--Lines)))
+	--LineHeight calc(var(--Baseline) * var(--CeilLines))
 	--FontFamily: $tk.FontFamilyHeading.val
 	// ??? --FontFamily $tk.FontFamilyDefault.val
-	--MarginBottom var(--ceilHalfLine)
+	--MarginBottom var(--CeilHalfLine)
 
 .heading
 	&00
-		--lines 6
+		--Lines 6
 
 	&0
-		--lines 4
+		--Lines 4
 
 	&1
-		--lines 3
+		--Lines 3
 
 	&2
-		--lines 2.75
+		--Lines 2.75
 
 	&3
-		--lines 2.25
+		--Lines 2.25
 
 	&4
-		--lines 1.75
+		--Lines 1.75
 
 	&5
-		--lines 1.5
+		--Lines 1.5
 
 	&6
-		--lines 1.25
+		--Lines 1.25
 
 .paragraph
 	--MarginBottom 1
@@ -75,86 +75,86 @@
 		margin 0
 
 .blockquote
-	--baseline: $tk.RhythmVertical.varDef
+	--Baseline: $tk.RhythmVertical.varDef
 	margin 0
-	padding var(--baseline)
+	padding var(--Baseline)
 
 .list
-	--listCounterSeparator ''
-	--listStyleType disc
-	--marginLeft 0
+	--ListCounterSeparator ''
+	--ListStyleType disc
+	--MarginLeft 0
 	counter-reset listCounter
 	list-style none
-	margin-bottom calc(var(--baseline) * 2)
+	margin-bottom calc(var(--Baseline) * 2)
 
 	& > *
 		counter-increment listCounter
-		margin-bottom calc((var(--baseline) / 1))
+		margin-bottom calc((var(--Baseline) / 1))
 
 		&:before
 			display inline-block
-			min-width calc(var(--baseline) * 1.5)
-			margin-right calc((var(--baseline) / 2))
-			margin-left calc(var(--baseline) * var(--marginLeft))
+			min-width calc(var(--Baseline) * 1.5)
+			margin-right calc((var(--Baseline) / 2))
+			margin-left calc(var(--Baseline) * var(--MarginLeft))
 			text-align right
-			content counter(listCounter, var(--listStyleType)) var(--listCounterSeparator)
+			content counter(listCounter, var(--ListStyleType)) var(--ListCounterSeparator)
 
 	&Style
 		&Position
 			&Inside
-				--listStylePosition inside
+				--ListStylePosition inside
 
 			&Outside
-				--listStylePosition outside
-				--marginLeft -2
+				--ListStylePosition outside
+				--MarginLeft -2
 
 		&Type
 			&None
-				--listStyleType none
+				--ListStyleType none
 
 				& > *:before
 					display none
 
 			&Disc
-				--listStyleType disc
+				--ListStyleType disc
 
 			&Circle
-				--listStyleType circle
+				--ListStyleType circle
 
 			&Square
-				--listStyleType square
+				--ListStyleType square
 
 			&Decimal, ^[0]:is(ol)
-				--listStyleType decimal
-				--listCounterSeparator '.'
+				--ListStyleType decimal
+				--ListCounterSeparator '.'
 
 			&DecimalLeadingZero
-				--listStyleType decimal-leading-zero
-				--listCounterSeparator '.'
+				--ListStyleType decimal-leading-zero
+				--ListCounterSeparator '.'
 
 			&LowerRoman
-				--listStyleType lower-roman
-				--listCounterSeparator '.'
+				--ListStyleType lower-roman
+				--ListCounterSeparator '.'
 
 			&UpperRoman
-				--listStyleType upper-roman
-				--listCounterSeparator '.'
+				--ListStyleType upper-roman
+				--ListCounterSeparator '.'
 
 			&LowerLatin
-				--listStyleType lower-latin
-				--listCounterSeparator '.'
+				--ListStyleType lower-latin
+				--ListCounterSeparator '.'
 
 			&UpperLatin
-				--listStyleType upper-latin
-				--listCounterSeparator '.'
+				--ListStyleType upper-latin
+				--ListCounterSeparator '.'
 
 			&LowerAlpha
-				--listStyleType lower-alpha
-				--listCounterSeparator '.'
+				--ListStyleType lower-alpha
+				--ListCounterSeparator '.'
 
 			&UpperAlpha
-				--listStyleType upper-alpha
-				--listCounterSeparator '.'
+				--ListStyleType upper-alpha
+				--ListCounterSeparator '.'
 
 .font
 	&Family
@@ -169,31 +169,31 @@
 
 	&Size
 		&Large4
-			--lines: $tk.FontSizeLarge4.varDef
+			--Lines: $tk.FontSizeLarge4.varDef
 
 		&Large3
-			--lines: $tk.FontSizeLarge3.val
+			--Lines: $tk.FontSizeLarge3.val
 
 		&Large2
-			--lines: $tk.FontSizeLarge2.val
+			--Lines: $tk.FontSizeLarge2.val
 
 		&Large1
-			--lines: $tk.FontSizeLarge1.val
+			--Lines: $tk.FontSizeLarge1.val
 
 		&Large
-			--lines: $tk.FontSizeLarge.val
+			--Lines: $tk.FontSizeLarge.val
 
 		&Default
-			--lines: $tk.FontSizeDefault.val
+			--Lines: $tk.FontSizeDefault.val
 
 		&Small
-			--lines: $tk.FontSizeSmall.val
+			--Lines: $tk.FontSizeSmall.val
 
 		&Small1
-			--lines: $tk.FontSizeSmall1.val
+			--Lines: $tk.FontSizeSmall1.val
 
 		&Small2
-			--lines: $tk.FontSizeSmall2.val
+			--Lines: $tk.FontSizeSmall2.val
 
 	&Weight
 		&9 // Black
