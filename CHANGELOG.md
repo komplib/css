@@ -1,3 +1,10 @@
+# [0.23.0](https://github.com/komplib/css/compare/v0.22.0...v0.23.0) (2022-06-29)
+
+
+### Features
+
+* add box ([fb865a3](https://github.com/komplib/css/commit/fb865a3a120ff2f966227172655d9bcd950a8fe1))
+
 # [0.22.0](https://github.com/komplib/css/compare/v0.21.0...v0.22.0) (2022-06-29)
 
 ### Features
