@@ -8,8 +8,9 @@
 	"scripts": {
 		"build:all": "yarn node builder.js --build",
 		"build:storybook": "build-storybook",
-		"format": "prettier --write \"**/*.{styl,pug,js,json,md,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
+		"format:prettier": "prettier --write \"**/*.{js,json,yml,yaml,css,scss,less,vue}\" --ignore-unknown",
 		"format:stylus": "yarn stylus-supremacy format ./src/**/*.styl --replace --options ./stylus-supremacy.json",
+		"format:all": "yarn format:prettier && yarn format:stylus",
 		"install:ci": "yarn install --immutable --immutable-cache --check-cache",
 		"lint": "yarn eslint --ext **/*.{js,ts} src",
 		"postinstall": "husky install",
@@ -76,6 +77,6 @@
 		"trim": "^0.0.3"
 	},
 	"lint-staged": {
-		"*.{styl,pug,js,json,md,yml,yaml,css,scss,less,vue}": "yarn format"
+		"*.{js,json,yml,yaml,css,scss,less,vue}": "yarn format:prettier"
 	}
 }

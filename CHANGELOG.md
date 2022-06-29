@@ -1,14 +1,13 @@
 # [0.22.0](https://github.com/komplib/css/compare/v0.21.0...v0.22.0) (2022-06-29)
 
-
 ### Features
 
-* add button & button outline ([7981156](https://github.com/komplib/css/commit/7981156770053dedc22fa1e764b6f0296ab19455))
-* add colors ([ba74847](https://github.com/komplib/css/commit/ba7484739215e1529efb91ce59c836c4bd910046))
-* add helper paddings ([bda5238](https://github.com/komplib/css/commit/bda523814c057b4566817c65f6b9126c4463757b))
-* add helper space margin ([15bbe10](https://github.com/komplib/css/commit/15bbe1010de8545df1ae83888e942ab98269b6ff))
-* add helper text align ([80daa14](https://github.com/komplib/css/commit/80daa146a6399498fb6c53f9089e46d4d7078922))
-* set color with contrast text button ([2317587](https://github.com/komplib/css/commit/231758744c135d89b65f15c90e110309cf6d0154))
+- add button & button outline ([7981156](https://github.com/komplib/css/commit/7981156770053dedc22fa1e764b6f0296ab19455))
+- add colors ([ba74847](https://github.com/komplib/css/commit/ba7484739215e1529efb91ce59c836c4bd910046))
+- add helper paddings ([bda5238](https://github.com/komplib/css/commit/bda523814c057b4566817c65f6b9126c4463757b))
+- add helper space margin ([15bbe10](https://github.com/komplib/css/commit/15bbe1010de8545df1ae83888e942ab98269b6ff))
+- add helper text align ([80daa14](https://github.com/komplib/css/commit/80daa146a6399498fb6c53f9089e46d4d7078922))
+- set color with contrast text button ([2317587](https://github.com/komplib/css/commit/231758744c135d89b65f15c90e110309cf6d0154))
 
 # [0.21.0](https://github.com/komplib/css/compare/v0.20.0...v0.21.0) (2022-06-19)
 

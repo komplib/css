@@ -2,6 +2,6 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 [ -n "$CI" ] && exit 0
-yarn format
+yarn format:prettier
 yarn lint-staged
 
