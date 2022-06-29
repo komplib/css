@@ -97,7 +97,7 @@ function chooseBuild(eventName, path) {
 	log.info(`${eventName} file ${path}`);
 	path.includes(".pug") && buildPug(path);
 	path.includes(".styl") && buildStylus(path);
-	path.includes(".json") && buildTokens();
+	path.includes("tokens.json") && buildTokens();
 }
 
 function buildTokens() {

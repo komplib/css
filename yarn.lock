@@ -7208,6 +7208,7 @@ __metadata:
     prettier: 2.7.0
     pug: ^3.0.2
     semantic-release: ^19.0.3
+    simple-json-db: ^2.0.0
     storybook-addon-pseudo-states: ^1.14.0
     stylus: ^0.58.1
     stylus-loader: ^4.0.0
@@ -15911,6 +15912,13 @@ eslint-config-airbnb-base@latest:
     figures: ^2.0.0
     pkg-conf: ^2.1.0
   checksum: a6a540e054096a1f4cf8b1f21fea62ca3e44a19faa63bd486723b736348609caab1fa59a87f16559de347dde8ae1fdebfc25a8b6723c88ae8239f176ffb0dda5
+  languageName: node
+  linkType: hard
+
+"simple-json-db@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "simple-json-db@npm:2.0.0"
+  checksum: 004c0ef9e068ae7585ed13332c9a99169ae376d407a60325073dd7e5aae9016de602228950ee71c1ad2f5e700b759eebac5f56260c8ab9f357b1044f69b682fe
   languageName: node
   linkType: hard
 

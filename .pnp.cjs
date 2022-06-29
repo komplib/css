@@ -73,6 +73,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.7.0"],\
             ["pug", "npm:3.0.2"],\
             ["semantic-release", "npm:19.0.3"],\
+            ["simple-json-db", "npm:2.0.0"],\
             ["storybook-addon-pseudo-states", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:1.14.0"],\
             ["stylus", "npm:0.58.1"],\
             ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"],\
@@ -11438,6 +11439,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["prettier", "npm:2.7.0"],\
             ["pug", "npm:3.0.2"],\
             ["semantic-release", "npm:19.0.3"],\
+            ["simple-json-db", "npm:2.0.0"],\
             ["storybook-addon-pseudo-states", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:1.14.0"],\
             ["stylus", "npm:0.58.1"],\
             ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"],\
@@ -21383,6 +21385,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chalk", "npm:2.4.2"],\
             ["figures", "npm:2.0.0"],\
             ["pkg-conf", "npm:2.1.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["simple-json-db", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/simple-json-db-npm-2.0.0-eee119b313-004c0ef9e0.zip/node_modules/simple-json-db/",\
+          "packageDependencies": [\
+            ["simple-json-db", "npm:2.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
