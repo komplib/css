@@ -19,3 +19,8 @@ storybook-static/
 node_modules/
 node_modules/.cache/storybook/
 build-storybook.log
+
+# backstop tests
+backstop/report_html/
+backstop/report_ci/
+backstop/test_result/
