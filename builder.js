@@ -36,6 +36,7 @@ process.on("uncaughtException", function (err) {
 
 function server() {
 	browserSync.init({
+		notify: false,
 		server: {
 			baseDir: folders.build,
 		},
