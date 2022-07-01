@@ -7218,6 +7218,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"css-tree@npm:~2.0.4":
+  version: 2.0.4
+  resolution: "css-tree@npm:2.0.4"
+  dependencies:
+    mdn-data: 2.0.23
+    source-map-js: ^1.0.1
+  checksum: 2e14c1f65c8363c6f90c548004a71644c1cb7495ef4be79d9d99def82661056edc9790f720681c5f3ab8b0e9e34fe2150aad700c83d6c2ef18ddbfa2cf5ea075
+  languageName: node
+  linkType: hard
+
 "css-what@npm:^6.0.1":
   version: 6.1.0
   resolution: "css-what@npm:6.1.0"
@@ -7277,6 +7287,7 @@ __metadata:
     chokidar: ^3.5.3
     chokidar-cli: ^3.0.0
     chromatic: ^6.5.6
+    csso: ^5.0.3
     eslint: ^8.2.0
     eslint-config-airbnb-base: latest
     eslint-config-prettier: ^8.5.0
@@ -7308,6 +7319,15 @@ __metadata:
   bin:
     cssesc: bin/cssesc
   checksum: f8c4ababffbc5e2ddf2fa9957dda1ee4af6048e22aeda1869d0d00843223c1b13ad3f5d88b51caa46c994225eacb636b764eb807a8883e2fb6f99b4f4e8c48b2
+  languageName: node
+  linkType: hard
+
+"csso@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "csso@npm:5.0.3"
+  dependencies:
+    css-tree: ~2.0.4
+  checksum: f316eb2205bd8a4dd0c94c5b9e16f44cbe86615f2eee432f28dfc2ee73067227f8d3975d2a12311bb21e556598446f2b5ddafbaf86a26cda97e8e18e0ada00cc
   languageName: node
   linkType: hard
 
@@ -12276,6 +12296,13 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
+"mdn-data@npm:2.0.23":
+  version: 2.0.23
+  resolution: "mdn-data@npm:2.0.23"
+  checksum: aa9d67c4c1ad034eb0290f5571e14148ab985273489122f0bac16e670396c5da39a7024b365dd13d888c826567955c4e3e362b35b63dcbc1bffece60dfcd3aa1
+  languageName: node
+  linkType: hard
+
 "mdurl@npm:^1.0.0":
   version: 1.0.1
   resolution: "mdurl@npm:1.0.1"
@@ -16477,6 +16504,13 @@ eslint-config-airbnb-base@latest:
   version: 2.0.1
   resolution: "source-list-map@npm:2.0.1"
   checksum: 806efc6f75e7cd31e4815e7a3aaf75a45c704871ea4075cb2eb49882c6fca28998f44fc5ac91adb6de03b2882ee6fb02f951fdc85e6a22b338c32bfe19557938
+  languageName: node
+  linkType: hard
+
+"source-map-js@npm:^1.0.1":
+  version: 1.0.2
+  resolution: "source-map-js@npm:1.0.2"
+  checksum: c049a7fc4deb9a7e9b481ae3d424cc793cb4845daa690bc5a05d428bf41bf231ced49b4cf0c9e77f9d42fdb3d20d6187619fc586605f5eabe995a316da8d377c
   languageName: node
   linkType: hard
 

@@ -58,6 +58,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chokidar", "npm:3.5.3"],\
             ["chokidar-cli", "npm:3.0.0"],\
             ["chromatic", "npm:6.5.6"],\
+            ["csso", "npm:5.0.3"],\
             ["eslint", "npm:8.17.0"],\
             ["eslint-config-airbnb-base", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:15.0.0"],\
             ["eslint-config-prettier", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:8.5.0"],\
@@ -11513,6 +11514,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["chokidar", "npm:3.5.3"],\
             ["chokidar-cli", "npm:3.0.0"],\
             ["chromatic", "npm:6.5.6"],\
+            ["csso", "npm:5.0.3"],\
             ["eslint", "npm:8.17.0"],\
             ["eslint-config-airbnb-base", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:15.0.0"],\
             ["eslint-config-prettier", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:8.5.0"],\
@@ -11598,6 +11600,17 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["css-tree", [\
+        ["npm:2.0.4", {\
+          "packageLocation": "./.yarn/cache/css-tree-npm-2.0.4-cf463eea1e-2e14c1f65c.zip/node_modules/css-tree/",\
+          "packageDependencies": [\
+            ["css-tree", "npm:2.0.4"],\
+            ["mdn-data", "npm:2.0.23"],\
+            ["source-map-js", "npm:1.0.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["css-what", [\
         ["npm:6.1.0", {\
           "packageLocation": "./.yarn/cache/css-what-npm-6.1.0-57f751efbb-b975e547e1.zip/node_modules/css-what/",\
@@ -11612,6 +11625,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/cssesc-npm-3.0.0-15ec56f86f-f8c4ababff.zip/node_modules/cssesc/",\
           "packageDependencies": [\
             ["cssesc", "npm:3.0.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["csso", [\
+        ["npm:5.0.3", {\
+          "packageLocation": "./.yarn/cache/csso-npm-5.0.3-cc71c5bcd8-f316eb2205.zip/node_modules/csso/",\
+          "packageDependencies": [\
+            ["csso", "npm:5.0.3"],\
+            ["css-tree", "npm:2.0.4"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -17338,6 +17361,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["mdn-data", [\
+        ["npm:2.0.23", {\
+          "packageLocation": "./.yarn/cache/mdn-data-npm-2.0.23-db089dfe9a-aa9d67c4c1.zip/node_modules/mdn-data/",\
+          "packageDependencies": [\
+            ["mdn-data", "npm:2.0.23"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["mdurl", [\
         ["npm:1.0.1", {\
           "packageLocation": "./.yarn/cache/mdurl-npm-1.0.1-054d974269-71731ecba9.zip/node_modules/mdurl/",\
@@ -22008,6 +22040,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/source-map-npm-0.7.4-bc8d018ab6-01cc5a74b1.zip/node_modules/source-map/",\
           "packageDependencies": [\
             ["source-map", "npm:0.7.4"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["source-map-js", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/source-map-js-npm-1.0.2-ee4f9f9b30-c049a7fc4d.zip/node_modules/source-map-js/",\
+          "packageDependencies": [\
+            ["source-map-js", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\

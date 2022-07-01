@@ -10,6 +10,7 @@ const stylus = require("stylus");
 const yargs = require("yargs/yargs");
 const { hideBin } = require("yargs/helpers");
 const browserSync = require("browser-sync").create();
+const { minify } = require("csso");
 
 const argv = yargs(hideBin(process.argv)).argv;
 const folders = {
@@ -144,7 +145,8 @@ function buildStylus(relativeFilePath, buildIndex = true) {
 				log.error(err);
 			}
 			ensureDirectoryExistence(cssPath);
-			fs.writeFileSync(cssPath, css);
+			const minifiedCss = minify(css).css;
+			fs.writeFileSync(cssPath, minifiedCss);
 			serverReload(cssPath);
 		});
 }
