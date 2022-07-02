@@ -2,82 +2,188 @@
 
 @property --CeilLines
 	syntax '<integer>'
-	initial-value 0
+	initial-value 1
 	inherits false
 
 @property --CeilHalfLine
 	syntax '<integer>'
-	initial-value 0
+	initial-value 1
 	inherits false
 
-[class*='font'], [class*='text'], [class*='heading'], .paragraph, .list
-	--Baseline: $tk.RhythmVertical.varDef
-	--CeilLines calc(var(--Lines))
-	--FontFamily: $tk.FontFamilyDefault.val
+fontfamily()
+	font-family var(--FontFamily, --FontFamilyDefault, SF Pro Text SF Pro Icons Helvetica Neue Helvetica Arial sans-serif);
+
+fontSize()
 	--FontSize: $tk.FontSizeDefault.varDef
-	--FontSizeCalc var(--FontSizeDefault, calc(var(--Baseline) * var(--Lines)))
-	--FontStyle normal
-	--FontVariant normal
-	--FontWeight 400
-	--LineHeight calc(var(--Baseline) * var(--CeilLines))
-	--Lines 1
-	--TextTransform none
-	--MarginBottom 0
-	--TextAlign var(--TextAlign, left)
+	--FontSizeLines 1
+	--Baseline: $tk.RhythmVertical.varDef
+	--FontSize var(--FontSizeDefault, calc(var(--Baseline) * var(--FontSizeLines)))
+	font-size var(--FontSize)
+
+colorText()
 	color var(--Color, var(--ColorText, #212529))
-	font var(--FontStyle) var(--FontVariant) var(--FontWeight) unquote('var(--FontSizeCalc)/var(--LineHeight)') var(--FontFamily)
-	// bug with custom properties with sintax var/var for font shorthand
-	font-family var(--FontFamily)
-	margin 0 0 calc(var(--MarginBottom) * var(--Baseline)) 0
-	padding 0
-	text-transform var(--TextTransform)
-	text-align var(--TextAlign)
+
+lineHeight()
+	--CeilLines calc(var(--FontSizeLines))
+	--Baseline: $tk.RhythmVertical.varDef
+	--LineHeight calc(var(--Baseline) * var(--CeilLines))
+	line-height var(--LineHeight)
+
+[class*='font'], [class*='heading'], [class*='text'], [class*='list'], .paragraph, .blockquote
+	fontfamily()
+	fontSize()
+	lineHeight()
+	colorText()
+	font-weight var(--FontWeight, 400)
+	font-style var(--FontStyle, normal)
+	text-transform var(--TextTransform, none)
+	text-align var(--TextAlign, inherit, left)
+
+	--Baseline: $tk.RhythmVertical.varDef
+	--MarginBottom calc(var(--MarginBottomLines, 0) * var(--Baseline))
+	margin 0 0 var(--MarginBottom, 0) 0
+
+	display var(--Display, inherit)
+
+	--PaddingTop  calc(var(--PaddingTopLines, 0) * var(--Baseline))
+	--PaddingRight  calc(var(--PaddingRightLines, 0) * var(--Baseline))
+	--PaddingBottom calc(var(--PaddingBottomLines, 0) * var(--Baseline))
+	--PaddingLeft calc(var(--PaddingLeftLines, 0) * var(--Baseline))
+	padding var(--PaddingTop, 0) var(--PaddingRight, 0) var(--PaddingBottom, 0) var(--PaddingLeft, 0)
+
+
 
 [class*='heading']
-	--Lines 3
-	--CeilHalfLine calc(calc((var(--Lines) / 2)) + 0.5)
-	--FontWeight 600
-	--FontSize calc(var(--Baseline) * calc(var(--Lines)))
-	--LineHeight calc(var(--Baseline) * var(--CeilLines))
 	--FontFamily: $tk.FontFamilyHeading.val
-	// ??? --FontFamily $tk.FontFamilyDefault.val
-	--MarginBottom var(--CeilHalfLine)
+	--FontWeight 600
+	--CeilHalfLine calc(var(--FontSizeLines) / 2)
+	--MarginBottomLines var(--CeilHalfLine)
+	--Display block
+
+.font
+	&Family
+		&Default
+			--FontFamily: $tk.FontFamilyDefault.val
+
+		&Heading
+			--FontFamily: $tk.FontFamilyHeading.val
+
+		&Monospaced
+			--FontFamily: $tk.FontFamilyMonospaced.val
+
+	&Size
+		&05
+			--FontSizeLines: 0.5
+		&075
+			--FontSizeLines: 0.75
+		&1
+			--FontSizeLines: 1
+		&2
+			--FontSizeLines: 2
+		&3
+			--FontSizeLines: 3
+		&4
+			--FontSizeLines: 4
+
+	&Weight
+		&9 // Black
+			--FontWeight 900
+
+		&8 // ExtraBold
+			--FontWeight 800
+
+		&7 // Bold
+			--FontWeight 700
+
+		&6 // SemiBold
+			--FontWeight 600
+
+		&5 // Medium
+			--FontWeight 500
+
+		&4 // Regular
+			--FontWeight 400
+
+		&3 // Light
+			--FontWeight 300
+
+		&2 // ExtraLight
+			--FontWeight 200
+
+		&1 // Thin
+			--FontWeight 100
+
+	&Style
+		&Normal
+			--FontStyle normal
+
+		&Italic
+			--FontStyle italic
+
+.text
+	&Transform
+		&Uppercase
+			--TextTransform uppercase
+
+		&Lowercase
+			--TextTransform lowercase
+
+		&Capitalize
+			--TextTransform capitalize
+
+	&Align
+		&Left
+			--TextAlign left
+
+		&Center
+			--TextAlign center
+
+		&Right
+			--TextAlign right
+
+		&Justify
+			--TextAlign justify
+
 
 .heading
 	&00
-		--Lines 6
-
+		--FontSizeLines: 3.5
 	&0
-		--Lines 4
-
+		--FontSizeLines: 3.25
 	&1
-		--Lines 3
-
+		--FontSizeLines: 3
 	&2
-		--Lines 2.75
-
+		--FontSizeLines: 2.25
 	&3
-		--Lines 2.25
-
+		--FontSizeLines: 1.5
 	&4
-		--Lines 1.75
-
+		--FontSizeLines: 1.25
 	&5
-		--Lines 1.5
-
+		--FontSizeLines: 1
 	&6
-		--Lines 1.25
+		--FontSizeLines: 0.875
 
 .paragraph
-	--MarginBottom 1
+	--MarginBottomLines 1
+	--Display block
 
-	&:only-child
-		margin 0
+	&:last-child
+		--MarginBottomLines 0
+
+	& + .blockquote
+		--PaddingTopLines 0
 
 .blockquote
-	--Baseline: $tk.RhythmVertical.varDef
-	margin 0
-	padding var(--Baseline)
+	--PaddingTopLines 1
+	--PaddingRightLines 1
+	--PaddingBottomLines 1
+	--PaddingLeftLines 1
+	--FontStyle italic
+
+	& + .blockquote
+		--PaddingTopLines 0
+
+
 
 .list
 	--ListCounterSeparator ''
@@ -156,103 +262,9 @@
 				--ListStyleType upper-alpha
 				--ListCounterSeparator '.'
 
-.font
-	&Family
-		&Default
-			--FontFamily: $tk.FontFamilyDefault.val
 
-		&Heading
-			--FontFamily: $tk.FontFamilyHeading.val
 
-		&Monospaced
-			--FontFamily: $tk.FontFamilyMonospaced.val
 
-	&Size
-		&Large4
-			--Lines: $tk.FontSizeLarge4.varDef
 
-		&Large3
-			--Lines: $tk.FontSizeLarge3.val
 
-		&Large2
-			--Lines: $tk.FontSizeLarge2.val
 
-		&Large1
-			--Lines: $tk.FontSizeLarge1.val
-
-		&Large
-			--Lines: $tk.FontSizeLarge.val
-
-		&Default
-			--Lines: $tk.FontSizeDefault.val
-
-		&Small
-			--Lines: $tk.FontSizeSmall.val
-
-		&Small1
-			--Lines: $tk.FontSizeSmall1.val
-
-		&Small2
-			--Lines: $tk.FontSizeSmall2.val
-
-	&Weight
-		&9 // Black
-			--FontWeight 900
-
-		&8 // ExtraBold
-			--FontWeight 800
-
-		&7 // Bold
-			--FontWeight 700
-
-		&6 // SemiBold
-			--FontWeight 600
-
-		&5 // Medium
-			--FontWeight 500
-
-		&4 // Regular
-			--FontWeight 400
-
-		&3 // Light
-			--FontWeight 300
-
-		&2 // ExtraLight
-			--FontWeight 200
-
-		&1 // Thin
-			--FontWeight 100
-
-	&Style
-		&Normal
-			--FontStyle normal
-
-		&Italic
-			--FontStyle italic
-
-.Text
-	&Transform
-		&Uppercase
-			--TextTransform uppercase
-
-		&Lowercase
-			--TextTransform lowercase
-
-		&Capitalize
-			--TextTransform capitalize
-
-		&None
-			--TextTransform none
-
-	&Align
-		&Left
-			--TextAlign left
-
-		&Center
-			--TextAlign center
-
-		&Right
-			--TextAlign right
-
-		&Justify
-			--TextAlign justify
