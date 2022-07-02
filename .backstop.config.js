@@ -19,6 +19,7 @@ const viewports = [
 const scenariosSimple = [
 	{ label: "Index", url: "http://localhost:3000/" },
 	{ label: "Grid", url: "http://localhost:3000/grid" },
+	{ label: "Typography", url: "http://localhost:3000/typography" },
 ];
 
 const scenariosTemplate = [

@@ -10,11 +10,17 @@
 	initial-value 1
 	inherits false
 
+cp($name, $value = null)
+	if ($value)
+		{'--' + $name} $value
+	else
+		convert('var(--' + $name + ')')
+
 fontfamily()
-	font-family var(--FontFamily, --FontFamilyDefault, SF Pro Text SF Pro Icons Helvetica Neue Helvetica Arial sans-serif);
+	--FontFamily: $tk.FontFamilyDefault.val
+	font-family var(--FontFamily)
 
 fontSize()
-	--FontSize: $tk.FontSizeDefault.varDef
 	--FontSizeLines 1
 	--Baseline: $tk.RhythmVertical.varDef
 	--FontSize var(--FontSizeDefault, calc(var(--Baseline) * var(--FontSizeLines)))
@@ -29,34 +35,39 @@ lineHeight()
 	--LineHeight calc(var(--Baseline) * var(--CeilLines))
 	line-height var(--LineHeight)
 
+paddings()
+	--PaddingTop calc(var(--PaddingTopLines, 0) * var(--Baseline))
+	--PaddingRight calc(var(--PaddingRightLines, 0) * var(--Baseline))
+	--PaddingBottom calc(var(--PaddingBottomLines, 0) * var(--Baseline))
+	--PaddingLeft calc(var(--PaddingLeftLines, 0) * var(--Baseline))
+	padding var(--PaddingTop, 0) var(--PaddingRight, 0) var(--PaddingBottom, 0) var(--PaddingLeft, 0)
+
+margins()
+	--MarginTop calc(var(--MarginTopLines, 0) * var(--Baseline))
+	--MarginRight calc(var(--MarginRightLines, 0) * var(--Baseline))
+	--MarginBottom calc(var(--MarginBottomLines, 0) * var(--Baseline))
+	--MarginLeft calc(var(--MarginLeftLines, 0) * var(--Baseline))
+	margin var(--MarginTop, 0) var(--MarginRight, 0) var(--MarginBottom, 0) var(--MarginLeft, 0)
+
 [class*='font'], [class*='heading'], [class*='text'], [class*='list'], .paragraph, .blockquote
 	fontfamily()
 	fontSize()
 	lineHeight()
 	colorText()
+	paddings()
 	font-weight var(--FontWeight, 400)
 	font-style var(--FontStyle, normal)
 	text-transform var(--TextTransform, none)
 	text-align var(--TextAlign, inherit, left)
-
 	--Baseline: $tk.RhythmVertical.varDef
 	--MarginBottom calc(var(--MarginBottomLines, 0) * var(--Baseline))
 	margin 0 0 var(--MarginBottom, 0) 0
-
 	display var(--Display, inherit)
-
-	--PaddingTop  calc(var(--PaddingTopLines, 0) * var(--Baseline))
-	--PaddingRight  calc(var(--PaddingRightLines, 0) * var(--Baseline))
-	--PaddingBottom calc(var(--PaddingBottomLines, 0) * var(--Baseline))
-	--PaddingLeft calc(var(--PaddingLeftLines, 0) * var(--Baseline))
-	padding var(--PaddingTop, 0) var(--PaddingRight, 0) var(--PaddingBottom, 0) var(--PaddingLeft, 0)
-
-
 
 [class*='heading']
 	--FontFamily: $tk.FontFamilyHeading.val
 	--FontWeight 600
-	--CeilHalfLine calc(var(--FontSizeLines) / 2)
+	--CeilHalfLine calc((var(--FontSizeLines) / 2))
 	--MarginBottomLines var(--CeilHalfLine)
 	--Display block
 
@@ -73,17 +84,22 @@ lineHeight()
 
 	&Size
 		&05
-			--FontSizeLines: 0.5
+			--FontSizeLines 0.5
+
 		&075
-			--FontSizeLines: 0.75
+			--FontSizeLines 0.75
+
 		&1
-			--FontSizeLines: 1
+			--FontSizeLines 1
+
 		&2
-			--FontSizeLines: 2
+			--FontSizeLines 2
+
 		&3
-			--FontSizeLines: 3
+			--FontSizeLines 3
+
 		&4
-			--FontSizeLines: 4
+			--FontSizeLines 4
 
 	&Weight
 		&9 // Black
@@ -144,24 +160,30 @@ lineHeight()
 		&Justify
 			--TextAlign justify
 
-
 .heading
 	&00
-		--FontSizeLines: 3.5
+		--FontSizeLines 3.5
+
 	&0
-		--FontSizeLines: 3.25
+		--FontSizeLines 3.25
+
 	&1
-		--FontSizeLines: 3
+		--FontSizeLines 3
+
 	&2
-		--FontSizeLines: 2.25
+		--FontSizeLines 2.25
+
 	&3
-		--FontSizeLines: 1.5
+		--FontSizeLines 1.5
+
 	&4
-		--FontSizeLines: 1.25
+		--FontSizeLines 1.25
+
 	&5
-		--FontSizeLines: 1
+		--FontSizeLines 1
+
 	&6
-		--FontSizeLines: 0.875
+		--FontSizeLines 0.875
 
 .paragraph
 	--MarginBottomLines 1
@@ -183,15 +205,16 @@ lineHeight()
 	& + .blockquote
 		--PaddingTopLines 0
 
-
-
 .list
+	margins()
+	paddings()
+	cp(MarginBottomLines, 1)
+	color cp(MarginBottomLines)
+	--MarginBottomLines 1
 	--ListCounterSeparator ''
 	--ListStyleType disc
-	--MarginLeft 0
 	counter-reset listCounter
 	list-style none
-	margin-bottom calc(var(--Baseline) * 2)
 
 	& > *
 		counter-increment listCounter
@@ -205,6 +228,11 @@ lineHeight()
 			text-align right
 			content counter(listCounter, var(--ListStyleType)) var(--ListCounterSeparator)
 
+	.list
+		--PaddingTopLines 1
+		--MarginBottomLines 0
+		--MarginLeftLines 1
+
 	&Style
 		&Position
 			&Inside
@@ -212,7 +240,7 @@ lineHeight()
 
 			&Outside
 				--ListStylePosition outside
-				--MarginLeft -2
+				--MarginLeftLines -2
 
 		&Type
 			&None
@@ -261,10 +289,3 @@ lineHeight()
 			&UpperAlpha
 				--ListStyleType upper-alpha
 				--ListCounterSeparator '.'
-
-
-
-
-
-
-
