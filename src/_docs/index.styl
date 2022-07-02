@@ -1,31 +1,50 @@
-  body
-    color green
-    font-family: cursive;
-    font-size 30px
+body
+	color green
+	font-family: cursive;
+	font-size 30px
 
-  .doc
+@layer doc
+	.doc
 
-    .docBox
-      background-color #007fff
-      margin-bottom 16px
-      padding 16px
-      color #fff
-      *
-        background-color #036
+		section
+			margin-bottom calc(16px * 4)
 
-    .demo
-      background-color #eee
-      padding 16px
+		.docBox
+			background-color #007fff
+			margin-bottom 16px
+			padding 16px
+			color #fff
+			*
+				background-color #036
 
-    .row
-      background #007fff
-      padding 8px 0
-      margin-bottom 8px
-      border-radius 5px
+		.demo
+			background-color #eee
+			padding 16px
 
-    .row > *
-      background #036
-      border-radius 5px
-      text-align center
-      color #fff
-      min-height 1rem
+			.docIgnore
+				color lightgray !important;
+
+			& > *
+				position relative
+				&:before
+					content '.' attr(class)
+					font-family monospace
+					font-size 16px
+					font-weight normal
+					position absolute
+					top 0
+					right 0
+					display none
+
+		.row
+			background #007fff
+			padding 8px 0
+			margin-bottom 8px
+			border-radius 5px
+
+			& > *
+				background #036
+				border-radius 5px
+				text-align center
+				color #fff
+				min-height 1rem
