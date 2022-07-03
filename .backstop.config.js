@@ -20,6 +20,7 @@ const scenariosSimple = [
 	{ label: "Index", url: "http://localhost:3000/" },
 	{ label: "Grid", url: "http://localhost:3000/grid" },
 	{ label: "Typography", url: "http://localhost:3000/typography" },
+	{ label: "Space", url: "http://localhost:3000/space" },
 ];
 
 const scenariosTemplate = [
