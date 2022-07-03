@@ -1,17 +1,25 @@
+@require '../tokens/'
+
 body
 	color green
 	font-family cursive
 	font-size 30px
 
 @layer doc
+
 	.doc
+		--BaselineDocs: $tk.RhythmVertical.varDef
+		padding var(--BaselineDocs)
+		font-family $tk.FontFamilyDefault.val
+		font-size var(--BaselineDocs)
+
 		section
-			margin-bottom calc(16px * 4)
+			margin-bottom calc(var(--BaselineDocs) * 4)
 
 		.docBox
 			background-color #007fff
-			margin-bottom 16px
-			padding 16px
+			margin-bottom var(--BaselineDocs)
+			padding var(--BaselineDocs)
 			color #fff
 
 			*
@@ -19,7 +27,7 @@ body
 
 		.demo
 			background-color #eee
-			padding 16px
+			padding var(--BaselineDocs)
 
 			.docIgnore
 				color lightgray !important
@@ -30,7 +38,7 @@ body
 				&:before
 					content '.' attr(class)
 					font-family monospace
-					font-size 16px
+					font-size var(--BaselineDocs)
 					font-weight normal
 					position absolute
 					top 0
@@ -39,13 +47,37 @@ body
 
 		.row
 			background #007fff
-			padding 8px 0
-			margin-bottom 8px
-			border-radius 5px
+			padding calc((var(--BaselineDocs) / 1)) 0
+			margin-bottom calc((var(--BaselineDocs) / 1))
+			border-radius calc((var(--BaselineDocs) / 3))
+
+			&:last-child
+				margin-bottom 0
+
+			&.align-items-start, &.align-items-end, &.align-items-center, &.align-items-baseline, &.align-items-stretch, &.wrap-yes.align-content-start, &.wrap-yes.align-content-end, &.wrap-yes.align-content-center, &.wrap-yes.align-content-spacebetween, &.wrap-yes.align-content-spacearound, &.wrap-yes.align-content-stretch
+				height calc(var(--BaselineDocs) * 6)
+
+			&.alignVerticalTop, &.alignVerticalBottom, &.alignVerticalCenter, &.alignVerticalStretch
+				height calc(var(--BaselineDocs) * 6)
+
+			&.alignContentStart, &.alignContentEnd, &.alignContentCenter, &.alignContentSpacebetween, &.alignContentSpacearound, &.alignContentStretch
+				height calc(var(--BaselineDocs) * 10)
+
+
+			[class*="col"] .row
+				padding-top 0
+				padding-bottom 0
+
+				[class*="col"]
+					background-color red
 
 			& > *
 				background #036
-				border-radius 5px
+				border-radius calc((var(--BaselineDocs) / 3))
 				text-align center
 				color #fff
-				min-height 1rem
+				min-height calc(var(--BaselineDocs) * 2)
+				font-size var(--BaselineDocs)
+
+				&[class*='order']
+					background-color red

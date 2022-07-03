@@ -44,6 +44,6 @@ FixedColumns.args = {
 	rows: Array(12)
 		.fill()
 		.map((_, index) => {
-			return { cols: 1, colClasses: `col-${index + 1}`, text: `${index + 1}` };
+			return { cols: 1, colClasses: `col${index + 1}`, text: `${index + 1}` };
 		}),
 };

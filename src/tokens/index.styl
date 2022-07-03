@@ -7,7 +7,7 @@ generateTokens($tokensLevel, $prevKey = '', $rootProps = false)
 	for $key, $val in $tokensLevel
 		$currentPropName = $prevKey + capitalize($key)
 
-		if (!($val.value))
+		if (!(($val.value)))
 			generateTokens($val, $currentPropName, $rootProps)
 		else
 			$value = $val.value

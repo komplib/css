@@ -11,19 +11,20 @@ mixin allOrders(quantity)
 		.row
 			each __, $indexCol in Array(quantity)
 				if $indexCol == 11
-					div(class=`col-1 order-${$indexRow + 1}`)=`--${$indexCol+1}--`
+					div(class=`col1 order${$indexRow + 1}`)=`${$indexCol+1}`
 				else
-					.col-1=$indexCol+1
+					.col1=$indexCol+1
 
 html
 	head
 		link(rel='stylesheet', href='../_docs/index.css')
+		link(rel='stylesheet', href='../reset/index.css')
 		link(rel='stylesheet', href='../typography/index.css')
 		link(rel='stylesheet', href='./index.css')
-	body.doc.fontSizeDefault
+	body.doc
 		h1.heading0 Grid
 
-		article
+		section
 			h1.heading1 Fluid columns
 
 			p.paragraph Adding .row to a container will make all the children of that container behave like block elements.
@@ -33,19 +34,19 @@ html
 				each _, i in Array(16)
 					+rowWithColumns(i+1)
 
-		article
+		section
 			h1.heading1 Fixed columns
 
-			p.paragraph Adding .col-NUMBER will make the column use a fixed width.
+			p.paragraph Adding .colNUMBER will make the column use a fixed width.
 			p.paragraph The default number of columns is 12
 
 			.demo
 				each _, i in Array(12)
 					.row
-						div(class=`col-${i+1}`)
-							| col-#{i+1}
+						div(class=`col${i+1}`)
+							| col#{i+1}
 
-		article
+		section
 			h1.heading1 Row Wrap
 
 			h2.heading2 Default
@@ -53,213 +54,224 @@ html
 			p.paragraph The content will overflow the row and be visible
 			.demo
 				.row
-					.col-5 1 .col-5
-					.col-5 2 .col-5
-					.col-5 3 .col-5
+					.col5 1 .col5
+					.col5 2 .col5
+					.col5 3 .col5
 
 			h2.heading2 Force wrap / break
-			p.paragraph Adding `wrap-yes` will force the columns to break if they dont fit the row
+			p.paragraph Adding `wrap` will force the columns to break if they dont fit the row
 			.demo
-				.row.wrap-yes
-					.col-5 1 .col-5
-					.col-5 2 .col-5
-					.col-5 3 .col-5
+				.row.wrap
+					.col5 1 .col5
+					.col5 2 .col5
+					.col5 3 .col5
 
 			h2.heading2 No wrap / break
 			p.paragraph Adding `wrap-no` will force the columns to not break, reseting back to the default behavior
 			.demo
-				.row.wrap-no
-					.col-5 1 .col-5
-					.col-5 2 .col-5
-					.col-5 3 .col-5
+				.row.wrapDisable
+					.col5 1 .col5
+					.col5 2 .col5
+					.col5 3 .col5
 
 			h2.heading2 Force wrap reverse / break reverse
-			p.paragraph Adding `wrap-yes` will force the columns to break, in reverse order, if they dont fit the row
+			p.paragraph Adding `wrap` will force the columns to break, in reverse order, if they dont fit the row
 			.demo
-				.row.wrap-reverse
-					.col-5 1 .col-5
-					.col-5 2 .col-5
-					.col-5 3 .col-5
+				.row.wrapReverse
+					.col5 1 .col5
+					.col5 2 .col5
+					.col5 3 .col5
 
-		article
+		section
 			h1.heading1 Column offset
 			.demo
 				each _, i in Array(12)
 					.row
-						div(class=`col-1 offset-${i+1}`)
-							| offset-#{i+1}
+						div(class=`col1 offset${i+1}`)
+							| #{i+1}
 
-		article
+		section
 			h1.heading1 Direction
 			.demo
-				p.paragraph default direction-row
-				.row.direction-row
-					.col-1 1
-					.col-1 2
-					.col-1 3
-				p.paragraph direction-rowReverse
-				.row.direction-rowReverse
-					.col-1 1
-					.col-1 2
-					.col-1 3
-				p.paragraph direction-column
-				.row.direction-column
-					.col-1 1
-					.col-2 2
-					.col-3 3
-				p.paragraph direction-columnReverse
-				.row.direction-columnReverse
-					.col-1 1
-					.col-2 2
-					.col-3 3
+				p.paragraph default directionHorizontal
+				.row.directionHorizontal
+					.col1 1
+					.col1 2
+					.col1 3
+				p.paragraph directionHorizontalReverse
+				.row.directionHorizontalReverse
+					.col1 1
+					.col1 2
+					.col1 3
+				p.paragraph directionVertical
+				.row.directionVertical
+					.col1 1
+					.col2 2
+					.col3 3
+				p.paragraph directionVerticalReverse
+				.row.directionVerticalReverse
+					.col1 1
+					.col2 2
+					.col3 3
 
-		article
-			h1.heading1 Justify content
-			.demo
-				p.paragraph Start
-				.row.content-start
-					.col-1 1
-					.col-1 2
-					.col-1 3
-				.content-start
-				p.paragraph End
-				.row.content-end
-					.col-1 1
-					.col-1 2
-					.col-1 3
-				.content-end
-				p.paragraph Center
-				.row.content-center
-					.col-1 1
-					.col-1 2
-					.col-1 3
-				.content-center
-				p.paragraph Space between
-				.row.content-spacebetween
-					.col-1 1
-					.col-1 2
-					.col-1 3
-				.content-spacebetween
-				p.paragraph Space around
-				.row.content-spacearound
-					.col-1 1
-					.col-1 2
-					.col-1 3
-				.content-spacearound
-				p.paragraph Space evenly
-				.row.content-spaceevenly
-					.col-1 1
-					.col-1 2
-					.col-1 3
+		section
+			h1.heading1 Align
 
-		article
-			h2.heading2 Align items
-			.demo
-				p.paragraph alignItems-start
-				.row.align-items-start(style="height: 100px;")
-					.col-1(style="height: 80px;") 1
-					.col-1(style="height: 30px;") 2
-					.col-1(style="height: 50px;") 3
-				p.paragraph alignItems-end
-				.row.align-items-end(style="height: 100px;")
-					.col-1(style="height: 80px;") 1
-					.col-1(style="height: 30px;") 2
-					.col-1(style="height: 50px;") 3
-				p.paragraph alignItems-center
-				.row.align-items-center(style="height: 100px;")
-					.col-1(style="height: 80px;") 1
-					.col-1(style="height: 30px;") 2
-					.col-1(style="height: 50px;") 3
-				p.paragraph alignItems-baseline
-				.row.align-items-baseline(style="height: 100px;")
-					.col-1
-						p.paragraph 1
-					.col-1
-						p.paragraph 2
-						p.paragraph 2
-					.col-1 3
-				p.paragraph alignItems-stretch
-				.row.align-items-stretch(style="height: 100px;")
-					.col-1 1
-					.col-1 2
-					.col-1 3
+			section
+				h1.heading2 Align Horizontal
+				.demo
+					p.paragraph Left
+					.row.alignHorizontalLeft
+						.col1 1
+						.col1 2
+						.col1 3
+					p.paragraph Right
+					.row.alignHorizontalRight
+						.col1 1
+						.col1 2
+						.col1 3
+					p.paragraph Center
+					.row.alignHorizontalCenter
+						.col1 1
+						.col1 2
+						.col1 3
+					p.paragraph Space between
+					.row.alignHorizontalSpaceBetween
+						.col1 1
+						.col1 2
+						.col1 3
+					p.paragraph Space around
+					.row.alignHorizontalSpaceAround
+						.col1 1
+						.col1 2
+						.col1 3
+					p.paragraph Space evenly
+					.row.alignHorizontalSpaceEvenly
+						.col1 1
+						.col1 2
+						.col1 3
 
-		article
+			section
+				h1.heading2 Align Vertical
+				.demo
+					p.paragraph alignVerticalTop
+					.row.alignVerticalTop
+						.col1(style="height: 80px;") 1
+						.col1(style="height: 30px;") 2
+						.col1(style="height: 50px;") 3
+					p.paragraph alignVerticalBottom
+					.row.alignVerticalBottom
+						.col1(style="height: 80px;") 1
+						.col1(style="height: 30px;") 2
+						.col1(style="height: 50px;") 3
+					p.paragraph alignVerticalCenter
+					.row.alignVerticalCenter
+						.col1(style="height: 80px;") 1
+						.col1(style="height: 30px;") 2
+						.col1(style="height: 50px;") 3
+					p.paragraph alignVerticalStretch
+					.row.alignVerticalStretch
+						.col1 1
+						.col1 2
+						.col1 3
+
+		section
 			h1.heading1 Align content
 			p.paragraph This modifier only takes effect on multi-line flexible containers, where flex-wrap is set to either wrap or wrap-reverse)
 			.demo
 				p.paragraph start
-				.row.wrap-yes.align-content-start(style="height: 100px;")
-					.col-6 1
-					.col-3 2
-					.col-5 3
-					.col-7 4
+				.row.wrap.alignContentStart
+					.col6 1
+					.col3 2
+					.col5 3
+					.col7 4
 				p.paragraph end
-				.row.wrap-yes.align-content-end(style="height: 100px;")
-					.col-6 1
-					.col-3 2
-					.col-5 3
-					.col-7 4
+				.row.wrap.alignContentEnd
+					.col6 1
+					.col3 2
+					.col5 3
+					.col7 4
 				p.paragraph center
-				.row.wrap-yes.align-content-center(style="height: 100px;")
-					.col-6 1
-					.col-3 2
-					.col-5 3
-					.col-7 4
+				.row.wrap.alignContentCenter
+					.col6 1
+					.col3 2
+					.col5 3
+					.col7 4
 				p.paragraph spacebetween
-				.row.wrap-yes.align-content-spacebetween(style="height: 100px;")
-					.col-6 1
-					.col-3 2
-					.col-5 3
-					.col-7 4
+				.row.wrap.alignContentSpacebetween
+					.col6 1
+					.col3 2
+					.col5 3
+					.col7 4
 				p.paragraph spacearound
-				.row.wrap-yes.align-content-spacearound(style="height: 100px;")
-					.col-6 1
-					.col-3 2
-					.col-5 3
-					.col-7 4
+				.row.wrap.alignContentSpacearound
+					.col6 1
+					.col3 2
+					.col5 3
+					.col7 4
 				p.paragraph stretch
-				.row.wrap-yes.align-content-stretch(style="height: 100px;")
-					.col-6
-						p.paragraph 1
-					.col-3 2
-					.col-5 3
-					.col-7 4
+				.row.wrap.alignContentStretch
+					.col6 1
+					.col3 2
+					.col5 3
+					.col7 4
 
-		article
+		section
 			h1.heading1 Order columns
 			.demo
 				+allOrders(12)
 
-		article
+		section
 			h1.heading1 Nested Grids
 			.demo
 				.row
-					.col-6 6
-					.col-6 6
+					.col6 6
+					.col6 6
 				.row
-					.col-6
+					.col6
 						.row
-							.col-6 6
-							.col-6
+							.col6 6
+							.col6 6
+					.col6 6
+				.row
+					.col6 6
+					.col6 6
+				.row
+					.col6
+						.row
+							.col6 6
+					.col6 6
+				.row
+					.col6 6
+					.col6 6
+				.row
+					.col6
+						.row
+							.col4 4
+							.col4 4
+							.col4 4
+						.row
+							.col6 6
+							.col6
 								.row
-									.col-6 6
-									.col-6 6
-					.col-3 3
-					.col-3 3
+									.col4 4
+									.col4 4
+									.col4 4
 
-		article
+					.col6 6
+
+		section
 			h1.heading1 Gaps
 
 			h2.heading2 Columns gaps
 			.demo
 				each _, $indexRow in Array(6)
-					div(class=`row gap-col-${$indexRow}`)
+					div(class=`row gapCol${$indexRow}`)
 						+repeatColumns(12)
 
 			h2.heading2 Row gaps
 			.demo
 				each _, $indexRow in Array(6)
-					div(class=`row wrap-yes gap-row-${$indexRow+1}`)
+					div(class=`row wrap gapRow${$indexRow+1}`)
 						each _, i in Array(6)
-							div.col-4=i+ 1
+							div.col4=i+ 1

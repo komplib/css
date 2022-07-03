@@ -45,7 +45,7 @@
 				padding-right 0
 				--FlexWrap wrap
 
-			for $num in 1 .. $tk.GridColumns.val
+			for $num in 1 .. 16
 				&:nth-child({$num})
 					--Order: $num + 1
 
@@ -63,86 +63,82 @@
 
 @layer grid-modifier
 	// Wrap columns
-	.wrap-
-		&yes
-			--FlexWrap wrap
+	.wrap
+		--FlexWrap wrap
 
-		&no
+		&Disable
 			--FlexWrap nowrap
 
-		&reverse
+		&Reverse
 			--FlexWrap wrap-reverse
 
-	.direction-
-		&row
+	.direction
+		&Horizontal
 			--FlexDirection row
 
-		&rowReverse
+		&HorizontalReverse
 			--FlexDirection row-reverse
 
-		&column
+		&Vertical
 			--FlexDirection column
 
 			& > *
 				--Width var(--FlexBasis)
 
-		&columnReverse
+		&VerticalReverse
 			--FlexDirection column-reverse
 
 			& > *
 				--Width var(--FlexBasis)
 
-	// Justify content
-	.content-
-		&start
-			--JustifyContent flex-start
+	.align
+		&Horizontal
+			&left
+				--JustifyContent flex-start
 
-		&end
-			--JustifyContent flex-end
+			&Right
+				--JustifyContent flex-end
 
-		&center
-			--JustifyContent center
+			&Center
+				--JustifyContent center
 
-		&spacebetween
-			--JustifyContent space-between
+			&Space
+				&Between
+					--JustifyContent space-between
 
-		&spacearound
-			--JustifyContent space-around
+				&Around
+					--JustifyContent space-around
 
-		&spaceevenly
-			--JustifyContent space-evenly
+				&Evenly
+					--JustifyContent space-evenly
 
-	.align-
-		&items-
-			&start
+		&Vertical
+			&Top
 				--AlignItems flex-start
 
-			&end
+			&Bottom
 				--AlignItems flex-end
 
-			&center
+			&Center
 				--AlignItems center
 
-			&baseline
-				--AlignItems baseline
-
-			&stretch
+			&Stretch
 				--AlignItems stretch
 
-		&content-
-			&start
+		&Content
+			&Start
 				--AlignContent flex-start
 
-			&end
+			&End
 				--AlignContent flex-end
 
-			&center
+			&Center
 				--AlignContent center
 
-			&spacebetween
+			&Spacebetween
 				--AlignContent space-between
 
-			&spacearound
+			&Spacearound
 				--AlignContent space-around
 
 			&stretch
@@ -151,26 +147,26 @@
 
 	.col
 		for $num in 1 .. $tk.GridColumns.val
-			&-{$num}
+			&{$num}
 				--Col $num
 
 	.offset
-		for $num in 1 .. $tk.GridColumns.val
-			&-{$num}
+		for $num in 0 .. $tk.GridColumns.val
+			&{$num}
 				--Offset $num
 
 	.order
 		for $num in 1 .. $tk.GridColumns.val
-			&-{$num}
+			&{$num}
 				--Order $num
 
 	.gap
-		&-col
+		&Col
 			for $num in 1 .. 6
-				&-{$num}
+				&{$num}
 					--GapColumnMultiplier $num
 
-		&-row
+		&Row
 			for $num in 1 .. 6
-				&-{$num}
+				&{$num}
 					--GapRowMultiplier $num
