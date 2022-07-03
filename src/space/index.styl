@@ -75,3 +75,13 @@
 	for $num in 1 .. 12
 		&{$num}
 			--LinesHeight $num
+
+[class*='width']
+	--Baseline: $tk.RhythmHorizontal.val
+	--LinesWidth auto
+	width calc(var(--Baseline) * var(--LinesWidth, auto))
+
+.width
+	for $num in 1 .. 24
+		&{$num}
+			--LinesWidth $num
