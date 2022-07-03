@@ -1,3 +1,10 @@
+## [0.23.1](https://github.com/komplib/css/compare/v0.23.0...v0.23.1) (2022-07-02)
+
+
+### Bug Fixes
+
+* nested lists typography ([f42bd2f](https://github.com/komplib/css/commit/f42bd2ffcf396c76cac09d908e1597551ccfdbe5))
+
 # [0.23.0](https://github.com/komplib/css/compare/v0.22.0...v0.23.0) (2022-06-29)
 
 
