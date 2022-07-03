@@ -65,3 +65,13 @@
 		for $num in 0 .. $tk.GridColumns.val
 			&{$num}
 				--LinesMarginLeft $num
+
+[class*='height']
+	--Baseline: $tk.RhythmVertical.val
+	--LinesHeight auto
+	height calc(var(--Baseline) * var(--LinesHeight, auto))
+
+.height
+	for $num in 1 .. 12
+		&{$num}
+			--LinesHeight $num

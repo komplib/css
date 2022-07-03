@@ -16,6 +16,20 @@ body
 		section
 			margin-bottom calc(var(--BaselineDocs) * 4)
 
+		.demoHeight
+			[class*='height']
+				background-color #007fff
+				margin-bottom calc(var(--BaselineDocs) * 1)
+				font-family $tk.FontFamilyDefault.val
+				font-size var(--BaselineDocs)
+				line-height var(--BaselineDocs)
+				color #fff
+				&:last-child
+					margin-bottom 0
+
+		[class*='paddingRight']
+			text-align right
+
 		.docBox
 			background-color #007fff
 			margin-bottom var(--BaselineDocs)
@@ -28,6 +42,9 @@ body
 		.demo
 			background-color #eee
 			padding var(--BaselineDocs)
+			font-family $tk.FontFamilyDefault.val
+			font-size var(--BaselineDocs)
+			line-height var(--BaselineDocs)
 
 			.docIgnore
 				color lightgray !important
