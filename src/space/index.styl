@@ -1,7 +1,7 @@
 @require '../tokens/'
 
 [class*='padding']
-	--Baseline: $tk.RhythmVertical.varDef
+	--Baseline: $tokens.RhythmVertical.varDef
 	--LinesPaddingTop 0
 	--LinesPaddingRight 0
 	--LinesPaddingBottom 0
@@ -14,27 +14,27 @@
 
 .padding
 	&Top
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesPaddingTop $num
 
 	&Right
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesPaddingRight $num
 
 	&Bottom
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesPaddingBottom $num
 
 	&Left
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesPaddingLeft $num
 
 [class*='margin']
-	--Baseline: $tk.RhythmVertical.varDef
+	--Baseline: $tokens.RhythmVertical.varDef
 	--LinesMarginTop 0
 	--LinesMarginRight 0
 	--LinesMarginBottom 0
@@ -47,27 +47,27 @@
 
 .margin
 	&Top
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesMarginTop $num
 
 	&Right
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesMarginRight $num
 
 	&Bottom
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesMarginBottom $num
 
 	&Left
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--LinesMarginLeft $num
 
 [class*='height']
-	--Baseline: $tk.RhythmVertical.val
+	--Baseline: $tokens.RhythmVertical.val
 	--LinesHeight auto
 	height calc(var(--Baseline) * var(--LinesHeight, auto))
 
@@ -77,7 +77,7 @@
 			--LinesHeight $num
 
 [class*='width']
-	--Baseline: $tk.RhythmHorizontal.val
+	--Baseline: $tokens.RhythmHorizontal.val
 	--LinesWidth auto
 	width calc(var(--Baseline) * var(--LinesWidth, auto))
 

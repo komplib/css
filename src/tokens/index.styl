@@ -1,7 +1,7 @@
 use('capitalize.js')
 use('storeVar.js')
 $tokensJson = json('tokens.json', { hash: true })
-$tk = {}
+$tokens = {}
 
 generateTokens($tokensLevel, $prevKey = '', $rootProps = false)
 	for $key, $val in $tokensLevel
@@ -17,7 +17,7 @@ generateTokens($tokensLevel, $prevKey = '', $rootProps = false)
 			if ($rootProps)
 				{$customPropName} $value
 			else
-				$tk[$currentPropName] = {
+				$tokens[$currentPropName] = {
 					val: $value,
 					var: unquote('var(--' + $currentPropName + ')'),
 					varDef: unquote('var(--' + $currentPropName + ', ' + $value + ')')

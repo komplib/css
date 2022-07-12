@@ -5,14 +5,14 @@
 		--AlignContent normal
 		--AlignItems flex-start
 		--AlignSelf auto
-		--Columns: $tk.GridColumns.varDef
+		--Columns: $tokens.GridColumns.varDef
 		--FlexDirection row
 		--FlexWrap nowrap
 		--GapColumnMultiplier 1
-		--GapColumnBase: $tk.GridGapColumn.varDef
+		--GapColumnBase: $tokens.GridGapColumn.varDef
 		--GapColumn calc(var(--GapColumnBase) * var(--GapColumnMultiplier))
 		--GapRowMultiplier 1
-		--GapRowBase: $tk.GridGapRow.varDef
+		--GapRowBase: $tokens.GridGapRow.varDef
 		--GapRow calc(var(--GapRowBase) * var(--GapRowMultiplier))
 		--JustifyContent flex-start
 		align-content var(--AlignContent)
@@ -146,17 +146,17 @@
 				--AlignSelf normal
 
 	.col
-		for $num in 1 .. $tk.GridColumns.val
+		for $num in 1 .. $tokens.GridColumns.val
 			&{$num}
 				--Col $num
 
 	.offset
-		for $num in 0 .. $tk.GridColumns.val
+		for $num in 0 .. $tokens.GridColumns.val
 			&{$num}
 				--Offset $num
 
 	.order
-		for $num in 1 .. $tk.GridColumns.val
+		for $num in 1 .. $tokens.GridColumns.val
 			&{$num}
 				--Order $num
 

@@ -17,12 +17,12 @@ cp($name, $value = null)
 		convert('var(--' + $name + ')')
 
 fontfamily()
-	--FontFamily: $tk.FontFamilyDefault.val
+	--FontFamily: $tokens.FontFamilyDefault.val
 	font-family var(--FontFamily)
 
 fontSize()
 	--FontSizeLines 1
-	--Baseline: $tk.RhythmVertical.varDef
+	--Baseline: $tokens.RhythmVertical.varDef
 	--FontSize var(--FontSizeDefault, calc(var(--Baseline) * var(--FontSizeLines)))
 	font-size var(--FontSize)
 
@@ -31,7 +31,7 @@ colorText()
 
 lineHeight()
 	--CeilLines calc(var(--FontSizeLines))
-	--Baseline: $tk.RhythmVertical.varDef
+	--Baseline: $tokens.RhythmVertical.varDef
 	--LineHeight calc(var(--Baseline) * var(--CeilLines))
 	line-height var(--LineHeight)
 
@@ -59,13 +59,13 @@ margins()
 	font-style var(--FontStyle, normal)
 	text-transform var(--TextTransform, none)
 	text-align var(--TextAlign, inherit, left)
-	--Baseline: $tk.RhythmVertical.varDef
+	--Baseline: $tokens.RhythmVertical.varDef
 	--MarginBottom calc(var(--MarginBottomLines, 0) * var(--Baseline))
 	margin 0 0 var(--MarginBottom, 0) 0
 	display var(--Display, inherit)
 
 [class*='heading']
-	--FontFamily: $tk.FontFamilyHeading.val
+	--FontFamily: $tokens.FontFamilyHeading.val
 	--FontWeight 600
 	--CeilHalfLine calc((var(--FontSizeLines) / 2))
 	--MarginBottomLines var(--CeilHalfLine)
@@ -74,13 +74,13 @@ margins()
 .font
 	&Family
 		&Default
-			--FontFamily: $tk.FontFamilyDefault.val
+			--FontFamily: $tokens.FontFamilyDefault.val
 
 		&Heading
-			--FontFamily: $tk.FontFamilyHeading.val
+			--FontFamily: $tokens.FontFamilyHeading.val
 
 		&Monospaced
-			--FontFamily: $tk.FontFamilyMonospaced.val
+			--FontFamily: $tokens.FontFamilyMonospaced.val
 
 	&Size
 		&05

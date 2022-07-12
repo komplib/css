@@ -1,66 +1,66 @@
 @require '../tokens/'
 
-$colorsNames = Primary Secondary Success Danger Warning Info Light Dark
-$colorsPairs = Light Light Light Light Dark Dark Dark Light
+// $colorsNames = Primary Secondary Success Danger Warning Info Light Dark
+// $colorsPairs = Light Light Light Light Dark Dark Dark Light
 
-[class*='button']
-	for $index in range(0, length($colorsNames) - 1)
-		$colorName = $colorsNames[$index]
-		// --Color{$colorName} lookup('$tk.color-' + $colorName)
-		$tkcolor = $tk['Color' + $colorName]
-		--Color{$colorName}: $tkcolor.val
+// [class*='button']
+// 	for $index in range(0, length($colorsNames) - 1)
+// 		$colorName = $colorsNames[$index]
+// 		// --Color{$colorName} lookup('$tokens.color-' + $colorName)
+// 		$tokenscolor = $tokens['Color' + $colorName]
+// 		--Color{$colorName}: $tokenscolor.val
 
-	--Lines 2
-	--Baseline: $tk.RhythmVertical.varDef
-	--CeilLines calc(var(--Lines))
-	--FontSize: $tk.FontSizeDefault.varDef
-	box-sizing border-box
-	cursor pointer
-	display inline-block
-	user-select none
-	white-space nowrap
-	--TextAlign var(--TextAlign, left)
-	text-align var(--TextAlign)
-	--TextTransform none
-	text-transform var(--TextTransform)
-	text-decoration none
-	--FontStyle normal
-	--FontVariant normal
-	--FontWeight 400
-	--FontSizeCalc var(--FontSizeDefault, calc(var(--Baseline) * (var(--Lines) - 1)))
-	--LineHeight calc(var(--Baseline) * var(--CeilLines))
-	--FontFamily: $tk.FontFamilyDefault.val
-	// // bug with custom properties with sintax var/var for font shorthand
-	font var(--FontStyle) var(--FontVariant) var(--FontWeight) unquote('var(--FontSizeCalc)/var(--LineHeight)') var(--FontFamily)
-	font-family var(--FontFamily)
-	padding 0 calc(var(--Baseline) * (var(--Lines) / 2))
-	--BorderRadius calc((var(--Baseline) / 3 * var(--Lines) / 2))
-	border-radius var(--BorderRadius)
-	--BorderWidth calc((var(--Baseline) / 16 * var(--Lines) / 2))
-	--BorderStyle solid
-	--BorderColor var(--BackgroundColor)
-	border var(--BorderWidth) var(--BorderStyle) var(--BorderColor)
-	--VerticalAlign middle
-	vertical-align var(--VerticalAlign)
-	--Color: $tk.ColorLight.varDef
-	color var(--Color)
-	--BackgroundColor: $tk.ColorSecondary.varDef
-	background-color var(--BackgroundColor)
+// 	--Lines 2
+// 	--Baseline: $tokens.RhythmVertical.varDef
+// 	--CeilLines calc(var(--Lines))
+// 	--FontSize: $tokens.FontSizeDefault.varDef
+// 	box-sizing border-box
+// 	cursor pointer
+// 	display inline-block
+// 	user-select none
+// 	white-space nowrap
+// 	--TextAlign var(--TextAlign, left)
+// 	text-align var(--TextAlign)
+// 	--TextTransform none
+// 	text-transform var(--TextTransform)
+// 	text-decoration none
+// 	--FontStyle normal
+// 	--FontVariant normal
+// 	--FontWeight 400
+// 	--FontSizeCalc var(--FontSizeDefault, calc(var(--Baseline) * (var(--Lines) - 1)))
+// 	--LineHeight calc(var(--Baseline) * var(--CeilLines))
+// 	--FontFamily: $tokens.FontFamilyDefault.val
+// 	// // bug with custom properties with sintax var/var for font shorthand
+// 	font var(--FontStyle) var(--FontVariant) var(--FontWeight) unquote('var(--FontSizeCalc)/var(--LineHeight)') var(--FontFamily)
+// 	font-family var(--FontFamily)
+// 	padding 0 calc(var(--Baseline) * (var(--Lines) / 2))
+// 	--BorderRadius calc((var(--Baseline) / 3 * var(--Lines) / 2))
+// 	border-radius var(--BorderRadius)
+// 	--BorderWidth calc((var(--Baseline) / 16 * var(--Lines) / 2))
+// 	--BorderStyle solid
+// 	--BorderColor var(--BackgroundColor)
+// 	border var(--BorderWidth) var(--BorderStyle) var(--BorderColor)
+// 	--VerticalAlign middle
+// 	vertical-align var(--VerticalAlign)
+// 	--Color: $tokens.ColorLight.varDef
+// 	color var(--Color)
+// 	--BackgroundColor: $tokens.ColorSecondary.varDef
+// 	background-color var(--BackgroundColor)
 
-	& + [class*='button']
-		margin-left calc(var(--Baseline) * 1)
+// 	& + [class*='button']
+// 		margin-left calc(var(--Baseline) * 1)
 
-$colorsNames = Primary Secondary Success Danger Warning Info Light Dark
-$colorsPairs = Light Light Light Light Dark Dark Dark Light
+// $colorsNames = Primary Secondary Success Danger Warning Info Light Dark
+// $colorsPairs = Light Light Light Light Dark Dark Dark Light
 
-for $index in range(0, length($colorsNames) - 1)
-	$colorName = $colorsNames[$index]
-	$colorPair = $colorsPairs[$index]
+// for $index in range(0, length($colorsNames) - 1)
+// 	$colorName = $colorsNames[$index]
+// 	$colorPair = $colorsPairs[$index]
 
-	.button{$colorName}
-		--BackgroundColor convert('var(--Color' + $colorName + ')')
-		--Color convert('var(--Color' + $colorPair + ')')
+// 	.button{$colorName}
+// 		--BackgroundColor convert('var(--Color' + $colorName + ')')
+// 		--Color convert('var(--Color' + $colorPair + ')')
 
-.outline
-	color var(--BackgroundColor)
-	background-color transparent
+// .outline
+// 	color var(--BackgroundColor)
+// 	background-color transparent
