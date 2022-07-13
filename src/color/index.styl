@@ -2,31 +2,37 @@
 
 //update with tokens themes
 
-generateRootCustomProps()
+// generateRootCustomProps()
 
 [class*='color']
 	--Color: $tokens.ColorDarkMain.varDef
 	color var(--Color)
 
-$colorsNames = Primary Secondary Success Danger Warning Info Light Dark
-$colorsPairs = Light Light Light Light Dark Dark Dark Light
-
-for $index in range(0, length($colorsNames) - 1)
-	$colorName = $colorsNames[$index]
-
-	.color{$colorName}
-		--Color convert('var(--Color' + $colorName + ')')
-
 [class*='background']
 	--BackgroundColor transparent
+	--Color: $tokens.ColorDarkMain.varDef
 	color var(--Color)
 	background-color var(--BackgroundColor)
-	color var(--Color)
 
-for $index in range(0, length($colorsNames) - 1)
-	$colorName = $colorsNames[$index]
-	$colorPair = $colorsPairs[$index]
+for $colorName, $colorConfig in $tokensJson.color
+	for $colorVariant, $val in $colorConfig
+		if ($colorVariant == 'main')
+			$colorVaviantName = ''
+		else
+			$colorVaviantName = $colorVariant
+		.color{capitalize($colorName) + capitalize($colorVaviantName)}
+			--Color $val.value
+		.background{capitalize($colorName) + capitalize($colorVaviantName)}
+			--Color $val.textColor
+			--BackgroundColor $val.value
 
-	.background{$colorName}
-		--BackgroundColor convert('var(--Color' + $colorName + ')')
-		--Color convert('var(--Color' + $colorPair + ')')
+
+
+
+// for $index in range(0, length($colorsNames) - 1)
+// 	$colorName = $colorsNames[$index]
+// 	$colorPair = $colorsPairs[$index]
+
+// 	.background{$colorName}
+// 		--BackgroundColor convert('var(--Color' + $colorName + ')')
+// 		--Color convert('var(--Color' + $colorPair + ')')
