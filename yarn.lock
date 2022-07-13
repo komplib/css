@@ -7366,7 +7366,7 @@ __metadata:
     pug: ^3.0.2
     semantic-release: ^19.0.3
     simple-json-db: ^2.0.0
-    storybook-addon-pseudo-states: ^1.14.0
+    storybook-addon-pseudo-states: ^1.15.1
     stylus: ^0.58.1
     stylus-loader: ^4.0.0
     stylus-supremacy: ^2.15.0
@@ -16822,23 +16822,23 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"storybook-addon-pseudo-states@npm:^1.14.0":
-  version: 1.14.0
-  resolution: "storybook-addon-pseudo-states@npm:1.14.0"
+"storybook-addon-pseudo-states@npm:^1.15.1":
+  version: 1.15.1
+  resolution: "storybook-addon-pseudo-states@npm:1.15.1"
   peerDependencies:
-    "@storybook/addons": ^6.4.19
-    "@storybook/api": ^6.4.19
-    "@storybook/components": ^6.4.19
-    "@storybook/core-events": ^6.4.19
-    "@storybook/theming": ^6.4.19
-    react: ^16.8.0 || ^17.0.0
-    react-dom: ^16.8.0 || ^17.0.0
+    "@storybook/addons": ^6.5.0
+    "@storybook/api": ^6.5.0
+    "@storybook/components": ^6.5.0
+    "@storybook/core-events": ^6.5.0
+    "@storybook/theming": ^6.5.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
   peerDependenciesMeta:
     react:
       optional: true
     react-dom:
       optional: true
-  checksum: 3c8c8e8cd5f69774eb1c2cee43c5551099d0f78b2f3d99925c953a0806225506a7aea86667dc12d154cde917ca27d7b09796fb2fb3a93b12a92da0f999725348
+  checksum: 67087030c1db4159fe928984d79374e8b72ad617ebd29a0f95ff076433dd27931ebee2570005268a88e648a16f324440c9d7fbe74eb2b5a706913392b8d4d5f2
   languageName: node
   linkType: hard
 

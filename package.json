@@ -70,7 +70,7 @@
 		"pug": "^3.0.2",
 		"semantic-release": "^19.0.3",
 		"simple-json-db": "^2.0.0",
-		"storybook-addon-pseudo-states": "^1.14.0",
+		"storybook-addon-pseudo-states": "^1.15.1",
 		"stylus": "^0.58.1",
 		"stylus-loader": "^4.0.0",
 		"stylus-supremacy": "^2.15.0",
