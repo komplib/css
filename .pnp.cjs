@@ -78,7 +78,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["simple-json-db", "npm:2.0.0"],\
             ["storybook-addon-pseudo-states", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:1.15.1"],\
             ["stylus", "npm:0.58.1"],\
-            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"],\
+            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:7.0.0"],\
             ["stylus-supremacy", "npm:2.15.0"],\
             ["yargs", "npm:17.5.1"]\
           ],\
@@ -11651,7 +11651,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["simple-json-db", "npm:2.0.0"],\
             ["storybook-addon-pseudo-states", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:1.15.1"],\
             ["stylus", "npm:0.58.1"],\
-            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"],\
+            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:7.0.0"],\
             ["stylus-supremacy", "npm:2.15.0"],\
             ["yargs", "npm:17.5.1"]\
           ],\
@@ -22854,24 +22854,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]\
       ]],\
       ["stylus-loader", [\
-        ["npm:4.3.3", {\
-          "packageLocation": "./.yarn/cache/stylus-loader-npm-4.3.3-29d82709b9-07aec3cdb2.zip/node_modules/stylus-loader/",\
+        ["npm:7.0.0", {\
+          "packageLocation": "./.yarn/cache/stylus-loader-npm-7.0.0-a8b4ba965c-3bb09d4590.zip/node_modules/stylus-loader/",\
           "packageDependencies": [\
-            ["stylus-loader", "npm:4.3.3"]\
+            ["stylus-loader", "npm:7.0.0"]\
           ],\
           "linkType": "SOFT"\
         }],\
-        ["virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3", {\
-          "packageLocation": "./.yarn/__virtual__/stylus-loader-virtual-91acc7c47d/0/cache/stylus-loader-npm-4.3.3-29d82709b9-07aec3cdb2.zip/node_modules/stylus-loader/",\
+        ["virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:7.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/stylus-loader-virtual-42b01eeebb/0/cache/stylus-loader-npm-7.0.0-a8b4ba965c-3bb09d4590.zip/node_modules/stylus-loader/",\
           "packageDependencies": [\
-            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:4.3.3"],\
+            ["stylus-loader", "virtual:06af3ffc01914af0d73f7c02501988ca2a73aab8066a5216a0e5b4f9891db3d880399f46837a49188ee6828536cb1620c090997b0b914ea839df38f829725561#npm:7.0.0"],\
             ["@types/stylus", null],\
             ["@types/webpack", null],\
             ["fast-glob", "npm:3.2.11"],\
             ["klona", "npm:2.0.5"],\
-            ["loader-utils", "npm:2.0.2"],\
             ["normalize-path", "npm:3.0.0"],\
-            ["schema-utils", "npm:3.1.1"],\
             ["stylus", "npm:0.58.1"],\
             ["webpack", null]\
           ],\

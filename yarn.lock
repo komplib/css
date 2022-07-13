@@ -7398,7 +7398,7 @@ __metadata:
     simple-json-db: ^2.0.0
     storybook-addon-pseudo-states: ^1.15.1
     stylus: ^0.58.1
-    stylus-loader: ^4.0.0
+    stylus-loader: ^7.0.0
     stylus-supremacy: ^2.15.0
     yargs: ^17.5.1
   languageName: unknown
@@ -8833,7 +8833,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.2.4, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -11633,7 +11633,7 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"klona@npm:^2.0.4":
+"klona@npm:^2.0.4, klona@npm:^2.0.5":
   version: 2.0.5
   resolution: "klona@npm:2.0.5"
   checksum: 8c976126ea252b766e648a4866e1bccff9d3b08432474ad80c559f6c7265cf7caede2498d463754d8c88c4759895edd8210c85c0d3155e6aae4968362889466f
@@ -17202,19 +17202,17 @@ eslint-config-airbnb-base@latest:
   languageName: node
   linkType: hard
 
-"stylus-loader@npm:^4.0.0":
-  version: 4.3.3
-  resolution: "stylus-loader@npm:4.3.3"
+"stylus-loader@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "stylus-loader@npm:7.0.0"
   dependencies:
-    fast-glob: ^3.2.4
-    klona: ^2.0.4
-    loader-utils: ^2.0.0
+    fast-glob: ^3.2.11
+    klona: ^2.0.5
     normalize-path: ^3.0.0
-    schema-utils: ^3.0.0
   peerDependencies:
     stylus: ">=0.52.4"
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 07aec3cdb2cd648b2d2ebc73fd44e9601aeedbcf592c3db4c4d081e8fd768ec8431b1dcd0654aac3e1071968a9c7c71486a90b1c9b2cf528beeccbc6f37b6057
+    webpack: ^5.0.0
+  checksum: 3bb09d45901865c7414a33d80b36bc32054fef325cd307d3648a7be5f0eca8ad76b7687aacb31d5e36ad216c6af7fcd92d091c8d08542306db7f87821edec10f
   languageName: node
   linkType: hard
 
