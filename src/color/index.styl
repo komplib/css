@@ -1,9 +1,5 @@
 @require '../tokens/'
 
-//update with tokens themes
-
-// generateRootCustomProps()
-
 [class*='color']
 	--Color: $tokens.ColorDarkMain.varDef
 	color var(--Color)
@@ -20,19 +16,10 @@ for $colorName, $colorConfig in $tokensJson.color
 			$colorVaviantName = ''
 		else
 			$colorVaviantName = $colorVariant
-		.color{capitalize($colorName) + capitalize($colorVaviantName)}
-			--Color $val.value
-		.background{capitalize($colorName) + capitalize($colorVaviantName)}
+		$colorFullName = capitalize($colorName) + capitalize($colorVaviantName)
+		.color{$colorFullName}
+			--Color var(unquote('--Color' + unquote($colorFullName)), $val.value)
+		.background{$colorFullName}
 			--Color $val.textColor
-			--BackgroundColor $val.value
+			--BackgroundColor var(unquote('--Color' + unquote($colorFullName)), $val.value)
 
-
-
-
-// for $index in range(0, length($colorsNames) - 1)
-// 	$colorName = $colorsNames[$index]
-// 	$colorPair = $colorsPairs[$index]
-
-// 	.background{$colorName}
-// 		--BackgroundColor convert('var(--Color' + $colorName + ')')
-// 		--Color convert('var(--Color' + $colorPair + ')')
