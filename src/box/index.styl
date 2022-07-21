@@ -2,57 +2,35 @@
 
 // $colorsNames = Primary Secondary Success Danger Warning Info Light Dark
 // $colorsPairs = Light Light Light Light Dark Dark Dark Light
+@layer box
+	[class*='box']
+		--BackgroundColor transparent
+		--Baseline $tokens.RhythmVertical.varDef
+		--BorderColor var(--BackgroundColor)
+		--BorderWidth 0
+		--Color $tokens.ColorDarkMain.varDef
+		--Padding calc(var(--Baseline) * 1)
+		background-color var(--BackgroundColor)
+		border var(--BorderWidth) solid var(--BorderColor)
+		color var(--Color)
+		padding var(--Padding)
 
-[class*='box']
-	// for $index in range(0, length($colorsNames) - 1)
-	// 	$colorName = $colorsNames[$index]
-	// 	// --Color{$colorName} lookup('$tokens.color-' + $colorName)
-	// 	$tokenscolor = $tokens['Color' + $colorName]
-	// 	--Color{$colorName}: $tokenscolor.val
+	for $colorName, $colorConfig in $tokensJson.color
+		for $colorVariant, $val in $colorConfig
+			if ($colorVariant == 'main')
+				$colorVaviantName = ''
+			else
+				$colorVaviantName = $colorVariant
+			$colorFullName = capitalize($colorName) + capitalize($colorVaviantName)
+			.box{$colorFullName}
+				--MainColor var(unquote('--Color' + unquote($colorFullName)), $val.value)
+				--Color $val.textColor
+				--BackgroundColor var(--MainColor)
 
-	// --Lines 2
-	// --Baseline: $tokens.RhythmVertical.varDef
-	// --CeilLines calc(var(--Lines))
-	// --FontSize: $tokens.FontSizeDefault.varDef
-	box-sizing border-box
-	display block
-	// --BorderRadius calc((var(--Baseline) / 3 * var(--Lines) / 2))
-	// border-radius var(--BorderRadius)
-	// --BorderWidth calc((var(--Baseline) / 16 * var(--Lines) / 2))
-	// --BorderStyle solid
-	// --BorderColor var(--BackgroundColor)
-	// border var(--BorderWidth) var(--BorderStyle) var(--BorderColor)
-	// --VerticalAlign middle
-	// vertical-align var(--VerticalAlign)
-	// --Color: $tokens.ColorLight.varDef
-	// color var(--Color)
-	--BackgroundColor pink
-	background-color var(--BackgroundColor)
-
-	// &> .content
-	// 	padding calc(var(--Baseline) * (var(--Lines) / 2))
-
-// $colorsNames = Primary Secondary Success Danger Warning Info Light Dark
-// $colorsPairs = Light Light Light Light Dark Dark Dark Light
-
-// for $index in range(0, length($colorsNames) - 1)
-// 	$colorName = $colorsNames[$index]
-// 	$colorPair = $colorsPairs[$index]
-
-// 	.box{$colorName}
-// 		--BackgroundColor convert('var(--Color' + $colorName + ')')
-// 		--Color convert('var(--Color' + $colorPair + ')')
-
-// .outline
-// 	color var(--BackgroundColor)
-// 	background-color transparent
-
-
-for $colorName, $colorConfig in $tokensJson.color
-	for $colorVariant, $val in $colorConfig
-		if ($colorVariant == 'main')
-			$colorVaviantName = ''
-		else
-			$colorVaviantName = $colorVariant
-		.color{capitalize($colorName) + capitalize($colorVaviantName)}
-			--color $val.value
+@layer modifiers
+	.outline
+		--BorderWidth $tokens.BorderWidthDefault.varDef
+		--Padding calc( var(--Baseline) - var(--BorderWidth) )
+		--Color $tokens.ColorDarkMain.varDef
+		--BorderColor var(--MainColor, transparent)
+		--BackgroundColor transparent
