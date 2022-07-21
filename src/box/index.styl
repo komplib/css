@@ -3,34 +3,7 @@
 // $colorsNames = Primary Secondary Success Danger Warning Info Light Dark
 // $colorsPairs = Light Light Light Light Dark Dark Dark Light
 @layer box
-	[class*='box']
-		--BackgroundColor transparent
-		--Baseline $tokens.RhythmVertical.varDef
-		--BorderColor var(--BackgroundColor)
-		--BorderWidth 0
-		--Color $tokens.ColorDarkMain.varDef
-		--Padding calc(var(--Baseline) * 1)
-		background-color var(--BackgroundColor)
-		border var(--BorderWidth) solid var(--BorderColor)
-		color var(--Color)
-		padding var(--Padding)
-
-	for $colorName, $colorConfig in $tokensJson.color
-		for $colorVariant, $val in $colorConfig
-			if ($colorVariant == 'main')
-				$colorVaviantName = ''
-			else
-				$colorVaviantName = $colorVariant
-			$colorFullName = capitalize($colorName) + capitalize($colorVaviantName)
-			.box{$colorFullName}
-				--MainColor var(unquote('--Color' + unquote($colorFullName)), $val.value)
-				--Color $val.textColor
-				--BackgroundColor var(--MainColor)
+	boxDefault('box')
 
 @layer modifiers
-	.outline
-		--BorderWidth $tokens.BorderWidthDefault.varDef
-		--Padding calc( var(--Baseline) - var(--BorderWidth) )
-		--Color $tokens.ColorDarkMain.varDef
-		--BorderColor var(--MainColor, transparent)
-		--BackgroundColor transparent
+	boxOutline()
