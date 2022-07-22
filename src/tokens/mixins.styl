@@ -5,10 +5,12 @@ boxDefault($name)
 		--BorderColor var(--BackgroundColor)
 		--BorderWidth 0
 		--Color $tokens.ColorDarkMain.varDef
+		--Margin 0
 		--Padding calc(var(--Baseline) * 1)
 		background-color var(--BackgroundColor)
 		border var(--BorderWidth) solid var(--BorderColor)
 		color var(--Color)
+		margin var(--Margin)
 		padding var(--Padding)
 
 	for $colorName, $colorConfig in $tokensJson.color
