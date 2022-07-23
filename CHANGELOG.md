@@ -1,3 +1,10 @@
+# [0.25.0](https://github.com/komplib/css/compare/v0.24.0...v0.25.0) (2022-07-23)
+
+
+### Features
+
+* add focus color to tokens ([3dd2ef3](https://github.com/komplib/css/commit/3dd2ef38e9a8752b981bb01622b4f348debb458c))
+
 # [0.24.0](https://github.com/komplib/css/compare/v0.23.1...v0.24.0) (2022-07-04)
 
 
