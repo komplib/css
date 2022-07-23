@@ -17,9 +17,20 @@
 
 		&.focus, &:focus
 			opacity .6
+			outline $tokens.FocusWidth.varDef solid $tokens.FocusColor.varDef
 
 		&.active, &:active
-			opacity .8
+			opacity .9
+
+		&.size
+			&1
+				--Lines 1
+			&2
+				--Lines 2
+			&3
+				--Lines 3
+			&4
+				--Lines 4
 
 
 @layer modifiers
