@@ -8,19 +8,19 @@
 		cursor pointer
 		white-space nowrap
 
+		&.disabled, &[disabled]
+			opacity .2
+			cursor not-allowed
+
 		&:hover
 			opacity .4
-
-		&.disabled, &[disabled]
-			opacity .3
-			cursor not-allowed
 
 		&.focus, &:focus
 			opacity .6
 			outline $tokens.FocusWidth.varDef solid $tokens.FocusColor.varDef
 
 		&.active, &:active
-			opacity .9
+			opacity .8
 
 		&.size
 			&1
