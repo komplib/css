@@ -53,7 +53,7 @@
 		"chokidar-cli": "^3.0.0",
 		"chromatic": "^6.5.6",
 		"csso": "^5.0.3",
-		"eslint": "^8.2.0",
+		"eslint": "^8.20.0",
 		"eslint-config-airbnb-base": "latest",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.25.2",
