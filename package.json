@@ -43,7 +43,7 @@
 		"@storybook/builder-webpack4": "^6.5.9",
 		"@storybook/html": "^6.5.9",
 		"@storybook/manager-webpack4": "^6.5.9",
-		"@storybook/testing-library": "^0.0.11",
+		"@storybook/testing-library": "^0.0.13",
 		"@typescript-eslint/eslint-plugin": "^5.30.6",
 		"@typescript-eslint/parser": "^5.30.6",
 		"babel-loader": "^8.2.5",
