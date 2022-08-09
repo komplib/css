@@ -58,7 +58,7 @@
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-plugin-import": "^2.25.2",
 		"eslint-plugin-prettier": "^4.0.0",
-		"eslint-plugin-storybook": "^0.5.12",
+		"eslint-plugin-storybook": "^0.6.4",
 		"glob": "^8.0.3",
 		"husky": "^8.0.1",
 		"lint-staged": "^13.0.0",
